@@ -72,11 +72,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerOrderDashboard.Designer.vb">
+      <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerOrderDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalOrderSummary.Designer.vb">
+      <DependentUpon>FinalOrderSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FinalOrderSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuItemCustomization.Designer.vb">
+      <DependentUpon>MenuItemCustomization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItemCustomization.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
