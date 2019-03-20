@@ -1,5 +1,11 @@
 ﻿Public Class LoginScreen
-    Private Sub LoginScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If (txtUser.Text = "JDenchy" And txtPass.Text = "Test1234") Then
+            Me.Hide()
+            WelcomeScreen.Show()
+        Else
+            MessageBox.Show("That username and password combination does not exist. Please try again.", "Login Error")
+        End If
     End Sub
 End Class
