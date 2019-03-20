@@ -32,7 +32,7 @@ Partial Class WelcomeScreen
         'btnCustomerOrder
         '
         Me.btnCustomerOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCustomerOrder.Location = New System.Drawing.Point(32, 184)
+        Me.btnCustomerOrder.Location = New System.Drawing.Point(56, 218)
         Me.btnCustomerOrder.Name = "btnCustomerOrder"
         Me.btnCustomerOrder.Size = New System.Drawing.Size(168, 83)
         Me.btnCustomerOrder.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class WelcomeScreen
         'btnFOH
         '
         Me.btnFOH.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnFOH.Location = New System.Drawing.Point(257, 184)
+        Me.btnFOH.Location = New System.Drawing.Point(281, 218)
         Me.btnFOH.Name = "btnFOH"
         Me.btnFOH.Size = New System.Drawing.Size(168, 83)
         Me.btnFOH.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class WelcomeScreen
         'btnManagement
         '
         Me.btnManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnManagement.Location = New System.Drawing.Point(469, 184)
+        Me.btnManagement.Location = New System.Drawing.Point(493, 218)
         Me.btnManagement.Name = "btnManagement"
         Me.btnManagement.Size = New System.Drawing.Size(168, 83)
         Me.btnManagement.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class WelcomeScreen
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(203, 33)
+        Me.Label1.Location = New System.Drawing.Point(227, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(287, 31)
         Me.Label1.TabIndex = 3
@@ -73,7 +73,7 @@ Partial Class WelcomeScreen
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label2.Location = New System.Drawing.Point(156, 64)
+        Me.Label2.Location = New System.Drawing.Point(180, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(380, 31)
         Me.Label2.TabIndex = 4
