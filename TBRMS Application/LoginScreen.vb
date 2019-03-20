@@ -1,7 +1,7 @@
 ﻿Public Class LoginScreen
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If (txtUser.Text = "JDenchy" And txtPass.Text = "Test1234") Then
+        If (txtUser.Text = "Admin" And txtPass.Text = "Test1234") Then
             Me.Hide()
             WelcomeScreen.Show()
         Else
