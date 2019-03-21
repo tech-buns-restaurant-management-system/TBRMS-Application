@@ -78,6 +78,12 @@
     <Compile Include="CustomerOrderDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerSplashScreen.Designer.vb">
+      <DependentUpon>CustomerSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FinalOrderSummary.Designer.vb">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </Compile>
@@ -95,6 +101,12 @@
     </Compile>
     <Compile Include="LoginScreen.Designer.vb">
       <DependentUpon>LoginScreen.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOutConfirmation.Designer.vb">
+      <DependentUpon>LogOutConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogOutConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuItemCustomization.Designer.vb">
@@ -124,10 +136,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OrderCancelConfirmation.Designer.vb">
+      <DependentUpon>OrderCancelConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCancelConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PaymentScreen.Designer.vb">
       <DependentUpon>PaymentScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="PaymentScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PINScreen.Designer.vb">
+      <DependentUpon>PINScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -141,11 +165,17 @@
     <EmbeddedResource Include="CustomerOrderDashboard.resx">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSplashScreen.resx">
+      <DependentUpon>CustomerSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FinalOrderSummary.resx">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOutConfirmation.resx">
+      <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuItemDeletionConfirmation.resx">
       <DependentUpon>MenuItemDeletionConfirmation.vb</DependentUpon>
@@ -155,6 +185,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderCancelConfirmation.resx">
+      <DependentUpon>OrderCancelConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PINScreen.resx">
+      <DependentUpon>PINScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

@@ -35,16 +35,16 @@ Partial Class CustomerOrderDashboard
         Me.btnOption3 = New System.Windows.Forms.Button()
         Me.btnOption4 = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnOrderCancel = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBurgers
         '
         Me.btnBurgers.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnBurgers.Location = New System.Drawing.Point(32, 62)
+        Me.btnBurgers.Location = New System.Drawing.Point(32, 122)
         Me.btnBurgers.Name = "btnBurgers"
-        Me.btnBurgers.Size = New System.Drawing.Size(275, 210)
+        Me.btnBurgers.Size = New System.Drawing.Size(275, 181)
         Me.btnBurgers.TabIndex = 0
         Me.btnBurgers.Text = "Burgers"
         Me.btnBurgers.UseVisualStyleBackColor = True
@@ -52,9 +52,9 @@ Partial Class CustomerOrderDashboard
         'btnSides
         '
         Me.btnSides.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnSides.Location = New System.Drawing.Point(32, 279)
+        Me.btnSides.Location = New System.Drawing.Point(32, 315)
         Me.btnSides.Name = "btnSides"
-        Me.btnSides.Size = New System.Drawing.Size(275, 210)
+        Me.btnSides.Size = New System.Drawing.Size(275, 181)
         Me.btnSides.TabIndex = 1
         Me.btnSides.Text = "Sides"
         Me.btnSides.UseVisualStyleBackColor = True
@@ -62,9 +62,9 @@ Partial Class CustomerOrderDashboard
         'btnBeverages
         '
         Me.btnBeverages.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnBeverages.Location = New System.Drawing.Point(32, 496)
+        Me.btnBeverages.Location = New System.Drawing.Point(32, 508)
         Me.btnBeverages.Name = "btnBeverages"
-        Me.btnBeverages.Size = New System.Drawing.Size(275, 210)
+        Me.btnBeverages.Size = New System.Drawing.Size(275, 181)
         Me.btnBeverages.TabIndex = 2
         Me.btnBeverages.Text = "Beverages"
         Me.btnBeverages.UseVisualStyleBackColor = True
@@ -72,10 +72,10 @@ Partial Class CustomerOrderDashboard
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!)
-        Me.Label1.Location = New System.Drawing.Point(507, 14)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(442, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(265, 37)
+        Me.Label1.Size = New System.Drawing.Size(395, 55)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Place Your Order"
         '
@@ -84,15 +84,15 @@ Partial Class CustomerOrderDashboard
         Me.lstOrderSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstOrderSummary.FormattingEnabled = True
         Me.lstOrderSummary.ItemHeight = 20
-        Me.lstOrderSummary.Location = New System.Drawing.Point(964, 62)
+        Me.lstOrderSummary.Location = New System.Drawing.Point(964, 122)
         Me.lstOrderSummary.Name = "lstOrderSummary"
-        Me.lstOrderSummary.Size = New System.Drawing.Size(277, 524)
+        Me.lstOrderSummary.Size = New System.Drawing.Size(277, 444)
         Me.lstOrderSummary.TabIndex = 7
         '
         'btnEdit
         '
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnEdit.Location = New System.Drawing.Point(964, 592)
+        Me.btnEdit.Location = New System.Drawing.Point(964, 575)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(277, 34)
         Me.btnEdit.TabIndex = 8
@@ -102,7 +102,7 @@ Partial Class CustomerOrderDashboard
         'btnCheckout
         '
         Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCheckout.Location = New System.Drawing.Point(964, 672)
+        Me.btnCheckout.Location = New System.Drawing.Point(964, 655)
         Me.btnCheckout.Name = "btnCheckout"
         Me.btnCheckout.Size = New System.Drawing.Size(277, 34)
         Me.btnCheckout.TabIndex = 9
@@ -116,9 +116,9 @@ Partial Class CustomerOrderDashboard
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption2)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption3)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption4)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(492, 62)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(492, 122)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(295, 644)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(295, 567)
         Me.FlowLayoutPanel1.TabIndex = 10
         '
         'btnOption1
@@ -168,22 +168,22 @@ Partial Class CustomerOrderDashboard
         'btnRemove
         '
         Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnRemove.Location = New System.Drawing.Point(964, 632)
+        Me.btnRemove.Location = New System.Drawing.Point(964, 615)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(277, 34)
         Me.btnRemove.TabIndex = 11
         Me.btnRemove.Text = "Remove"
         Me.btnRemove.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnOrderCancel
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(32, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(40, 40)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOrderCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnOrderCancel.Location = New System.Drawing.Point(32, 22)
+        Me.btnOrderCancel.Name = "btnOrderCancel"
+        Me.btnOrderCancel.Size = New System.Drawing.Size(80, 80)
+        Me.btnOrderCancel.TabIndex = 12
+        Me.btnOrderCancel.Text = "X"
+        Me.btnOrderCancel.UseVisualStyleBackColor = True
         '
         'CustomerOrderDashboard
         '
@@ -191,7 +191,7 @@ Partial Class CustomerOrderDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnOrderCancel)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnCheckout)
@@ -225,5 +225,5 @@ Partial Class CustomerOrderDashboard
     Friend WithEvents btnOption3 As Button
     Friend WithEvents btnOption4 As Button
     Friend WithEvents btnRemove As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnOrderCancel As Button
 End Class

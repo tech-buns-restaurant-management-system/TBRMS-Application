@@ -22,19 +22,23 @@ Partial Class WelcomeScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(WelcomeScreen))
         Me.btnCustomerOrder = New System.Windows.Forms.Button()
         Me.btnFOH = New System.Windows.Forms.Button()
         Me.btnManagement = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnLogOut = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCustomerOrder
         '
         Me.btnCustomerOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCustomerOrder.Location = New System.Drawing.Point(56, 218)
+        Me.btnCustomerOrder.Location = New System.Drawing.Point(173, 381)
         Me.btnCustomerOrder.Name = "btnCustomerOrder"
-        Me.btnCustomerOrder.Size = New System.Drawing.Size(168, 83)
+        Me.btnCustomerOrder.Size = New System.Drawing.Size(307, 179)
         Me.btnCustomerOrder.TabIndex = 0
         Me.btnCustomerOrder.Text = "Customer Order"
         Me.btnCustomerOrder.UseVisualStyleBackColor = True
@@ -42,9 +46,9 @@ Partial Class WelcomeScreen
         'btnFOH
         '
         Me.btnFOH.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnFOH.Location = New System.Drawing.Point(281, 218)
+        Me.btnFOH.Location = New System.Drawing.Point(486, 381)
         Me.btnFOH.Name = "btnFOH"
-        Me.btnFOH.Size = New System.Drawing.Size(168, 83)
+        Me.btnFOH.Size = New System.Drawing.Size(307, 179)
         Me.btnFOH.TabIndex = 1
         Me.btnFOH.Text = "Front of House Staff"
         Me.btnFOH.UseVisualStyleBackColor = True
@@ -52,9 +56,9 @@ Partial Class WelcomeScreen
         'btnManagement
         '
         Me.btnManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnManagement.Location = New System.Drawing.Point(493, 218)
+        Me.btnManagement.Location = New System.Drawing.Point(799, 381)
         Me.btnManagement.Name = "btnManagement"
-        Me.btnManagement.Size = New System.Drawing.Size(168, 83)
+        Me.btnManagement.Size = New System.Drawing.Size(307, 179)
         Me.btnManagement.TabIndex = 2
         Me.btnManagement.Text = "Manangement"
         Me.btnManagement.UseVisualStyleBackColor = True
@@ -62,35 +66,60 @@ Partial Class WelcomeScreen
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(227, 31)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(299, 158)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(287, 31)
+        Me.Label1.Size = New System.Drawing.Size(680, 73)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Welcome to Top Buns!"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label2.Location = New System.Drawing.Point(180, 62)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(190, 231)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(380, 31)
+        Me.Label2.Size = New System.Drawing.Size(899, 73)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Please select an option below."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Enabled = False
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(1184, 624)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.Location = New System.Drawing.Point(1180, 620)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(80, 80)
+        Me.btnLogOut.TabIndex = 6
+        Me.btnLogOut.TabStop = False
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'WelcomeScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(716, 369)
+        Me.ClientSize = New System.Drawing.Size(1278, 718)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnManagement)
         Me.Controls.Add(Me.btnFOH)
         Me.Controls.Add(Me.btnCustomerOrder)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "WelcomeScreen"
-        Me.Text = "WelcomeScreen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -101,4 +130,6 @@ Partial Class WelcomeScreen
     Friend WithEvents btnManagement As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnLogOut As Button
 End Class

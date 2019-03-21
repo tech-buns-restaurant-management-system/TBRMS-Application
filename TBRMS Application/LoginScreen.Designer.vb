@@ -22,12 +22,16 @@ Partial Class LoginScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginScreen))
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.lblForgotPassword = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnLogOut = New System.Windows.Forms.Button()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLogin
@@ -83,18 +87,40 @@ Partial Class LoginScreen
         'lblForgotPassword
         '
         Me.lblForgotPassword.AutoSize = True
-        Me.lblForgotPassword.Location = New System.Drawing.Point(218, 78)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(216, 78)
         Me.lblForgotPassword.Name = "lblForgotPassword"
-        Me.lblForgotPassword.Size = New System.Drawing.Size(86, 13)
+        Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 4
-        Me.lblForgotPassword.TabStop = True
-        Me.lblForgotPassword.Text = "Forgot Password"
+        Me.lblForgotPassword.Text = "Forgot Password?"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Enabled = False
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(293, 120)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.Location = New System.Drawing.Point(289, 116)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(40, 40)
+        Me.btnLogOut.TabIndex = 10
+        Me.btnLogOut.TabStop = False
+        Me.btnLogOut.UseVisualStyleBackColor = True
         '
         'LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(334, 161)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.btnLogOut)
         Me.Controls.Add(Me.lblForgotPassword)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.txtPass)
@@ -106,7 +132,7 @@ Partial Class LoginScreen
         Me.MinimizeBox = False
         Me.Name = "LoginScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -118,4 +144,6 @@ Partial Class LoginScreen
     Friend WithEvents txtPass As TextBox
     Friend WithEvents txtUser As TextBox
     Friend WithEvents lblForgotPassword As LinkLabel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnLogOut As Button
 End Class

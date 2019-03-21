@@ -63,13 +63,6 @@
         btnOption3.Text = "Spring Water"
     End Sub
 
-    Function ResetButtons()
-        btnOption1.Hide()
-        btnOption2.Hide()
-        btnOption3.Hide()
-        btnOption4.Hide()
-    End Function
-
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         MenuItemCustomization.Show()
     End Sub
@@ -78,8 +71,15 @@
         MenuItemDeletionConfirmation.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub btnOrderCancel_Click(sender As Object, e As EventArgs) Handles btnOrderCancel.Click
+        OrderCancelConfirmation.Show()
     End Sub
+
+    Function ResetButtons()
+        btnOption1.Hide()
+        btnOption2.Hide()
+        btnOption3.Hide()
+        btnOption4.Hide()
+    End Function
 End Class
 
