@@ -8,4 +8,9 @@
             MessageBox.Show("That username and password combination does not exist. Please try again.", "Login Error")
         End If
     End Sub
+
+    Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
+        Me.Hide()
+        WelcomeScreen.Show()
+    End Sub
 End Class

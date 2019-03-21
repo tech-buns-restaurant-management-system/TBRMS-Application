@@ -33,7 +33,7 @@ Partial Class LoginScreen
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(83, 95)
+        Me.btnLogin.Location = New System.Drawing.Point(83, 99)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(175, 43)
         Me.btnLogin.TabIndex = 2
@@ -44,7 +44,7 @@ Partial Class LoginScreen
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 17)
+        Me.Label1.Location = New System.Drawing.Point(28, 21)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 1
@@ -54,7 +54,7 @@ Partial Class LoginScreen
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 48)
+        Me.Label2.Location = New System.Drawing.Point(33, 52)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 2
@@ -63,7 +63,7 @@ Partial Class LoginScreen
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(117, 45)
+        Me.txtPass.Location = New System.Drawing.Point(117, 49)
         Me.txtPass.MaxLength = 8
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -74,7 +74,7 @@ Partial Class LoginScreen
         'txtUser
         '
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(117, 14)
+        Me.txtUser.Location = New System.Drawing.Point(117, 18)
         Me.txtUser.MaxLength = 20
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(187, 26)
@@ -83,7 +83,7 @@ Partial Class LoginScreen
         'lblForgotPassword
         '
         Me.lblForgotPassword.AutoSize = True
-        Me.lblForgotPassword.Location = New System.Drawing.Point(218, 74)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(218, 78)
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(86, 13)
         Me.lblForgotPassword.TabIndex = 4
@@ -94,7 +94,7 @@ Partial Class LoginScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(333, 152)
+        Me.ClientSize = New System.Drawing.Size(334, 161)
         Me.Controls.Add(Me.lblForgotPassword)
         Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.txtPass)
