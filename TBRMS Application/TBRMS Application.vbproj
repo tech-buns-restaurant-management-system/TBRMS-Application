@@ -154,6 +154,12 @@
     <Compile Include="PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ThankYouScreen.Designer.vb">
+      <DependentUpon>ThankYouScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYouScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
@@ -189,8 +195,14 @@
     <EmbeddedResource Include="OrderCancelConfirmation.resx">
       <DependentUpon>OrderCancelConfirmation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PINScreen.resx">
       <DependentUpon>PINScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThankYouScreen.resx">
+      <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
