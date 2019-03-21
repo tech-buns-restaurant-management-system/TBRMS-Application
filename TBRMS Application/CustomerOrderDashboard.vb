@@ -1,7 +1,15 @@
 ﻿Public Class CustomerOrderDashboard
+    Public strOrderLine() As String
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+
+        For i As Integer = 0 To (lstOrderSummary.Items.Count - 1)
+            ReDim Preserve strOrderLine(i)
+            strOrderLine(i) = lstOrderSummary.Items(i)
+        Next
+
         Me.Hide()
         FinalOrderSummary.Show()
+
     End Sub
 
     Private Sub btnOption1_Click(sender As Object, e As EventArgs) Handles btnOption1.Click
@@ -68,7 +76,9 @@
     End Sub
 
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        MenuItemDeletionConfirmation.Show()
+        If (lstOrderSummary.SelectedIndex > -1) Then
+            MenuItemDeletionConfirmation.Show()
+        End If
     End Sub
 
     Private Sub btnOrderCancel_Click(sender As Object, e As EventArgs) Handles btnOrderCancel.Click
