@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PaymentScreen
+Partial Class ThankYouScreen
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,59 +22,65 @@ Partial Class PaymentScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnCash = New System.Windows.Forms.Button()
-        Me.btnCard = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
-        '
-        'btnCash
-        '
-        Me.btnCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCash.Location = New System.Drawing.Point(123, 212)
-        Me.btnCash.Name = "btnCash"
-        Me.btnCash.Size = New System.Drawing.Size(435, 297)
-        Me.btnCash.TabIndex = 0
-        Me.btnCash.Text = "Cash"
-        Me.btnCash.UseVisualStyleBackColor = True
-        '
-        'btnCard
-        '
-        Me.btnCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCard.Location = New System.Drawing.Point(729, 212)
-        Me.btnCard.Name = "btnCard"
-        Me.btnCard.Size = New System.Drawing.Size(435, 297)
-        Me.btnCard.TabIndex = 1
-        Me.btnCard.Text = "Credit/Debit Card"
-        Me.btnCard.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.Label1.Location = New System.Drawing.Point(420, 93)
+        Me.Label1.Location = New System.Drawing.Point(465, 253)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(476, 31)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Please select a payment option below."
+        Me.Label1.Size = New System.Drawing.Size(318, 31)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Thank you for your order!"
         '
-        'PaymentScreen
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.Label2.Location = New System.Drawing.Point(340, 284)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(592, 31)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Our staff is currently working on it in the kitchen."
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
+        Me.Label3.Location = New System.Drawing.Point(279, 315)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(717, 31)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Please take your seat and we will deliver your food shortly."
+        '
+        'Timer1
+        '
+        '
+        'ThankYouScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnCard)
-        Me.Controls.Add(Me.btnCash)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "PaymentScreen"
+        Me.Name = "ThankYouScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnCash As Button
-    Friend WithEvents btnCard As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Timer1 As Timer
 End Class
