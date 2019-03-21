@@ -72,22 +72,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerOrderDashboard.Designer.vb">
+    <Compile Include="CustomerScreens\CustomerOrderDashboard.Designer.vb">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerOrderDashboard.vb">
+    <Compile Include="CustomerScreens\CustomerOrderDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerSplashScreen.Designer.vb">
+    <Compile Include="CustomerScreens\CustomerSplashScreen.Designer.vb">
       <DependentUpon>CustomerSplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerSplashScreen.vb">
+    <Compile Include="CustomerScreens\CustomerSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FinalOrderSummary.Designer.vb">
+    <Compile Include="CustomerScreens\FinalOrderSummary.Designer.vb">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </Compile>
-    <Compile Include="FinalOrderSummary.vb">
+    <Compile Include="CustomerScreens\FinalOrderSummary.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FoHSDashboard.Designer.vb">
@@ -109,16 +109,16 @@
     <Compile Include="LogOutConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuItemCustomization.Designer.vb">
+    <Compile Include="CustomerScreens\MenuItemCustomization.Designer.vb">
       <DependentUpon>MenuItemCustomization.vb</DependentUpon>
     </Compile>
-    <Compile Include="MenuItemCustomization.vb">
+    <Compile Include="CustomerScreens\MenuItemCustomization.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuItemDeletionConfirmation.Designer.vb">
+    <Compile Include="CustomerScreens\MenuItemDeletionConfirmation.Designer.vb">
       <DependentUpon>MenuItemDeletionConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="MenuItemDeletionConfirmation.vb">
+    <Compile Include="CustomerScreens\MenuItemDeletionConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -136,16 +136,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="OrderCancelConfirmation.Designer.vb">
+    <Compile Include="CustomerScreens\OrderCancelConfirmation.Designer.vb">
       <DependentUpon>OrderCancelConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="OrderCancelConfirmation.vb">
+    <Compile Include="CustomerScreens\OrderCancelConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PaymentScreen.Designer.vb">
+    <Compile Include="CustomerScreens\PaymentScreen.Designer.vb">
       <DependentUpon>PaymentScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="PaymentScreen.vb">
+    <Compile Include="CustomerScreens\PaymentScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PINScreen.Designer.vb">
@@ -154,10 +154,10 @@
     <Compile Include="PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThankYouScreen.Designer.vb">
+    <Compile Include="CustomerScreens\ThankYouScreen.Designer.vb">
       <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="ThankYouScreen.vb">
+    <Compile Include="CustomerScreens\ThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -168,13 +168,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CustomerOrderDashboard.resx">
+    <EmbeddedResource Include="CustomerScreens\CustomerOrderDashboard.resx">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerSplashScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\CustomerSplashScreen.resx">
       <DependentUpon>CustomerSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FinalOrderSummary.resx">
+    <EmbeddedResource Include="CustomerScreens\FinalOrderSummary.resx">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
@@ -183,7 +183,7 @@
     <EmbeddedResource Include="LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuItemDeletionConfirmation.resx">
+    <EmbeddedResource Include="CustomerScreens\MenuItemDeletionConfirmation.resx">
       <DependentUpon>MenuItemDeletionConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -192,16 +192,16 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderCancelConfirmation.resx">
+    <EmbeddedResource Include="CustomerScreens\OrderCancelConfirmation.resx">
       <DependentUpon>OrderCancelConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PaymentScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\PaymentScreen.resx">
       <DependentUpon>PaymentScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PINScreen.resx">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThankYouScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\ThankYouScreen.resx">
       <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">

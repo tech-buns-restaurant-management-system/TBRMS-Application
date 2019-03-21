@@ -61,6 +61,7 @@ Partial Class ThankYouScreen
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'ThankYouScreen
         '
