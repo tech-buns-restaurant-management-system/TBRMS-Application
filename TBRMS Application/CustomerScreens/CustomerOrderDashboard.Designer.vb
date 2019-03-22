@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CustomerOrderDashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class CustomerOrderDashboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerOrderDashboard))
         Me.btnBurgers = New System.Windows.Forms.Button()
         Me.btnSides = New System.Windows.Forms.Button()
         Me.btnBeverages = New System.Windows.Forms.Button()
@@ -36,7 +37,12 @@ Partial Class CustomerOrderDashboard
         Me.btnOption4 = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnOrderCancel = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.FlowLayoutPanel1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnBurgers
@@ -112,6 +118,7 @@ Partial Class CustomerOrderDashboard
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AutoScroll = True
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption1)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption2)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption3)
@@ -178,12 +185,44 @@ Partial Class CustomerOrderDashboard
         'btnOrderCancel
         '
         Me.btnOrderCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOrderCancel.Location = New System.Drawing.Point(32, 22)
+        Me.btnOrderCancel.Location = New System.Drawing.Point(32, 32)
         Me.btnOrderCancel.Name = "btnOrderCancel"
         Me.btnOrderCancel.Size = New System.Drawing.Size(80, 80)
         Me.btnOrderCancel.TabIndex = 12
-        Me.btnOrderCancel.Text = "X"
         Me.btnOrderCancel.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtSearch)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(888, 29)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(353, 55)
+        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabStop = False
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtSearch.Location = New System.Drawing.Point(6, 18)
+        Me.txtSearch.MaxLength = 9
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.ReadOnly = True
+        Me.txtSearch.Size = New System.Drawing.Size(341, 31)
+        Me.txtSearch.TabIndex = 0
+        Me.txtSearch.TabStop = False
+        Me.txtSearch.Text = "Search..."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Enabled = False
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
         '
         'CustomerOrderDashboard
         '
@@ -191,6 +230,8 @@ Partial Class CustomerOrderDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnOrderCancel)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.FlowLayoutPanel1)
@@ -207,6 +248,9 @@ Partial Class CustomerOrderDashboard
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -226,4 +270,7 @@ Partial Class CustomerOrderDashboard
     Friend WithEvents btnOption4 As Button
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnOrderCancel As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

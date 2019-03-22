@@ -87,7 +87,7 @@ Partial Class WelcomeScreen
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1184, 624)
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -96,7 +96,7 @@ Partial Class WelcomeScreen
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(1180, 620)
+        Me.btnLogOut.Location = New System.Drawing.Point(32, 32)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(80, 80)
         Me.btnLogOut.TabIndex = 6

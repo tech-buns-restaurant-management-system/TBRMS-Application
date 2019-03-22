@@ -90,6 +90,12 @@
     <Compile Include="CustomerScreens\FinalOrderSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerScreens\MenuSearchScreen.Designer.vb">
+      <DependentUpon>MenuSearchScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerScreens\MenuSearchScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FoHSDashboard.Designer.vb">
       <DependentUpon>FoHSDashboard.vb</DependentUpon>
     </Compile>
@@ -148,10 +154,10 @@
     <Compile Include="CustomerScreens\PaymentScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PINScreen.Designer.vb">
+    <Compile Include="CustomerScreens\PINScreen.Designer.vb">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="PINScreen.vb">
+    <Compile Include="CustomerScreens\PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerScreens\ThankYouScreen.Designer.vb">
@@ -177,6 +183,12 @@
     <EmbeddedResource Include="CustomerScreens\FinalOrderSummary.resx">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\MenuSearchScreen.resx">
+      <DependentUpon>MenuSearchScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoHSDashboard.resx">
+      <DependentUpon>FoHSDashboard.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -198,7 +210,7 @@
     <EmbeddedResource Include="CustomerScreens\PaymentScreen.resx">
       <DependentUpon>PaymentScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PINScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\PINScreen.resx">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\ThankYouScreen.resx">

@@ -1,5 +1,6 @@
 ﻿Public Class CustomerOrderDashboard
     Public strOrderLine() As String
+
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
 
         For i As Integer = 0 To (lstOrderSummary.Items.Count - 1)
@@ -7,8 +8,8 @@
             strOrderLine(i) = lstOrderSummary.Items(i)
         Next
 
-        Me.Hide()
         FinalOrderSummary.Show()
+        Me.Hide()
 
     End Sub
 
@@ -91,5 +92,13 @@
         btnOption3.Hide()
         btnOption4.Hide()
     End Function
+
+    Private Sub txtSearch_Click(sender As Object, e As EventArgs) Handles txtSearch.Click
+        MenuSearchScreen.pnlSlider.Location = New Point(-2, 720)
+        MenuSearchScreen.txtSearch.Text = ""
+        MenuSearchScreen.Show()
+        MenuSearchScreen.tmrSlider.Enabled = True
+        MenuSearchScreen.tmrSlider.Start()
+    End Sub
 End Class
 
