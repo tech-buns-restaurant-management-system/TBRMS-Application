@@ -50,6 +50,7 @@
                     CustomerOrderDashboard.Label1.Focus()
                     ResetButtons()
                     Me.Hide()
+                    blnBack = False
                 End If
             End If
         End If

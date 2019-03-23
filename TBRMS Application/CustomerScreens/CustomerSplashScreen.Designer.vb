@@ -34,7 +34,7 @@ Partial Class CustomerSplashScreen
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1184, 624)
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -43,7 +43,7 @@ Partial Class CustomerSplashScreen
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(1180, 620)
+        Me.btnLogOut.Location = New System.Drawing.Point(32, 32)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(80, 80)
         Me.btnLogOut.TabIndex = 8
@@ -63,7 +63,7 @@ Partial Class CustomerSplashScreen
         'btnStartOrder
         '
         Me.btnStartOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStartOrder.Location = New System.Drawing.Point(474, 361)
+        Me.btnStartOrder.Location = New System.Drawing.Point(474, 348)
         Me.btnStartOrder.Name = "btnStartOrder"
         Me.btnStartOrder.Size = New System.Drawing.Size(330, 126)
         Me.btnStartOrder.TabIndex = 10

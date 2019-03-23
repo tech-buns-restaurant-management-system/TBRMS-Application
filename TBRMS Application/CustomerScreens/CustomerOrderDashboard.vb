@@ -2,14 +2,17 @@
     Public strOrderLine() As String
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+        If (lstOrderSummary.Items.Count > 0) Then
+            For i As Integer = 0 To (lstOrderSummary.Items.Count - 1)
+                ReDim Preserve strOrderLine(i)
+                strOrderLine(i) = lstOrderSummary.Items(i)
+            Next
 
-        For i As Integer = 0 To (lstOrderSummary.Items.Count - 1)
-            ReDim Preserve strOrderLine(i)
-            strOrderLine(i) = lstOrderSummary.Items(i)
-        Next
-
-        FinalOrderSummary.Show()
-        Me.Hide()
+            FinalOrderSummary.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Error: No items on order")
+        End If
 
     End Sub
 

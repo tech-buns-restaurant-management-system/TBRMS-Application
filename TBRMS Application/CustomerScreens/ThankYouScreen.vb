@@ -10,8 +10,8 @@
         intSecond += 1
         If intSecond >= 5 Then
             Timer1.Stop()
-            Me.Hide()
             CustomerSplashScreen.Show()
+            Me.Hide()
         End If
     End Sub
 End Class
