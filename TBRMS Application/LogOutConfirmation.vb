@@ -1,7 +1,7 @@
 ﻿Public Class LogOutConfirmation
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         WelcomeScreen.Hide()
-        LoginScreen.Show()
+        LoginSplash.Show()
         Me.Hide()
     End Sub
 

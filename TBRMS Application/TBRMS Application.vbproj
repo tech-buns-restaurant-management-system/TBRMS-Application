@@ -102,11 +102,10 @@
     <Compile Include="FoHSDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginScreen.vb">
-      <SubType>Form</SubType>
+    <Compile Include="LoginSplash.Designer.vb">
+      <DependentUpon>LoginSplash.vb</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.Designer.vb">
-      <DependentUpon>LoginScreen.vb</DependentUpon>
+    <Compile Include="LoginSplash.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogOutConfirmation.Designer.vb">
@@ -189,8 +188,8 @@
     <EmbeddedResource Include="FoHSDashboard.resx">
       <DependentUpon>FoHSDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginScreen.resx">
-      <DependentUpon>LoginScreen.vb</DependentUpon>
+    <EmbeddedResource Include="LoginSplash.resx">
+      <DependentUpon>LoginSplash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>

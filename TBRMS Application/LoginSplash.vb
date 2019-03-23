@@ -1,4 +1,12 @@
-﻿Public Class LoginScreen
+﻿Public Class LoginSplash
+    Private Sub LoginSplash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        tmrSlider.Enabled = True
+        tmrSlider.Start()
+    End Sub
+
+    Private Sub tmrSlider_Tick(sender As Object, e As EventArgs) Handles tmrSlider.Tick
+        MenuSearchScreen.Slider()
+    End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If (txtUser.Text = "Admin" And txtPass.Text = "Test1234") Then
