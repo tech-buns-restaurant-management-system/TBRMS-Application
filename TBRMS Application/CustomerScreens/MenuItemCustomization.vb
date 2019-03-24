@@ -9,4 +9,11 @@
         CustomerOrderDashboard.lstOrderSummary.Items.Add(lblItem.Text)
         Me.Hide()
     End Sub
+
+    Function ResetIngredients()
+        pnlIng1.Visible = False
+        pnlIng2.Visible = False
+        pnlIng3.Visible = False
+        pnlIng4.Visible = False
+    End Function
 End Class

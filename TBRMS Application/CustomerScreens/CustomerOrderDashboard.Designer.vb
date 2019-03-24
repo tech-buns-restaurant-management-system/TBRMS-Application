@@ -123,9 +123,9 @@ Partial Class CustomerOrderDashboard
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption2)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption3)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnOption4)
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(492, 122)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(489, 122)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(295, 567)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(300, 567)
         Me.FlowLayoutPanel1.TabIndex = 10
         '
         'btnOption1
