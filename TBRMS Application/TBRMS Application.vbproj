@@ -168,6 +168,12 @@
     <Compile Include="CustomerScreens\MenuItemDeletionConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManagementScreens\ManagemantDashboard.Designer.vb">
+      <DependentUpon>ManagemantDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\ManagemantDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\MenuItemDeletionConfirmation.resx">
       <DependentUpon>MenuItemDeletionConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\ManagemantDashboard.resx">
+      <DependentUpon>ManagemantDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

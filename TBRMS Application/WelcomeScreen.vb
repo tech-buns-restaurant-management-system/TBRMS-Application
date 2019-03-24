@@ -11,4 +11,9 @@
         FoHSDashboard.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnManagement_Click(sender As Object, e As EventArgs) Handles btnManagement.Click
+        ManagemantDashboard.Show()
+        Me.Hide()
+    End Sub
 End Class
