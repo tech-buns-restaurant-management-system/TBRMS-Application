@@ -32,7 +32,10 @@ Partial Class ManagemantDashboard
         Me.btnOpt2 = New System.Windows.Forms.Button()
         Me.btnOpt3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lsbPortalDisplay = New System.Windows.Forms.ListBox()
+        Me.lsbInventoryOrder = New System.Windows.Forms.ListBox()
+        Me.lsbInventoryItems = New System.Windows.Forms.ListBox()
+        Me.btnAddtoOrder = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -132,13 +135,42 @@ Partial Class ManagemantDashboard
         Me.PictureBox1.TabIndex = 23
         Me.PictureBox1.TabStop = False
         '
-        'ListBox1
+        'lsbPortalDisplay
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(430, 149)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(470, 498)
-        Me.ListBox1.TabIndex = 24
+        Me.lsbPortalDisplay.FormattingEnabled = True
+        Me.lsbPortalDisplay.Location = New System.Drawing.Point(433, 149)
+        Me.lsbPortalDisplay.Name = "lsbPortalDisplay"
+        Me.lsbPortalDisplay.Size = New System.Drawing.Size(470, 498)
+        Me.lsbPortalDisplay.TabIndex = 24
+        Me.lsbPortalDisplay.Visible = False
+        '
+        'lsbInventoryOrder
+        '
+        Me.lsbInventoryOrder.FormattingEnabled = True
+        Me.lsbInventoryOrder.Location = New System.Drawing.Point(433, 149)
+        Me.lsbInventoryOrder.Name = "lsbInventoryOrder"
+        Me.lsbInventoryOrder.Size = New System.Drawing.Size(202, 498)
+        Me.lsbInventoryOrder.TabIndex = 25
+        Me.lsbInventoryOrder.Visible = False
+        '
+        'lsbInventoryItems
+        '
+        Me.lsbInventoryItems.FormattingEnabled = True
+        Me.lsbInventoryItems.Location = New System.Drawing.Point(701, 149)
+        Me.lsbInventoryItems.Name = "lsbInventoryItems"
+        Me.lsbInventoryItems.Size = New System.Drawing.Size(202, 498)
+        Me.lsbInventoryItems.TabIndex = 26
+        Me.lsbInventoryItems.Visible = False
+        '
+        'btnAddtoOrder
+        '
+        Me.btnAddtoOrder.Location = New System.Drawing.Point(641, 379)
+        Me.btnAddtoOrder.Name = "btnAddtoOrder"
+        Me.btnAddtoOrder.Size = New System.Drawing.Size(54, 40)
+        Me.btnAddtoOrder.TabIndex = 28
+        Me.btnAddtoOrder.Text = "Add to Order"
+        Me.btnAddtoOrder.UseVisualStyleBackColor = True
+        Me.btnAddtoOrder.Visible = False
         '
         'ManagemantDashboard
         '
@@ -146,7 +178,10 @@ Partial Class ManagemantDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 704)
         Me.ControlBox = False
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.btnAddtoOrder)
+        Me.Controls.Add(Me.lsbInventoryItems)
+        Me.Controls.Add(Me.lsbInventoryOrder)
+        Me.Controls.Add(Me.lsbPortalDisplay)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnInventoryItemsPortal)
@@ -174,5 +209,8 @@ Partial Class ManagemantDashboard
     Friend WithEvents btnOpt2 As Button
     Friend WithEvents btnOpt3 As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lsbPortalDisplay As ListBox
+    Friend WithEvents lsbInventoryOrder As ListBox
+    Friend WithEvents lsbInventoryItems As ListBox
+    Friend WithEvents btnAddtoOrder As Button
 End Class
