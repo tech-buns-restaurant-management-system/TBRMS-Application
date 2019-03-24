@@ -4,8 +4,7 @@
     End Sub
 
     Private Sub btnCustomerOrder_Click(sender As Object, e As EventArgs) Handles btnCustomerOrder.Click
-        CustomerSplashScreen.Show()
-        Me.Hide()
+        CustomerModeConfirmation.Show()
     End Sub
 
     Private Sub btnFOH_Click(sender As Object, e As EventArgs) Handles btnFOH.Click

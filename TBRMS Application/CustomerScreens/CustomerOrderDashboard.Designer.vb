@@ -35,7 +35,7 @@ Partial Class CustomerOrderDashboard
         Me.btnOption2 = New System.Windows.Forms.Button()
         Me.btnOption3 = New System.Windows.Forms.Button()
         Me.btnOption4 = New System.Windows.Forms.Button()
-        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnOrderCancel = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtSearch = New System.Windows.Forms.TextBox()
@@ -102,7 +102,7 @@ Partial Class CustomerOrderDashboard
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(277, 34)
         Me.btnEdit.TabIndex = 8
-        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.Text = "Edit Item"
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'btnCheckout
@@ -172,15 +172,15 @@ Partial Class CustomerOrderDashboard
         Me.btnOption4.UseVisualStyleBackColor = True
         Me.btnOption4.Visible = False
         '
-        'btnRemove
+        'btnDelete
         '
-        Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnRemove.Location = New System.Drawing.Point(964, 615)
-        Me.btnRemove.Name = "btnRemove"
-        Me.btnRemove.Size = New System.Drawing.Size(277, 34)
-        Me.btnRemove.TabIndex = 11
-        Me.btnRemove.Text = "Remove"
-        Me.btnRemove.UseVisualStyleBackColor = True
+        Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
+        Me.btnDelete.Location = New System.Drawing.Point(964, 615)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(277, 34)
+        Me.btnDelete.TabIndex = 11
+        Me.btnDelete.Text = "Delete Item"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
         'btnOrderCancel
         '
@@ -233,7 +233,7 @@ Partial Class CustomerOrderDashboard
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnOrderCancel)
-        Me.Controls.Add(Me.btnRemove)
+        Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.btnCheckout)
         Me.Controls.Add(Me.btnEdit)
@@ -268,7 +268,7 @@ Partial Class CustomerOrderDashboard
     Friend WithEvents btnOption2 As Button
     Friend WithEvents btnOption3 As Button
     Friend WithEvents btnOption4 As Button
-    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnDelete As Button
     Friend WithEvents btnOrderCancel As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtSearch As TextBox

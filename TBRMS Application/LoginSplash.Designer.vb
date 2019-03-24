@@ -25,11 +25,19 @@ Partial Class LoginSplash
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginSplash))
         Me.pnlSlider = New System.Windows.Forms.Panel()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnSpace = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.btnHide = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnShift = New System.Windows.Forms.Button()
+        Me.btn9 = New System.Windows.Forms.Button()
+        Me.btn0 = New System.Windows.Forms.Button()
+        Me.btn7 = New System.Windows.Forms.Button()
+        Me.btn8 = New System.Windows.Forms.Button()
+        Me.btn3 = New System.Windows.Forms.Button()
+        Me.btn5 = New System.Windows.Forms.Button()
+        Me.btn6 = New System.Windows.Forms.Button()
+        Me.btn4 = New System.Windows.Forms.Button()
+        Me.btn2 = New System.Windows.Forms.Button()
+        Me.btn1 = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnO = New System.Windows.Forms.Button()
         Me.btnP = New System.Windows.Forms.Button()
         Me.btnU = New System.Windows.Forms.Button()
@@ -74,11 +82,19 @@ Partial Class LoginSplash
         '
         Me.pnlSlider.BackColor = System.Drawing.Color.Transparent
         Me.pnlSlider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pnlSlider.Controls.Add(Me.btnDelete)
-        Me.pnlSlider.Controls.Add(Me.btnSpace)
         Me.pnlSlider.Controls.Add(Me.PictureBox2)
-        Me.pnlSlider.Controls.Add(Me.btnHide)
-        Me.pnlSlider.Controls.Add(Me.btnSearch)
+        Me.pnlSlider.Controls.Add(Me.btnShift)
+        Me.pnlSlider.Controls.Add(Me.btn9)
+        Me.pnlSlider.Controls.Add(Me.btn0)
+        Me.pnlSlider.Controls.Add(Me.btn7)
+        Me.pnlSlider.Controls.Add(Me.btn8)
+        Me.pnlSlider.Controls.Add(Me.btn3)
+        Me.pnlSlider.Controls.Add(Me.btn5)
+        Me.pnlSlider.Controls.Add(Me.btn6)
+        Me.pnlSlider.Controls.Add(Me.btn4)
+        Me.pnlSlider.Controls.Add(Me.btn2)
+        Me.pnlSlider.Controls.Add(Me.btn1)
+        Me.pnlSlider.Controls.Add(Me.btnDelete)
         Me.pnlSlider.Controls.Add(Me.btnO)
         Me.pnlSlider.Controls.Add(Me.btnP)
         Me.pnlSlider.Controls.Add(Me.btnU)
@@ -110,313 +126,394 @@ Partial Class LoginSplash
         Me.pnlSlider.Size = New System.Drawing.Size(1282, 300)
         Me.pnlSlider.TabIndex = 17
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Enabled = False
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(291, 227)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(57, 57)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 42
+        Me.PictureBox2.TabStop = False
+        '
+        'btnShift
+        '
+        Me.btnShift.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnShift.Location = New System.Drawing.Point(287, 223)
+        Me.btnShift.Name = "btnShift"
+        Me.btnShift.Size = New System.Drawing.Size(65, 65)
+        Me.btnShift.TabIndex = 41
+        Me.btnShift.UseVisualStyleBackColor = True
+        '
+        'btn9
+        '
+        Me.btn9.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn9.Location = New System.Drawing.Point(855, 8)
+        Me.btn9.Name = "btn9"
+        Me.btn9.Size = New System.Drawing.Size(65, 65)
+        Me.btn9.TabIndex = 40
+        Me.btn9.Text = "9"
+        Me.btn9.UseVisualStyleBackColor = True
+        '
+        'btn0
+        '
+        Me.btn0.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn0.Location = New System.Drawing.Point(926, 8)
+        Me.btn0.Name = "btn0"
+        Me.btn0.Size = New System.Drawing.Size(65, 65)
+        Me.btn0.TabIndex = 39
+        Me.btn0.Text = "0"
+        Me.btn0.UseVisualStyleBackColor = True
+        '
+        'btn7
+        '
+        Me.btn7.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn7.Location = New System.Drawing.Point(713, 8)
+        Me.btn7.Name = "btn7"
+        Me.btn7.Size = New System.Drawing.Size(65, 65)
+        Me.btn7.TabIndex = 38
+        Me.btn7.Text = "7"
+        Me.btn7.UseVisualStyleBackColor = True
+        '
+        'btn8
+        '
+        Me.btn8.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn8.Location = New System.Drawing.Point(784, 8)
+        Me.btn8.Name = "btn8"
+        Me.btn8.Size = New System.Drawing.Size(65, 65)
+        Me.btn8.TabIndex = 37
+        Me.btn8.Text = "8"
+        Me.btn8.UseVisualStyleBackColor = True
+        '
+        'btn3
+        '
+        Me.btn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn3.Location = New System.Drawing.Point(429, 8)
+        Me.btn3.Name = "btn3"
+        Me.btn3.Size = New System.Drawing.Size(65, 65)
+        Me.btn3.TabIndex = 36
+        Me.btn3.Text = "3"
+        Me.btn3.UseVisualStyleBackColor = True
+        '
+        'btn5
+        '
+        Me.btn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn5.Location = New System.Drawing.Point(571, 8)
+        Me.btn5.Name = "btn5"
+        Me.btn5.Size = New System.Drawing.Size(65, 65)
+        Me.btn5.TabIndex = 35
+        Me.btn5.Text = "5"
+        Me.btn5.UseVisualStyleBackColor = True
+        '
+        'btn6
+        '
+        Me.btn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn6.Location = New System.Drawing.Point(642, 8)
+        Me.btn6.Name = "btn6"
+        Me.btn6.Size = New System.Drawing.Size(65, 65)
+        Me.btn6.TabIndex = 34
+        Me.btn6.Text = "6"
+        Me.btn6.UseVisualStyleBackColor = True
+        '
+        'btn4
+        '
+        Me.btn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn4.Location = New System.Drawing.Point(500, 8)
+        Me.btn4.Name = "btn4"
+        Me.btn4.Size = New System.Drawing.Size(65, 65)
+        Me.btn4.TabIndex = 33
+        Me.btn4.Text = "4"
+        Me.btn4.UseVisualStyleBackColor = True
+        '
+        'btn2
+        '
+        Me.btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn2.Location = New System.Drawing.Point(358, 8)
+        Me.btn2.Name = "btn2"
+        Me.btn2.Size = New System.Drawing.Size(65, 65)
+        Me.btn2.TabIndex = 32
+        Me.btn2.Text = "2"
+        Me.btn2.UseVisualStyleBackColor = True
+        '
+        'btn1
+        '
+        Me.btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn1.Location = New System.Drawing.Point(287, 8)
+        Me.btn1.Name = "btn1"
+        Me.btn1.Size = New System.Drawing.Size(65, 65)
+        Me.btn1.TabIndex = 31
+        Me.btn1.Text = "1"
+        Me.btn1.UseVisualStyleBackColor = True
+        '
         'btnDelete
         '
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDelete.Location = New System.Drawing.Point(818, 149)
+        Me.btnDelete.Location = New System.Drawing.Point(855, 224)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(134, 65)
         Me.btnDelete.TabIndex = 30
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnSpace
-        '
-        Me.btnSpace.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpace.Location = New System.Drawing.Point(412, 219)
-        Me.btnSpace.Name = "btnSpace"
-        Me.btnSpace.Size = New System.Drawing.Size(345, 65)
-        Me.btnSpace.TabIndex = 29
-        Me.btnSpace.UseVisualStyleBackColor = True
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Enabled = False
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(345, 223)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(57, 57)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 28
-        Me.PictureBox2.TabStop = False
-        '
-        'btnHide
-        '
-        Me.btnHide.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHide.Location = New System.Drawing.Point(341, 219)
-        Me.btnHide.Name = "btnHide"
-        Me.btnHide.Size = New System.Drawing.Size(65, 65)
-        Me.btnHide.TabIndex = 27
-        Me.btnHide.UseVisualStyleBackColor = True
-        '
-        'btnSearch
-        '
-        Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(763, 219)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(145, 65)
-        Me.btnSearch.TabIndex = 26
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
         'btnO
         '
         Me.btnO.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnO.Location = New System.Drawing.Point(854, 6)
+        Me.btnO.Location = New System.Drawing.Point(855, 78)
         Me.btnO.Name = "btnO"
         Me.btnO.Size = New System.Drawing.Size(65, 65)
         Me.btnO.TabIndex = 25
-        Me.btnO.Text = "O"
+        Me.btnO.Text = "o"
         Me.btnO.UseVisualStyleBackColor = True
         '
         'btnP
         '
         Me.btnP.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnP.Location = New System.Drawing.Point(925, 6)
+        Me.btnP.Location = New System.Drawing.Point(926, 78)
         Me.btnP.Name = "btnP"
         Me.btnP.Size = New System.Drawing.Size(65, 65)
         Me.btnP.TabIndex = 24
-        Me.btnP.Text = "P"
+        Me.btnP.Text = "p"
         Me.btnP.UseVisualStyleBackColor = True
         '
         'btnU
         '
         Me.btnU.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnU.Location = New System.Drawing.Point(712, 6)
+        Me.btnU.Location = New System.Drawing.Point(713, 78)
         Me.btnU.Name = "btnU"
         Me.btnU.Size = New System.Drawing.Size(65, 65)
         Me.btnU.TabIndex = 23
-        Me.btnU.Text = "U"
+        Me.btnU.Text = "u"
         Me.btnU.UseVisualStyleBackColor = True
         '
         'btnI
         '
         Me.btnI.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnI.Location = New System.Drawing.Point(783, 6)
+        Me.btnI.Location = New System.Drawing.Point(784, 78)
         Me.btnI.Name = "btnI"
         Me.btnI.Size = New System.Drawing.Size(65, 65)
         Me.btnI.TabIndex = 22
-        Me.btnI.Text = "I"
+        Me.btnI.Text = "i"
         Me.btnI.UseVisualStyleBackColor = True
         '
         'btnE
         '
         Me.btnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnE.Location = New System.Drawing.Point(428, 6)
+        Me.btnE.Location = New System.Drawing.Point(429, 78)
         Me.btnE.Name = "btnE"
         Me.btnE.Size = New System.Drawing.Size(65, 65)
         Me.btnE.TabIndex = 21
-        Me.btnE.Text = "E"
+        Me.btnE.Text = "e"
         Me.btnE.UseVisualStyleBackColor = True
         '
         'btnT
         '
         Me.btnT.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnT.Location = New System.Drawing.Point(570, 6)
+        Me.btnT.Location = New System.Drawing.Point(571, 78)
         Me.btnT.Name = "btnT"
         Me.btnT.Size = New System.Drawing.Size(65, 65)
         Me.btnT.TabIndex = 20
-        Me.btnT.Text = "T"
+        Me.btnT.Text = "t"
         Me.btnT.UseVisualStyleBackColor = True
         '
         'btnY
         '
         Me.btnY.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnY.Location = New System.Drawing.Point(641, 6)
+        Me.btnY.Location = New System.Drawing.Point(642, 78)
         Me.btnY.Name = "btnY"
         Me.btnY.Size = New System.Drawing.Size(65, 65)
         Me.btnY.TabIndex = 19
-        Me.btnY.Text = "Y"
+        Me.btnY.Text = "y"
         Me.btnY.UseVisualStyleBackColor = True
         '
         'btnR
         '
         Me.btnR.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnR.Location = New System.Drawing.Point(499, 6)
+        Me.btnR.Location = New System.Drawing.Point(500, 78)
         Me.btnR.Name = "btnR"
         Me.btnR.Size = New System.Drawing.Size(65, 65)
         Me.btnR.TabIndex = 18
-        Me.btnR.Text = "R"
+        Me.btnR.Text = "r"
         Me.btnR.UseVisualStyleBackColor = True
         '
         'btnK
         '
         Me.btnK.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnK.Location = New System.Drawing.Point(800, 77)
+        Me.btnK.Location = New System.Drawing.Point(820, 149)
         Me.btnK.Name = "btnK"
         Me.btnK.Size = New System.Drawing.Size(65, 65)
         Me.btnK.TabIndex = 17
-        Me.btnK.Text = "K"
+        Me.btnK.Text = "k"
         Me.btnK.UseVisualStyleBackColor = True
         '
         'btnL
         '
         Me.btnL.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnL.Location = New System.Drawing.Point(871, 77)
+        Me.btnL.Location = New System.Drawing.Point(891, 149)
         Me.btnL.Name = "btnL"
         Me.btnL.Size = New System.Drawing.Size(65, 65)
         Me.btnL.TabIndex = 16
-        Me.btnL.Text = "L"
+        Me.btnL.Text = "l"
         Me.btnL.UseVisualStyleBackColor = True
         '
         'btnD
         '
         Me.btnD.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnD.Location = New System.Drawing.Point(445, 77)
+        Me.btnD.Location = New System.Drawing.Point(465, 149)
         Me.btnD.Name = "btnD"
         Me.btnD.Size = New System.Drawing.Size(65, 65)
         Me.btnD.TabIndex = 15
-        Me.btnD.Text = "D"
+        Me.btnD.Text = "d"
         Me.btnD.UseVisualStyleBackColor = True
         '
         'btnF
         '
         Me.btnF.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnF.Location = New System.Drawing.Point(516, 77)
+        Me.btnF.Location = New System.Drawing.Point(536, 149)
         Me.btnF.Name = "btnF"
         Me.btnF.Size = New System.Drawing.Size(65, 65)
         Me.btnF.TabIndex = 14
-        Me.btnF.Text = "F"
+        Me.btnF.Text = "f"
         Me.btnF.UseVisualStyleBackColor = True
         '
         'btnG
         '
         Me.btnG.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnG.Location = New System.Drawing.Point(587, 77)
+        Me.btnG.Location = New System.Drawing.Point(607, 149)
         Me.btnG.Name = "btnG"
         Me.btnG.Size = New System.Drawing.Size(65, 65)
         Me.btnG.TabIndex = 13
-        Me.btnG.Text = "G"
+        Me.btnG.Text = "g"
         Me.btnG.UseVisualStyleBackColor = True
         '
         'btnH
         '
         Me.btnH.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnH.Location = New System.Drawing.Point(658, 77)
+        Me.btnH.Location = New System.Drawing.Point(678, 149)
         Me.btnH.Name = "btnH"
         Me.btnH.Size = New System.Drawing.Size(65, 65)
         Me.btnH.TabIndex = 12
-        Me.btnH.Text = "H"
+        Me.btnH.Text = "h"
         Me.btnH.UseVisualStyleBackColor = True
         '
         'btnJ
         '
         Me.btnJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnJ.Location = New System.Drawing.Point(729, 77)
+        Me.btnJ.Location = New System.Drawing.Point(749, 149)
         Me.btnJ.Name = "btnJ"
         Me.btnJ.Size = New System.Drawing.Size(65, 65)
         Me.btnJ.TabIndex = 11
-        Me.btnJ.Text = "J"
+        Me.btnJ.Text = "j"
         Me.btnJ.UseVisualStyleBackColor = True
         '
         'btnC
         '
         Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnC.Location = New System.Drawing.Point(463, 148)
+        Me.btnC.Location = New System.Drawing.Point(501, 223)
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(65, 65)
         Me.btnC.TabIndex = 10
-        Me.btnC.Text = "C"
+        Me.btnC.Text = "c"
         Me.btnC.UseVisualStyleBackColor = True
         '
         'btnV
         '
         Me.btnV.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnV.Location = New System.Drawing.Point(534, 148)
+        Me.btnV.Location = New System.Drawing.Point(572, 223)
         Me.btnV.Name = "btnV"
         Me.btnV.Size = New System.Drawing.Size(65, 65)
         Me.btnV.TabIndex = 9
-        Me.btnV.Text = "V"
+        Me.btnV.Text = "v"
         Me.btnV.UseVisualStyleBackColor = True
         '
         'btnB
         '
         Me.btnB.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnB.Location = New System.Drawing.Point(605, 148)
+        Me.btnB.Location = New System.Drawing.Point(643, 223)
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(65, 65)
         Me.btnB.TabIndex = 8
-        Me.btnB.Text = "B"
+        Me.btnB.Text = "b"
         Me.btnB.UseVisualStyleBackColor = True
         '
         'btnN
         '
         Me.btnN.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnN.Location = New System.Drawing.Point(676, 148)
+        Me.btnN.Location = New System.Drawing.Point(714, 223)
         Me.btnN.Name = "btnN"
         Me.btnN.Size = New System.Drawing.Size(65, 65)
         Me.btnN.TabIndex = 7
-        Me.btnN.Text = "N"
+        Me.btnN.Text = "n"
         Me.btnN.UseVisualStyleBackColor = True
         '
         'btnM
         '
         Me.btnM.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnM.Location = New System.Drawing.Point(747, 148)
+        Me.btnM.Location = New System.Drawing.Point(785, 223)
         Me.btnM.Name = "btnM"
         Me.btnM.Size = New System.Drawing.Size(65, 65)
         Me.btnM.TabIndex = 6
-        Me.btnM.Text = "M"
+        Me.btnM.Text = "m"
         Me.btnM.UseVisualStyleBackColor = True
         '
         'btnW
         '
         Me.btnW.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnW.Location = New System.Drawing.Point(357, 6)
+        Me.btnW.Location = New System.Drawing.Point(358, 78)
         Me.btnW.Name = "btnW"
         Me.btnW.Size = New System.Drawing.Size(65, 65)
         Me.btnW.TabIndex = 5
-        Me.btnW.Text = "W"
+        Me.btnW.Text = "w"
         Me.btnW.UseVisualStyleBackColor = True
         '
         'btnS
         '
         Me.btnS.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnS.Location = New System.Drawing.Point(374, 77)
+        Me.btnS.Location = New System.Drawing.Point(394, 149)
         Me.btnS.Name = "btnS"
         Me.btnS.Size = New System.Drawing.Size(65, 65)
         Me.btnS.TabIndex = 4
-        Me.btnS.Text = "S"
+        Me.btnS.Text = "s"
         Me.btnS.UseVisualStyleBackColor = True
         '
         'btnX
         '
         Me.btnX.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnX.Location = New System.Drawing.Point(392, 148)
+        Me.btnX.Location = New System.Drawing.Point(430, 223)
         Me.btnX.Name = "btnX"
         Me.btnX.Size = New System.Drawing.Size(65, 65)
         Me.btnX.TabIndex = 3
-        Me.btnX.Text = "X"
+        Me.btnX.Text = "x"
         Me.btnX.UseVisualStyleBackColor = True
         '
         'btnZ
         '
         Me.btnZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnZ.Location = New System.Drawing.Point(321, 148)
+        Me.btnZ.Location = New System.Drawing.Point(358, 223)
         Me.btnZ.Name = "btnZ"
         Me.btnZ.Size = New System.Drawing.Size(65, 65)
         Me.btnZ.TabIndex = 2
-        Me.btnZ.Text = "Z"
+        Me.btnZ.Text = "z"
         Me.btnZ.UseVisualStyleBackColor = True
         '
         'btnA
         '
         Me.btnA.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnA.Location = New System.Drawing.Point(303, 77)
+        Me.btnA.Location = New System.Drawing.Point(323, 149)
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(65, 65)
         Me.btnA.TabIndex = 1
-        Me.btnA.Text = "A"
+        Me.btnA.Text = "a"
         Me.btnA.UseVisualStyleBackColor = True
         '
         'btnQ
         '
         Me.btnQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnQ.Location = New System.Drawing.Point(286, 6)
+        Me.btnQ.Location = New System.Drawing.Point(287, 78)
         Me.btnQ.Name = "btnQ"
         Me.btnQ.Size = New System.Drawing.Size(65, 65)
         Me.btnQ.TabIndex = 0
-        Me.btnQ.Text = "Q"
+        Me.btnQ.Text = "q"
         Me.btnQ.UseVisualStyleBackColor = True
         '
         'tmrSlider
@@ -427,7 +524,7 @@ Partial Class LoginSplash
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(524, 377)
+        Me.PictureBox1.Location = New System.Drawing.Point(524, 240)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -436,7 +533,7 @@ Partial Class LoginSplash
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(520, 373)
+        Me.btnLogOut.Location = New System.Drawing.Point(520, 236)
         Me.btnLogOut.Name = "btnLogOut"
         Me.btnLogOut.Size = New System.Drawing.Size(40, 40)
         Me.btnLogOut.TabIndex = 25
@@ -446,7 +543,7 @@ Partial Class LoginSplash
         'lblForgotPassword
         '
         Me.lblForgotPassword.AutoSize = True
-        Me.lblForgotPassword.Location = New System.Drawing.Point(687, 350)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(687, 213)
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 23
@@ -456,7 +553,7 @@ Partial Class LoginSplash
         'txtUser
         '
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(588, 290)
+        Me.txtUser.Location = New System.Drawing.Point(588, 153)
         Me.txtUser.MaxLength = 20
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(187, 26)
@@ -465,7 +562,7 @@ Partial Class LoginSplash
         'txtPass
         '
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.Location = New System.Drawing.Point(588, 321)
+        Me.txtPass.Location = New System.Drawing.Point(588, 184)
         Me.txtPass.MaxLength = 8
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -477,7 +574,7 @@ Partial Class LoginSplash
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(504, 324)
+        Me.Label2.Location = New System.Drawing.Point(504, 187)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 21
@@ -487,7 +584,7 @@ Partial Class LoginSplash
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(499, 293)
+        Me.Label1.Location = New System.Drawing.Point(499, 156)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 20
@@ -496,7 +593,7 @@ Partial Class LoginSplash
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(588, 371)
+        Me.btnLogin.Location = New System.Drawing.Point(588, 234)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(187, 42)
         Me.btnLogin.TabIndex = 22
@@ -531,10 +628,6 @@ Partial Class LoginSplash
 
     Friend WithEvents pnlSlider As Panel
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnSpace As Button
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents btnHide As Button
-    Friend WithEvents btnSearch As Button
     Friend WithEvents btnO As Button
     Friend WithEvents btnP As Button
     Friend WithEvents btnU As Button
@@ -570,4 +663,16 @@ Partial Class LoginSplash
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As Button
+    Friend WithEvents btn9 As Button
+    Friend WithEvents btn0 As Button
+    Friend WithEvents btn7 As Button
+    Friend WithEvents btn8 As Button
+    Friend WithEvents btn3 As Button
+    Friend WithEvents btn5 As Button
+    Friend WithEvents btn6 As Button
+    Friend WithEvents btn4 As Button
+    Friend WithEvents btn2 As Button
+    Friend WithEvents btn1 As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnShift As Button
 End Class

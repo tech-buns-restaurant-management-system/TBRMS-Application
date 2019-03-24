@@ -1,11 +1,11 @@
-﻿Public Class MenuItemCustomization
+﻿Public Class FoHMenuItemCustomization
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        CustomerOrderDashboard.Show()
+        FoHSDashboard.Show()
         Me.Hide()
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        CustomerOrderDashboard.Show()
+        FoHSDashboard.Show()
         Me.Hide()
     End Sub
 End Class

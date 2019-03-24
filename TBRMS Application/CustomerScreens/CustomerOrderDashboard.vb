@@ -76,17 +76,33 @@
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        MenuItemCustomization.Show()
+        If lstOrderSummary.SelectedIndex = -1 Then
+            MessageBox.Show("Error: No order item is selected")
+        Else
+            MenuItemCustomization.lblItem.Text = lstOrderSummary.Items(lstOrderSummary.SelectedIndex)
+            ItemCustomization(lstOrderSummary.Items(lstOrderSummary.SelectedIndex))
+            MenuItemCustomization.Show()
+        End If
     End Sub
 
-    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
-        If (lstOrderSummary.SelectedIndex > -1) Then
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        If (lstOrderSummary.SelectedIndex = -1) Then
+            MessageBox.Show("Error: No order item is selected")
+        Else
             MenuItemDeletionConfirmation.Show()
         End If
     End Sub
 
     Private Sub btnOrderCancel_Click(sender As Object, e As EventArgs) Handles btnOrderCancel.Click
         OrderCancelConfirmation.Show()
+    End Sub
+
+    Private Sub txtSearch_Click(sender As Object, e As EventArgs) Handles txtSearch.Click
+        MenuSearchScreen.pnlSlider.Location = New Point(-2, 720)
+        MenuSearchScreen.txtSearch.Text = ""
+        MenuSearchScreen.Show()
+        MenuSearchScreen.tmrSlider.Enabled = True
+        MenuSearchScreen.tmrSlider.Start()
     End Sub
 
     Function ResetButtons()
@@ -96,12 +112,29 @@
         btnOption4.Hide()
     End Function
 
-    Private Sub txtSearch_Click(sender As Object, e As EventArgs) Handles txtSearch.Click
-        MenuSearchScreen.pnlSlider.Location = New Point(-2, 720)
-        MenuSearchScreen.txtSearch.Text = ""
-        MenuSearchScreen.Show()
-        MenuSearchScreen.tmrSlider.Enabled = True
-        MenuSearchScreen.tmrSlider.Start()
-    End Sub
+    Function ItemCustomization(strItem As String)
+        'TODO: Customization Options
+        Select Case strItem
+            Case "Drunk Monk Burger"
+
+            Case "Banzai Burger"
+
+            Case "Bare Essentials Burger"
+
+            Case "Sea Salted Sweet Potato Fries"
+
+            Case "Sea Salted French Fries"
+
+            Case "Roasted Vegetables"
+
+            Case "Top Beverages Vanilla Cream Soda"
+
+            Case "Top Beverages Fresh Lemonade"
+
+            Case "Spring Water"
+
+        End Select
+    End Function
+
 End Class
 

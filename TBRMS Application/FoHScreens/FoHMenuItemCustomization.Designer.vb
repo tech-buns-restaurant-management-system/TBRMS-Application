@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FoHSDashboard
+Partial Class FoHMenuItemCustomization
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,57 +22,27 @@ Partial Class FoHSDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FoHSDashboard))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FoHMenuItemCustomization))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnRunOrder = New System.Windows.Forms.Button()
-        Me.btnOrderDetails = New System.Windows.Forms.Button()
-        Me.lstCurrentOrders = New System.Windows.Forms.ListBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnBack = New System.Windows.Forms.Button()
-        Me.btnCash = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.lblItem = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(356, 36)
+        Me.Label1.Location = New System.Drawing.Point(422, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(567, 110)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Top Buns Front-of-House" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Dashboard"
+        Me.Label1.Size = New System.Drawing.Size(434, 55)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Item Customization"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnRunOrder
-        '
-        Me.btnRunOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnRunOrder.Location = New System.Drawing.Point(73, 654)
-        Me.btnRunOrder.Name = "btnRunOrder"
-        Me.btnRunOrder.Size = New System.Drawing.Size(379, 34)
-        Me.btnRunOrder.TabIndex = 12
-        Me.btnRunOrder.Text = "Run Order"
-        Me.btnRunOrder.UseVisualStyleBackColor = True
-        '
-        'btnOrderDetails
-        '
-        Me.btnOrderDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnOrderDetails.Location = New System.Drawing.Point(73, 574)
-        Me.btnOrderDetails.Name = "btnOrderDetails"
-        Me.btnOrderDetails.Size = New System.Drawing.Size(379, 34)
-        Me.btnOrderDetails.TabIndex = 11
-        Me.btnOrderDetails.Text = "Order Details"
-        Me.btnOrderDetails.UseVisualStyleBackColor = True
-        '
-        'lstCurrentOrders
-        '
-        Me.lstCurrentOrders.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstCurrentOrders.FormattingEnabled = True
-        Me.lstCurrentOrders.ItemHeight = 20
-        Me.lstCurrentOrders.Location = New System.Drawing.Point(73, 164)
-        Me.lstCurrentOrders.Name = "lstCurrentOrders"
-        Me.lstCurrentOrders.Size = New System.Drawing.Size(379, 404)
-        Me.lstCurrentOrders.TabIndex = 10
         '
         'PictureBox1
         '
@@ -82,7 +52,7 @@ Partial Class FoHSDashboard
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabIndex = 36
         Me.PictureBox1.TabStop = False
         '
         'btnBack
@@ -91,47 +61,65 @@ Partial Class FoHSDashboard
         Me.btnBack.Location = New System.Drawing.Point(32, 32)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(80, 80)
-        Me.btnBack.TabIndex = 15
+        Me.btnBack.TabIndex = 35
         Me.btnBack.UseVisualStyleBackColor = True
         '
-        'btnCash
+        'PictureBox2
         '
-        Me.btnCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCash.Location = New System.Drawing.Point(73, 614)
-        Me.btnCash.Name = "btnCash"
-        Me.btnCash.Size = New System.Drawing.Size(379, 34)
-        Me.btnCash.TabIndex = 17
-        Me.btnCash.Text = "Cash Payment"
-        Me.btnCash.UseVisualStyleBackColor = True
+        Me.PictureBox2.Enabled = False
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(1172, 36)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(72, 72)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 38
+        Me.PictureBox2.TabStop = False
         '
-        'FoHSDashboard
+        'btnSave
+        '
+        Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSave.Location = New System.Drawing.Point(1168, 32)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(80, 80)
+        Me.btnSave.TabIndex = 37
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'lblItem
+        '
+        Me.lblItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItem.Location = New System.Drawing.Point(-1, 92)
+        Me.lblItem.Name = "lblItem"
+        Me.lblItem.Size = New System.Drawing.Size(1280, 55)
+        Me.lblItem.TabIndex = 39
+        Me.lblItem.Text = "Menu Item to Customize"
+        Me.lblItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'FoHMenuItemCustomization
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnCash)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.btnRunOrder)
-        Me.Controls.Add(Me.btnOrderDetails)
-        Me.Controls.Add(Me.lstCurrentOrders)
         Me.Controls.Add(Me.Label1)
-        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Controls.Add(Me.lblItem)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "FoHSDashboard"
+        Me.Name = "FoHMenuItemCustomization"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnRunOrder As Button
-    Friend WithEvents btnOrderDetails As Button
-    Friend WithEvents lstCurrentOrders As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnBack As Button
-    Friend WithEvents btnCash As Button
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents btnSave As Button
+    Friend WithEvents lblItem As Label
 End Class

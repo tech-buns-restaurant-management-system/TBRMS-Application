@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerModeConfirmation.Designer.vb">
+      <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerModeConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerScreens\CustomerOrderDashboard.Designer.vb">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </Compile>
@@ -96,10 +102,28 @@
     <Compile Include="CustomerScreens\MenuSearchScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FoHSDashboard.Designer.vb">
+    <Compile Include="FoHScreens\CashPaymentScreen.Designer.vb">
+      <DependentUpon>CashPaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoHScreens\CashPaymentScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoHScreens\FoHMenuItemCustomization.Designer.vb">
+      <DependentUpon>FoHMenuItemCustomization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoHScreens\FoHMenuItemCustomization.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoHScreens\FoHMenuItemDeletionConfirmation.Designer.vb">
+      <DependentUpon>FoHMenuItemDeletionConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoHScreens\FoHMenuItemDeletionConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoHScreens\FoHSDashboard.Designer.vb">
       <DependentUpon>FoHSDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="FoHSDashboard.vb">
+    <Compile Include="FoHScreens\FoHSDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginSplash.Designer.vb">
@@ -173,6 +197,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CustomerModeConfirmation.resx">
+      <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\CustomerOrderDashboard.resx">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -182,10 +209,22 @@
     <EmbeddedResource Include="CustomerScreens\FinalOrderSummary.resx">
       <DependentUpon>FinalOrderSummary.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\MenuItemCustomization.resx">
+      <DependentUpon>MenuItemCustomization.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\MenuSearchScreen.resx">
       <DependentUpon>MenuSearchScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoHSDashboard.resx">
+    <EmbeddedResource Include="FoHScreens\CashPaymentScreen.resx">
+      <DependentUpon>CashPaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoHScreens\FoHMenuItemCustomization.resx">
+      <DependentUpon>FoHMenuItemCustomization.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoHScreens\FoHMenuItemDeletionConfirmation.resx">
+      <DependentUpon>FoHMenuItemDeletionConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoHScreens\FoHSDashboard.resx">
       <DependentUpon>FoHSDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginSplash.resx">
