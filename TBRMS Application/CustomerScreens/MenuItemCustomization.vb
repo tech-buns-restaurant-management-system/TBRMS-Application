@@ -6,6 +6,7 @@
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         CustomerOrderDashboard.Show()
+        CustomerOrderDashboard.lstOrderSummary.Items.Add(lblItem.Text)
         Me.Hide()
     End Sub
 End Class

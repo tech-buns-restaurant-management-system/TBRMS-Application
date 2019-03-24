@@ -1,4 +1,4 @@
-﻿Public Class CashPaymentScreen
+﻿Public Class FoHCashPaymentScreen
     Public dblDue As Double
     Dim dblPaid, dblChange As Double
     Dim blnPaid As Boolean = False
@@ -72,6 +72,13 @@
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         FoHSDashboard.Show()
+        txtDue.Clear()
+        txtPaid.Clear()
+        txtChange.Clear()
+        dblDue = 0
+        dblPaid = 0
+        dblChange = 0
+        blnPaid = False
         Me.Hide()
     End Sub
 

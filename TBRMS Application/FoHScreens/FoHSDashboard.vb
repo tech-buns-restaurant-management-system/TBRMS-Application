@@ -1,5 +1,6 @@
 ﻿Public Class FoHSDashboard
-    Dim strOrder1(2), strOrder2(4), strOrder3(3), strOrder4(2) As String
+    Public strOrder1(2), strOrder2(4), strOrder3(3), strOrder4(2) As String
+    Public intSelectedOrder As String = 0
 
     Private Sub btnEditItem_Click(sender As Object, e As EventArgs) Handles btnEditItem.Click
         If lstOrderDetails.SelectedIndex = -1 Then
@@ -34,9 +35,9 @@
     End Sub
 
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnCash.Click
-        CashPaymentScreen.dblDue = 16.95
-        CashPaymentScreen.txtDue.Text = "$" + CStr(CashPaymentScreen.dblDue)
-        CashPaymentScreen.Show()
+        FoHCashPaymentScreen.dblDue = 16.95
+        FoHCashPaymentScreen.txtDue.Text = "$" + CStr(FoHCashPaymentScreen.dblDue)
+        FoHCashPaymentScreen.Show()
     End Sub
 
     Private Sub FoHSDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -72,6 +73,9 @@
             MessageBox.Show(lstCurrentOrders.Items(lstCurrentOrders.SelectedIndex).TrimEnd(strTrimEnd) + "Complete")
 
             lstCurrentOrders.Items.RemoveAt(lstCurrentOrders.SelectedIndex)
+            lstOrderDetails.Items.Clear()
+        Else
+            MessageBox.Show("Error: The order has not been paid for")
         End If
     End Sub
 
@@ -87,18 +91,22 @@
             lstOrderDetails.Items.Clear()
             Select Case lstCurrentOrders.SelectedIndex
                 Case 0
+                    intSelectedOrder = 1
                     For i As Integer = 0 To strOrder1.Length - 1
                         lstOrderDetails.Items.Add(strOrder1(i))
                     Next
                 Case 1
+                    intSelectedOrder = 2
                     For i As Integer = 0 To strOrder2.Length - 1
                         lstOrderDetails.Items.Add(strOrder2(i))
                     Next
                 Case 2
+                    intSelectedOrder = 3
                     For i As Integer = 0 To strOrder3.Length - 1
                         lstOrderDetails.Items.Add(strOrder3(i))
                     Next
                 Case 3
+                    intSelectedOrder = 4
                     For i As Integer = 0 To strOrder4.Length - 1
                         lstOrderDetails.Items.Add(strOrder4(i))
                     Next

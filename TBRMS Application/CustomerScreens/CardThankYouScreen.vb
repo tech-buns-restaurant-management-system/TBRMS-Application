@@ -1,4 +1,4 @@
-﻿Public Class ThankYouScreen
+﻿Public Class CardThankYouScreen
 
     Dim intSecond As Integer
     Private Sub ThankYouScreen_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

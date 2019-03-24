@@ -524,18 +524,18 @@ Partial Class LoginSplash
         '
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(524, 240)
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
         'btnLogOut
         '
-        Me.btnLogOut.Location = New System.Drawing.Point(520, 236)
+        Me.btnLogOut.Location = New System.Drawing.Point(32, 32)
         Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(40, 40)
+        Me.btnLogOut.Size = New System.Drawing.Size(80, 80)
         Me.btnLogOut.TabIndex = 25
         Me.btnLogOut.TabStop = False
         Me.btnLogOut.UseVisualStyleBackColor = True
@@ -543,7 +543,7 @@ Partial Class LoginSplash
         'lblForgotPassword
         '
         Me.lblForgotPassword.AutoSize = True
-        Me.lblForgotPassword.Location = New System.Drawing.Point(687, 213)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(686, 213)
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 23
@@ -593,9 +593,9 @@ Partial Class LoginSplash
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(588, 234)
+        Me.btnLogin.Location = New System.Drawing.Point(503, 234)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(187, 42)
+        Me.btnLogin.Size = New System.Drawing.Size(272, 42)
         Me.btnLogin.TabIndex = 22
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True

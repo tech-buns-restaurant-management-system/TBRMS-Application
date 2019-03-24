@@ -3,12 +3,16 @@
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         If (lstOrderSummary.Items.Count > 0) Then
+            FinalOrderSummary.lstOrderSummary.Items.Clear()
             For i As Integer = 0 To (lstOrderSummary.Items.Count - 1)
                 ReDim Preserve strOrderLine(i)
                 strOrderLine(i) = lstOrderSummary.Items(i)
+                FinalOrderSummary.lstOrderSummary.Items.Add(lstOrderSummary.Items(i))
             Next
 
+            ResetButtons()
             FinalOrderSummary.Show()
+            lstOrderSummary.Items.Clear()
             Me.Hide()
         Else
             MessageBox.Show("Error: No items on order")
@@ -17,19 +21,31 @@
     End Sub
 
     Private Sub btnOption1_Click(sender As Object, e As EventArgs) Handles btnOption1.Click
-        lstOrderSummary.Items.Add(btnOption1.Text)
+        MenuItemCustomization.lblItem.Text = btnOption1.Text
+        MenuItemCustomization.Show()
+        ResetButtons()
+        'lstOrderSummary.Items.Add(btnOption1.Text)
     End Sub
 
     Private Sub btnOption2_Click(sender As Object, e As EventArgs) Handles btnOption2.Click
-        lstOrderSummary.Items.Add(btnOption2.Text)
+        MenuItemCustomization.lblItem.Text = btnOption2.Text
+        MenuItemCustomization.Show()
+        ResetButtons()
+        'lstOrderSummary.Items.Add(btnOption2.Text)
     End Sub
 
     Private Sub btnOption3_Click(sender As Object, e As EventArgs) Handles btnOption3.Click
-        lstOrderSummary.Items.Add(btnOption3.Text)
+        MenuItemCustomization.lblItem.Text = btnOption3.Text
+        MenuItemCustomization.Show()
+        ResetButtons()
+        'lstOrderSummary.Items.Add(btnOption3.Text)
     End Sub
 
     Private Sub btnOption4_Click(sender As Object, e As EventArgs) Handles btnOption4.Click
-        lstOrderSummary.Items.Add(btnOption4.Text)
+        MenuItemCustomization.lblItem.Text = btnOption4.Text
+        MenuItemCustomization.Show()
+        ResetButtons()
+        'lstOrderSummary.Items.Add(btnOption4.Text)
     End Sub
 
     Private Sub btnBurgers_Click(sender As Object, e As EventArgs) Handles btnBurgers.Click
@@ -135,6 +151,5 @@
 
         End Select
     End Function
-
 End Class
 

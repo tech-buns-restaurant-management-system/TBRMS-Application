@@ -1,9 +1,11 @@
-﻿Public Class PINScreen
-
-    Dim strPIN As String = ""
-
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+﻿Public Class OrderTagScreen
+    Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
+        If CInt(txtOrderTag.Text) > 0 And txtOrderTag.Text.Length = 2 Then
+            PaymentScreen.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Error: Invalid Order Tag")
+        End If
     End Sub
 
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
@@ -46,25 +48,13 @@
         AddNumber("0")
     End Sub
 
-    Function AddNumber(Num As String)
-        If (strPIN.Length < 4) Then
-            strPIN += Num
-        End If
-
-        If (strPIN.Length = 4 And strPIN = "1234") Then
-            Me.Hide()
-            WelcomeScreen.Show()
-            CustomerSplashScreen.Hide()
-            strPIN = ""
-        ElseIf (strPIN.Length = 4 And strPIN <> "1234") Then
-            Me.Hide()
-            strPIN = ""
-        End If
-
-    End Function
-
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        strPIN = ""
-        Me.Hide()
+        txtOrderTag.Clear()
     End Sub
+
+    Function AddNumber(Num As String)
+        If txtOrderTag.Text.Length < 2 Then
+            txtOrderTag.Text += Num
+        End If
+    End Function
 End Class

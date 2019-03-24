@@ -6,6 +6,7 @@
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         Me.Hide()
         CustomerSplashScreen.Show()
+        CustomerOrderDashboard.ResetButtons()
         CustomerOrderDashboard.Hide()
     End Sub
 End Class

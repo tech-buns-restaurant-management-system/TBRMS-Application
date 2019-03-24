@@ -32,6 +32,7 @@ Partial Class PINScreen
         Me.btn6 = New System.Windows.Forms.Button()
         Me.btn5 = New System.Windows.Forms.Button()
         Me.btn4 = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btn1
@@ -134,12 +135,23 @@ Partial Class PINScreen
         Me.btn4.Text = "4"
         Me.btn4.UseVisualStyleBackColor = True
         '
+        'btnClear
+        '
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(13, 268)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(80, 80)
+        Me.btnClear.TabIndex = 74
+        Me.btnClear.Text = "Cancel"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
         'PINScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(306, 359)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btn6)
         Me.Controls.Add(Me.btn5)
         Me.Controls.Add(Me.btn4)
@@ -166,4 +178,5 @@ Partial Class PINScreen
     Friend WithEvents btn6 As Button
     Friend WithEvents btn5 As Button
     Friend WithEvents btn4 As Button
+    Friend WithEvents btnClear As Button
 End Class

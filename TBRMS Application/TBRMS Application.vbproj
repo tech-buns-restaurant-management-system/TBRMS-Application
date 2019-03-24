@@ -78,6 +78,12 @@
     <Compile Include="CustomerModeConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerScreens\CardPaymentScreen.Designer.vb">
+      <DependentUpon>CardPaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerScreens\CardPaymentScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerScreens\CustomerOrderDashboard.Designer.vb">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </Compile>
@@ -96,16 +102,28 @@
     <Compile Include="CustomerScreens\FinalOrderSummary.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerScreens\CashThankYouScreen.Designer.vb">
+      <DependentUpon>CashThankYouScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerScreens\CashThankYouScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerScreens\MenuSearchScreen.Designer.vb">
       <DependentUpon>MenuSearchScreen.vb</DependentUpon>
     </Compile>
     <Compile Include="CustomerScreens\MenuSearchScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FoHScreens\CashPaymentScreen.Designer.vb">
-      <DependentUpon>CashPaymentScreen.vb</DependentUpon>
+    <Compile Include="CustomerScreens\OrderTagScreen.Designer.vb">
+      <DependentUpon>OrderTagScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="FoHScreens\CashPaymentScreen.vb">
+    <Compile Include="CustomerScreens\OrderTagScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoHScreens\FoHCashPaymentScreen.Designer.vb">
+      <DependentUpon>FoHCashPaymentScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoHScreens\FoHCashPaymentScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FoHScreens\FoHMenuItemCustomization.Designer.vb">
@@ -183,10 +201,10 @@
     <Compile Include="CustomerScreens\PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerScreens\ThankYouScreen.Designer.vb">
-      <DependentUpon>ThankYouScreen.vb</DependentUpon>
+    <Compile Include="CustomerScreens\CardThankYouScreen.Designer.vb">
+      <DependentUpon>CardThankYouScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerScreens\ThankYouScreen.vb">
+    <Compile Include="CustomerScreens\CardThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
@@ -199,6 +217,12 @@
   <ItemGroup>
     <EmbeddedResource Include="CustomerModeConfirmation.resx">
       <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\CardPaymentScreen.resx">
+      <DependentUpon>CardPaymentScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\CashThankYouScreen.resx">
+      <DependentUpon>CashThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\CustomerOrderDashboard.resx">
       <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
@@ -215,8 +239,11 @@
     <EmbeddedResource Include="CustomerScreens\MenuSearchScreen.resx">
       <DependentUpon>MenuSearchScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoHScreens\CashPaymentScreen.resx">
-      <DependentUpon>CashPaymentScreen.vb</DependentUpon>
+    <EmbeddedResource Include="CustomerScreens\OrderTagScreen.resx">
+      <DependentUpon>OrderTagScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoHScreens\FoHCashPaymentScreen.resx">
+      <DependentUpon>FoHCashPaymentScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoHScreens\FoHMenuItemCustomization.resx">
       <DependentUpon>FoHMenuItemCustomization.vb</DependentUpon>
@@ -251,8 +278,8 @@
     <EmbeddedResource Include="CustomerScreens\PINScreen.resx">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerScreens\ThankYouScreen.resx">
-      <DependentUpon>ThankYouScreen.vb</DependentUpon>
+    <EmbeddedResource Include="CustomerScreens\CardThankYouScreen.resx">
+      <DependentUpon>CardThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
