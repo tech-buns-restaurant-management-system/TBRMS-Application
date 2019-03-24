@@ -30,7 +30,7 @@
         btnOpt3.Text = "Delete Menu Item"
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         WelcomeScreen.Show()
         Me.Hide()
         btnOpt1.Visible = False

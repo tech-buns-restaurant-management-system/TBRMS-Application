@@ -5,8 +5,13 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        If CustomerOrderDashboard.blnEditItem = False Then
+            CustomerOrderDashboard.lstOrderSummary.Items.Add(lblItem.Text)
+        Else
+            'Concatenate customizations onto existing Order Line item
+        End If
         CustomerOrderDashboard.Show()
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(lblItem.Text)
+
         Me.Hide()
     End Sub
 
