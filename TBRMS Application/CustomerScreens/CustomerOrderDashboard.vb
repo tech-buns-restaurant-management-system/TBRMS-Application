@@ -28,23 +28,29 @@
             Case "Drunk Monk Burger"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Red Ale-Carmelized Onions"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
                 MenuItemCustomization.pnlIng2.Visible = True
                 MenuItemCustomization.lblIng2.Text = "Arugula"
+                MenuItemCustomization.rdIng2Reg.Checked = True
 
                 MenuItemCustomization.pnlIng3.Visible = True
                 MenuItemCustomization.lblIng3.Text = "Rosemary Aioli"
+                MenuItemCustomization.rdIng3Reg.Checked = True
 
                 MenuItemCustomization.pnlIng4.Visible = True
                 MenuItemCustomization.lblIng4.Text = "Brie Cheese"
+                MenuItemCustomization.rdIng4Reg.Checked = True
 
             Case "Sea Salt French Fries"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Sea Salt"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
             Case "Top Beverages Vanilla Cream Soda"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Ice"
+                MenuItemCustomization.rdIng1Reg.Checked = True
         End Select
 
         MenuItemCustomization.Show()
@@ -60,23 +66,29 @@
             Case "Banzai Burger"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Lettuce"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
                 MenuItemCustomization.pnlIng2.Visible = True
                 MenuItemCustomization.lblIng2.Text = "Pineapple Rings"
+                MenuItemCustomization.rdIng2Reg.Checked = True
 
                 MenuItemCustomization.pnlIng3.Visible = True
                 MenuItemCustomization.lblIng3.Text = "Teriyaki Demi-Glace"
+                MenuItemCustomization.rdIng3Reg.Checked = True
 
                 MenuItemCustomization.pnlIng4.Visible = True
                 MenuItemCustomization.lblIng4.Text = "Cheddar Cheese"
+                MenuItemCustomization.rdIng4Reg.Checked = True
 
             Case "Sea Salt Sweet Potato Fries"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Sea Salt"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
             Case "Top Beverages Fresh Lemonade"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Ice"
+                MenuItemCustomization.rdIng1Reg.Checked = True
         End Select
 
         MenuItemCustomization.Show()
@@ -92,32 +104,41 @@
             Case "Banzai Burger"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Lettuce"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
                 MenuItemCustomization.pnlIng2.Visible = True
                 MenuItemCustomization.lblIng2.Text = "Pineapple Rings"
+                MenuItemCustomization.rdIng2Reg.Checked = True
 
                 MenuItemCustomization.pnlIng3.Visible = True
                 MenuItemCustomization.lblIng3.Text = "Teriyaki Demi-Glace"
+                MenuItemCustomization.rdIng3Reg.Checked = True
 
                 MenuItemCustomization.pnlIng4.Visible = True
                 MenuItemCustomization.lblIng4.Text = "Cheddar Cheese"
+                MenuItemCustomization.rdIng4Reg.Checked = True
 
             Case "Roasted Vegetables"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Salt & Pepper"
+                MenuItemCustomization.rdIng1Reg.Checked = True
 
                 MenuItemCustomization.pnlIng2.Visible = True
                 MenuItemCustomization.lblIng2.Text = "Oregano"
+                MenuItemCustomization.rdIng2Reg.Checked = True
 
                 MenuItemCustomization.pnlIng3.Visible = True
                 MenuItemCustomization.lblIng3.Text = "Crushed Red Pepper"
+                MenuItemCustomization.rdIng3Reg.Checked = True
 
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Balsamic Vinagrette"
+                MenuItemCustomization.pnlIng4.Visible = True
+                MenuItemCustomization.lblIng4.Text = "Balsamic Vinagrette"
+                MenuItemCustomization.rdIng4Reg.Checked = True
 
             Case "Spring Water"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Ice"
+                MenuItemCustomization.rdIng1Reg.Checked = True
         End Select
         MenuItemCustomization.Show()
         ResetButtons()
