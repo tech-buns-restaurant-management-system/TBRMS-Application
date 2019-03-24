@@ -43,7 +43,7 @@
         lsbPortalDisplay.Visible = True
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         WelcomeScreen.Show()
         Me.Hide()
         btnOpt1.Visible = False

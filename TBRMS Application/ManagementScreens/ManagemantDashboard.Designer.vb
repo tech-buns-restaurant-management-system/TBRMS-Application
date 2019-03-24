@@ -41,7 +41,7 @@ Partial Class ManagemantDashboard
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(252, 42)
+        Me.Label1.Location = New System.Drawing.Point(245, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(775, 55)
         Me.Label1.TabIndex = 5
@@ -124,9 +124,8 @@ Partial Class ManagemantDashboard
         '
         'PictureBox1
         '
-        Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
+        Me.PictureBox1.Location = New System.Drawing.Point(44, 36)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -170,20 +169,11 @@ Partial Class ManagemantDashboard
         Me.btnAddtoOrder.UseVisualStyleBackColor = True
         Me.btnAddtoOrder.Visible = False
         '
-        'btnBack
-        '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(32, 32)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(80, 80)
-        Me.btnBack.TabIndex = 42
-        Me.btnBack.UseVisualStyleBackColor = True
-        '
         'ManagemantDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1278, 718)
+        Me.ClientSize = New System.Drawing.Size(1264, 704)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnAddtoOrder)
         Me.Controls.Add(Me.lsbInventoryItems)
@@ -195,9 +185,7 @@ Partial Class ManagemantDashboard
         Me.Controls.Add(Me.btnMenuItemsPortal)
         Me.Controls.Add(Me.btnSuppliersPortal)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBack)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ManagemantDashboard"

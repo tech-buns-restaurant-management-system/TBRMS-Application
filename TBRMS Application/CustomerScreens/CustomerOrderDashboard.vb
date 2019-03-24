@@ -1,6 +1,5 @@
 ﻿Public Class CustomerOrderDashboard
     Public strOrderLine() As String
-    Public blnEditItem As Boolean = False
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         If (lstOrderSummary.Items.Count > 0) Then
@@ -102,21 +101,21 @@
         MenuItemCustomization.ResetIngredients()
 
         Select Case btnOption3.Text
-            Case "Bare Essentials Burger"
+            Case "Banzai Burger"
                 MenuItemCustomization.pnlIng1.Visible = True
                 MenuItemCustomization.lblIng1.Text = "Lettuce"
                 MenuItemCustomization.rdIng1Reg.Checked = True
 
                 MenuItemCustomization.pnlIng2.Visible = True
-                MenuItemCustomization.lblIng2.Text = "Tomato"
+                MenuItemCustomization.lblIng2.Text = "Pineapple Rings"
                 MenuItemCustomization.rdIng2Reg.Checked = True
 
                 MenuItemCustomization.pnlIng3.Visible = True
-                MenuItemCustomization.lblIng3.Text = "Ketchup"
+                MenuItemCustomization.lblIng3.Text = "Teriyaki Demi-Glace"
                 MenuItemCustomization.rdIng3Reg.Checked = True
 
                 MenuItemCustomization.pnlIng4.Visible = True
-                MenuItemCustomization.lblIng4.Text = "American Cheese"
+                MenuItemCustomization.lblIng4.Text = "Cheddar Cheese"
                 MenuItemCustomization.rdIng4Reg.Checked = True
 
             Case "Roasted Vegetables"
@@ -208,7 +207,6 @@
         If lstOrderSummary.SelectedIndex = -1 Then
             MessageBox.Show("Error: No order item is selected")
         Else
-            blnEditItem = True
             MenuItemCustomization.lblItem.Text = lstOrderSummary.Items(lstOrderSummary.SelectedIndex)
             ItemCustomization(lstOrderSummary.Items(lstOrderSummary.SelectedIndex))
             MenuItemCustomization.Show()

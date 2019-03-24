@@ -11,7 +11,6 @@
             Timer1.Stop()
             CustomerSplashScreen.Show()
             Me.Hide()
-            intSecond = 0
         End If
     End Sub
 End Class
