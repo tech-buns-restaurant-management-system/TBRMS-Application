@@ -17,6 +17,8 @@
     End Sub
 
     Private Sub btnInventoryItemsPortal_Click(sender As Object, e As EventArgs) Handles btnInventoryItemsPortal.Click
+        lsbInventoryItems.Items.Clear()
+        lsbInventoryOrder.Items.Clear()
         btnOpt1.Visible = True
         btnOpt2.Visible = True
         btnOpt3.Visible = True
@@ -27,6 +29,12 @@
         lsbPortalDisplay.Visible = False
         lsbInventoryItems.Visible = True
         lsbInventoryOrder.Visible = True
+        lsbInventoryItems.Items.Add("Beef")
+        lsbInventoryItems.Items.Add("Buns")
+        lsbInventoryItems.Items.Add("Lettuce")
+        lsbInventoryOrder.Items.Add("Buns")
+        lsbInventoryOrder.Items.Add("Lettuce")
+        lsbInventoryOrder.Items.Add("Beef")
     End Sub
 
     Private Sub btnMenuItemsPortal_Click(sender As Object, e As EventArgs) Handles btnMenuItemsPortal.Click
@@ -77,7 +85,16 @@
 
     End Sub
 
-    Private Sub btnOpt2_Click(sender As Object, e As EventArgs) Handles btnOpt2.Click
-
+    Private Sub btnOpt1_Click(sender As Object, e As EventArgs) Handles btnOpt1.Click
+        If btnOpt1.Text = "Add New Supplier" Then
+            AddForm.BtnSave.Text = "Add Supplier"
+            AddForm.Show()
+        ElseIf btnOpt1.Text = "Add New Inventory Item" Then
+            AddForm.Label1.Text = "Item Name"
+            AddForm.BtnSave.Text = "Add Item"
+            AddForm.txtAddAddress.Visible = False
+            AddForm.Label2.Visible = False
+            AddForm.Show()
+        End If
     End Sub
 End Class
