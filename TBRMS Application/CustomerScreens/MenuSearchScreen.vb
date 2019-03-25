@@ -196,57 +196,65 @@
     End Sub
 
     Private Sub btnOption1_Click(sender As Object, e As EventArgs) Handles btnOption1.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption1.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption1.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption2_Click(sender As Object, e As EventArgs) Handles btnOption2.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption2.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption2.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption3_Click(sender As Object, e As EventArgs) Handles btnOption3.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption3.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption3.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption4_Click(sender As Object, e As EventArgs) Handles btnOption4.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption4.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption4.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption5_Click(sender As Object, e As EventArgs) Handles btnOption5.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption5.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption5.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption6_Click(sender As Object, e As EventArgs) Handles btnOption6.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption6.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption6.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption7_Click(sender As Object, e As EventArgs) Handles btnOption7.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption7.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption7.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
 
     Private Sub btnOption8_Click(sender As Object, e As EventArgs) Handles btnOption8.Click
-        CustomerOrderDashboard.lstOrderSummary.Items.Add(btnOption8.Text)
-        CustomerOrderDashboard.Label1.Focus()
+        MenuItemCustomization.lblItem.Text = btnOption8.Text
+        MenuItemCustomization.SetIngredients()
+        MenuItemCustomization.Show()
         ResetButtons()
         Me.Hide()
     End Sub
