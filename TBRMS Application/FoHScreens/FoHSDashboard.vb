@@ -6,12 +6,11 @@
         If lstOrderDetails.SelectedIndex = -1 Then
             MessageBox.Show("Error: No order item is selected")
         Else
-            ItemCustomization(lstOrderDetails.Items(lstOrderDetails.SelectedIndex))
-            FoHMenuItemCustomization.lblItem.Text = lstOrderDetails.Items(lstOrderDetails.SelectedIndex)
+            FoHMenuItemCustomization.lblItem.Text = lstOrderDetails.SelectedItem
+            FoHMenuItemCustomization.SetIngredients()
             FoHMenuItemCustomization.Show()
             Me.Hide()
         End If
-
     End Sub
 
     Private Sub btnDeleteItem_Click(sender As Object, e As EventArgs) Handles btnDeleteItem.Click
@@ -113,28 +112,4 @@
             End Select
         End If
     End Sub
-
-    Function ItemCustomization(strItem As String)
-        'TODO: Customization Options
-        Select Case strItem
-            Case "Drunk Monk Burger"
-
-            Case "Banzai Burger"
-
-            Case "Bare Essentials Burger"
-
-            Case "Sea Salted Sweet Potato Fries"
-
-            Case "Sea Salted French Fries"
-
-            Case "Roasted Vegetables"
-
-            Case "Top Beverages Vanilla Cream Soda"
-
-            Case "Top Beverages Fresh Lemonade"
-
-            Case "Spring Water"
-
-        End Select
-    End Function
 End Class
