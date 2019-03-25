@@ -1,5 +1,5 @@
 ﻿Public Class CustomerOrderDashboard
-    Public strOrderLine() As String
+    Public strOrderLine(0) As String
     Public blnEditItem As Boolean = False
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
@@ -209,8 +209,9 @@
             MessageBox.Show("Error: No order item is selected")
         Else
             blnEditItem = True
-            MenuItemCustomization.lblItem.Text = lstOrderSummary.Items(lstOrderSummary.SelectedIndex)
-            ItemCustomization(lstOrderSummary.Items(lstOrderSummary.SelectedIndex))
+
+            MenuItemCustomization.lblItem.Text = strOrderLine(lstOrderSummary.SelectedIndex + (1 * lstOrderSummary.SelectedIndex))
+            MenuItemCustomization.ResetRadioButtons()
             MenuItemCustomization.Show()
         End If
     End Sub
@@ -240,30 +241,6 @@
         btnOption2.Hide()
         btnOption3.Hide()
         btnOption4.Hide()
-    End Function
-
-    Function ItemCustomization(strItem As String)
-        'TODO: Customization Options
-        Select Case strItem
-            Case "Drunk Monk Burger"
-
-            Case "Banzai Burger"
-
-            Case "Bare Essentials Burger"
-
-            Case "Sea Salted Sweet Potato Fries"
-
-            Case "Sea Salted French Fries"
-
-            Case "Roasted Vegetables"
-
-            Case "Top Beverages Vanilla Cream Soda"
-
-            Case "Top Beverages Fresh Lemonade"
-
-            Case "Spring Water"
-
-        End Select
     End Function
 End Class
 

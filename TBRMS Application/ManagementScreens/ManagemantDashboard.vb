@@ -43,20 +43,20 @@
         lsbPortalDisplay.Visible = True
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        WelcomeScreen.Show()
-        Me.Hide()
-        btnOpt1.Visible = False
-        btnOpt2.Visible = False
-        btnOpt3.Visible = False
-        lsbInventoryItems.Visible = False
-        lsbInventoryOrder.Visible = False
-        btnAddtoOrder.Visible = False
-        lsbPortalDisplay.Visible = False
-        lsbInventoryItems.Items.Clear()
-        lsbInventoryOrder.Items.Clear()
-        lsbPortalDisplay.Items.Clear()
+    'Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    '    WelcomeScreen.Show()
+    '    Me.Hide()
+    '    btnOpt1.Visible = False
+    '    btnOpt2.Visible = False
+    '    btnOpt3.Visible = False
+    '    lsbInventoryItems.Visible = False
+    '    lsbInventoryOrder.Visible = False
+    '    btnAddtoOrder.Visible = False
+    '    lsbPortalDisplay.Visible = False
+    '    lsbInventoryItems.Items.Clear()
+    '    lsbInventoryOrder.Items.Clear()
+    '    lsbPortalDisplay.Items.Clear()
 
 
-    End Sub
+    'End Sub
 End Class

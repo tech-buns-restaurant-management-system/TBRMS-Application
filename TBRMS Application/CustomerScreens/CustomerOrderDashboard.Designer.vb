@@ -89,6 +89,7 @@ Partial Class CustomerOrderDashboard
         '
         Me.lstOrderSummary.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstOrderSummary.FormattingEnabled = True
+        Me.lstOrderSummary.HorizontalScrollbar = True
         Me.lstOrderSummary.ItemHeight = 20
         Me.lstOrderSummary.Location = New System.Drawing.Point(964, 122)
         Me.lstOrderSummary.Name = "lstOrderSummary"
