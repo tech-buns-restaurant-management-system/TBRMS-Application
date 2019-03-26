@@ -37,6 +37,8 @@ Partial Class ManagemantDashboard
         Me.lsbInventoryItems = New System.Windows.Forms.ListBox()
         Me.btnAddtoOrder = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.lblOrder = New System.Windows.Forms.Label()
+        Me.lblAll = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -183,12 +185,34 @@ Partial Class ManagemantDashboard
         Me.btnBack.TabIndex = 29
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'lblOrder
+        '
+        Me.lblOrder.AutoSize = True
+        Me.lblOrder.Location = New System.Drawing.Point(492, 133)
+        Me.lblOrder.Name = "lblOrder"
+        Me.lblOrder.Size = New System.Drawing.Size(49, 13)
+        Me.lblOrder.TabIndex = 30
+        Me.lblOrder.Text = "To Order"
+        Me.lblOrder.Visible = False
+        '
+        'lblAll
+        '
+        Me.lblAll.AutoSize = True
+        Me.lblAll.Location = New System.Drawing.Point(776, 133)
+        Me.lblAll.Name = "lblAll"
+        Me.lblAll.Size = New System.Drawing.Size(46, 13)
+        Me.lblAll.TabIndex = 31
+        Me.lblAll.Text = "All Items"
+        Me.lblAll.Visible = False
+        '
         'ManagemantDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblAll)
+        Me.Controls.Add(Me.lblOrder)
         Me.Controls.Add(Me.btnAddtoOrder)
         Me.Controls.Add(Me.lsbInventoryItems)
         Me.Controls.Add(Me.lsbInventoryOrder)
@@ -227,4 +251,6 @@ Partial Class ManagemantDashboard
     Friend WithEvents lsbInventoryItems As ListBox
     Friend WithEvents btnAddtoOrder As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents lblOrder As Label
+    Friend WithEvents lblAll As Label
 End Class

@@ -15,6 +15,8 @@
         lsbPortalDisplay.Items.Add("Food Inc.")
         lsbPortalDisplay.Items.Add("Sides Inc.")
         lsbPortalDisplay.Items.Add("Drinks Inc.")
+        lblAll.Visible = False
+        lblOrder.Visible = False
     End Sub
 
     Private Sub btnInventoryItemsPortal_Click(sender As Object, e As EventArgs) Handles btnInventoryItemsPortal.Click
@@ -36,6 +38,8 @@
         lsbInventoryOrder.Items.Add("Buns")
         lsbInventoryOrder.Items.Add("Lettuce")
         lsbInventoryOrder.Items.Add("Beef")
+        lblAll.Visible = True
+        lblOrder.Visible = True
     End Sub
 
     Private Sub btnMenuItemsPortal_Click(sender As Object, e As EventArgs) Handles btnMenuItemsPortal.Click
@@ -53,6 +57,8 @@
         lsbPortalDisplay.Items.Add("Bonzai Burger")
         lsbPortalDisplay.Items.Add("Water")
         lsbPortalDisplay.Items.Add("Drunk Monkey Burger")
+        lblAll.Visible = False
+        lblOrder.Visible = False
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -146,4 +152,6 @@
     Private Sub btnAddtoOrder_Click(sender As Object, e As EventArgs) Handles btnAddtoOrder.Click
         lsbInventoryOrder.Items.Add(lsbInventoryItems.SelectedItem)
     End Sub
+
+
 End Class
