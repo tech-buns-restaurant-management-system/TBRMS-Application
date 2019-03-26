@@ -90,7 +90,7 @@
             Identifier = "i1"
         ElseIf btnOpt1.Text = "Add New Menu Item" Then
             AddForm.txtAddName.Clear()
-            AddForm.BtnSave.Text = "Add Menu Item"
+            AddForm.BtnSave.Text = "Add Item"
             AddForm.Label1.Text = "Item Name"
             AddForm.txtAddAddress.Visible = False
             AddForm.Label2.Visible = False
