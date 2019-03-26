@@ -1,4 +1,5 @@
 ﻿Public Class ManagemantDashboard
+    Public Identifier As String
     Private Sub btnSuppliersPortal_Click(sender As Object, e As EventArgs) Handles btnSuppliersPortal.Click
         lsbPortalDisplay.Items.Clear()
         btnOpt1.Visible = True
@@ -69,12 +70,69 @@
         Me.Hide()
     End Sub
 
+
+
+    Private Sub btnOpt1_Click(sender As Object, e As EventArgs) Handles btnOpt1.Click
+        If btnOpt1.Text = "Add New Supplier" Then
+            AddForm.txtAddName.Clear()
+            AddForm.BtnSave.Text = "Add Supplier"
+            AddForm.Label2.Visible = True
+            AddForm.txtAddAddress.Visible = True
+            AddForm.Show()
+            Identifier = "s1"
+        ElseIf btnOpt1.Text = "Add New Inventory Item" Then
+            AddForm.txtAddName.Clear()
+            AddForm.Label1.Text = "Item Name"
+            AddForm.BtnSave.Text = "Add Item"
+            AddForm.txtAddAddress.Visible = False
+            AddForm.Label2.Visible = False
+            AddForm.Show()
+            Identifier = "i1"
+        ElseIf btnOpt1.Text = "Add New Menu Item" Then
+            AddForm.txtAddName.Clear()
+            AddForm.BtnSave.Text = "Add Menu Item"
+            AddForm.Label1.Text = "Item Name"
+            AddForm.txtAddAddress.Visible = False
+            AddForm.Label2.Visible = False
+            AddForm.Show()
+            Identifier = "m1"
+        End If
+    End Sub
+
+    Private Sub btnOpt2_Click(sender As Object, e As EventArgs) Handles btnOpt2.Click
+        If btnOpt2.Text = "View/Edit Supplier Information" Then
+            AddForm.txtAddName.Clear()
+            AddForm.txtAddName.Text = lsbPortalDisplay.SelectedItem
+            AddForm.txtAddAddress.Text = "Company info from database"
+            AddForm.BtnSave.Text = "Update Supplier"
+            AddForm.Label2.Visible = True
+            AddForm.txtAddAddress.Visible = True
+            AddForm.Show()
+            Identifier = "s2"
+        ElseIf btnOpt2.Text = "View/Edit Existing Inventory Item" Then
+            AddForm.txtAddName.Clear()
+            AddForm.Label1.Text = "Item Name"
+            AddForm.txtAddName.Text = lsbInventoryItems.SelectedItem
+            AddForm.BtnSave.Text = "Update Item"
+            AddForm.txtAddAddress.Visible = False
+            AddForm.Label2.Visible = False
+            AddForm.Show()
+            Identifier = "i2"
+        ElseIf btnOpt2.Text = "View/Edit Menu Item" Then
+            AddForm.txtAddName.Clear()
+            AddForm.Label1.Text = "Item Name"
+            AddForm.txtAddName.Text = lsbPortalDisplay.SelectedItem
+            AddForm.BtnSave.Text = "Update Item"
+            AddForm.txtAddAddress.Visible = False
+            AddForm.Label2.Visible = False
+            AddForm.Show()
+            Identifier = "m2"
+        End If
+    End Sub
     Private Sub btnOpt3_Click(sender As Object, e As EventArgs) Handles btnOpt3.Click
 
         If btnOpt3.Text = "Delete Menu Item" Or btnOpt3.Text = "Delete Supplier" Then
             If lsbPortalDisplay.SelectedIndex <> -1 Then
-
-
                 ItemDeletionConfirmation.Show()
             End If
 
@@ -85,16 +143,7 @@
 
     End Sub
 
-    Private Sub btnOpt1_Click(sender As Object, e As EventArgs) Handles btnOpt1.Click
-        If btnOpt1.Text = "Add New Supplier" Then
-            AddForm.BtnSave.Text = "Add Supplier"
-            AddForm.Show()
-        ElseIf btnOpt1.Text = "Add New Inventory Item" Then
-            AddForm.Label1.Text = "Item Name"
-            AddForm.BtnSave.Text = "Add Item"
-            AddForm.txtAddAddress.Visible = False
-            AddForm.Label2.Visible = False
-            AddForm.Show()
-        End If
+    Private Sub btnAddtoOrder_Click(sender As Object, e As EventArgs) Handles btnAddtoOrder.Click
+        lsbInventoryOrder.Items.Add(lsbInventoryItems.SelectedItem)
     End Sub
 End Class
