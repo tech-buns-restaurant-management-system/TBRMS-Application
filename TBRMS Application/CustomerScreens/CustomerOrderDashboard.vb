@@ -1,5 +1,5 @@
 ﻿Public Class CustomerOrderDashboard
-    Public strOrderLine() As String
+    Public strOrderLine(0) As String
     Public blnEditItem As Boolean = False
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
@@ -23,142 +23,30 @@
 
     Private Sub btnOption1_Click(sender As Object, e As EventArgs) Handles btnOption1.Click
         MenuItemCustomization.lblItem.Text = btnOption1.Text
-        MenuItemCustomization.ResetIngredients()
-
-        Select Case btnOption1.Text
-            Case "Drunk Monk Burger"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Red Ale-Carmelized Onions"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-                MenuItemCustomization.pnlIng2.Visible = True
-                MenuItemCustomization.lblIng2.Text = "Arugula"
-                MenuItemCustomization.rdIng2Reg.Checked = True
-
-                MenuItemCustomization.pnlIng3.Visible = True
-                MenuItemCustomization.lblIng3.Text = "Rosemary Aioli"
-                MenuItemCustomization.rdIng3Reg.Checked = True
-
-                MenuItemCustomization.pnlIng4.Visible = True
-                MenuItemCustomization.lblIng4.Text = "Brie Cheese"
-                MenuItemCustomization.rdIng4Reg.Checked = True
-
-            Case "Sea Salt French Fries"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Sea Salt"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-            Case "Top Beverages Vanilla Cream Soda"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Ice"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-        End Select
-
+        MenuItemCustomization.SetIngredients()
         MenuItemCustomization.Show()
         ResetButtons()
-        'lstOrderSummary.Items.Add(btnOption1.Text)
     End Sub
 
     Private Sub btnOption2_Click(sender As Object, e As EventArgs) Handles btnOption2.Click
         MenuItemCustomization.lblItem.Text = btnOption2.Text
-        MenuItemCustomization.ResetIngredients()
-
-        Select Case btnOption2.Text
-            Case "Banzai Burger"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Lettuce"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-                MenuItemCustomization.pnlIng2.Visible = True
-                MenuItemCustomization.lblIng2.Text = "Pineapple Rings"
-                MenuItemCustomization.rdIng2Reg.Checked = True
-
-                MenuItemCustomization.pnlIng3.Visible = True
-                MenuItemCustomization.lblIng3.Text = "Teriyaki Demi-Glace"
-                MenuItemCustomization.rdIng3Reg.Checked = True
-
-                MenuItemCustomization.pnlIng4.Visible = True
-                MenuItemCustomization.lblIng4.Text = "Cheddar Cheese"
-                MenuItemCustomization.rdIng4Reg.Checked = True
-
-            Case "Sea Salt Sweet Potato Fries"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Sea Salt"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-            Case "Top Beverages Fresh Lemonade"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Ice"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-        End Select
-
+        MenuItemCustomization.SetIngredients()
         MenuItemCustomization.Show()
         ResetButtons()
-        'lstOrderSummary.Items.Add(btnOption2.Text)
     End Sub
 
     Private Sub btnOption3_Click(sender As Object, e As EventArgs) Handles btnOption3.Click
         MenuItemCustomization.lblItem.Text = btnOption3.Text
-        MenuItemCustomization.ResetIngredients()
-
-        Select Case btnOption3.Text
-            Case "Bare Essentials Burger"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Lettuce"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-                MenuItemCustomization.pnlIng2.Visible = True
-                MenuItemCustomization.lblIng2.Text = "Tomato"
-                MenuItemCustomization.rdIng2Reg.Checked = True
-
-                MenuItemCustomization.pnlIng3.Visible = True
-                MenuItemCustomization.lblIng3.Text = "Ketchup"
-                MenuItemCustomization.rdIng3Reg.Checked = True
-
-                MenuItemCustomization.pnlIng4.Visible = True
-                MenuItemCustomization.lblIng4.Text = "American Cheese"
-                MenuItemCustomization.rdIng4Reg.Checked = True
-
-            Case "Roasted Vegetables"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Salt & Pepper"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-
-                MenuItemCustomization.pnlIng2.Visible = True
-                MenuItemCustomization.lblIng2.Text = "Oregano"
-                MenuItemCustomization.rdIng2Reg.Checked = True
-
-                MenuItemCustomization.pnlIng3.Visible = True
-                MenuItemCustomization.lblIng3.Text = "Crushed Red Pepper"
-                MenuItemCustomization.rdIng3Reg.Checked = True
-
-                MenuItemCustomization.pnlIng4.Visible = True
-                MenuItemCustomization.lblIng4.Text = "Balsamic Vinagrette"
-                MenuItemCustomization.rdIng4Reg.Checked = True
-
-            Case "Spring Water"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Ice"
-                MenuItemCustomization.rdIng1Reg.Checked = True
-        End Select
+        MenuItemCustomization.SetIngredients()
         MenuItemCustomization.Show()
         ResetButtons()
-        'lstOrderSummary.Items.Add(btnOption3.Text)
     End Sub
 
     Private Sub btnOption4_Click(sender As Object, e As EventArgs) Handles btnOption4.Click
         MenuItemCustomization.lblItem.Text = btnOption4.Text
-        MenuItemCustomization.ResetIngredients()
-
-        Select Case btnOption4.Text
-            Case "Mini Gherkins"
-                MenuItemCustomization.pnlIng1.Visible = True
-                MenuItemCustomization.lblIng1.Text = "Spicy Mustard"
-
-        End Select
+        MenuItemCustomization.SetIngredients()
         MenuItemCustomization.Show()
         ResetButtons()
-        'lstOrderSummary.Items.Add(btnOption4.Text)
     End Sub
 
     Private Sub btnBurgers_Click(sender As Object, e As EventArgs) Handles btnBurgers.Click
@@ -209,8 +97,9 @@
             MessageBox.Show("Error: No order item is selected")
         Else
             blnEditItem = True
-            MenuItemCustomization.lblItem.Text = lstOrderSummary.Items(lstOrderSummary.SelectedIndex)
-            ItemCustomization(lstOrderSummary.Items(lstOrderSummary.SelectedIndex))
+
+            MenuItemCustomization.lblItem.Text = strOrderLine(lstOrderSummary.SelectedIndex + (1 * lstOrderSummary.SelectedIndex))
+            MenuItemCustomization.SetIngredients()
             MenuItemCustomization.Show()
         End If
     End Sub
@@ -240,30 +129,6 @@
         btnOption2.Hide()
         btnOption3.Hide()
         btnOption4.Hide()
-    End Function
-
-    Function ItemCustomization(strItem As String)
-        'TODO: Customization Options
-        Select Case strItem
-            Case "Drunk Monk Burger"
-
-            Case "Banzai Burger"
-
-            Case "Bare Essentials Burger"
-
-            Case "Sea Salted Sweet Potato Fries"
-
-            Case "Sea Salted French Fries"
-
-            Case "Roasted Vegetables"
-
-            Case "Top Beverages Vanilla Cream Soda"
-
-            Case "Top Beverages Fresh Lemonade"
-
-            Case "Spring Water"
-
-        End Select
     End Function
 End Class
 

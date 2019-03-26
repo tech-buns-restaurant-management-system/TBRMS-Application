@@ -168,10 +168,28 @@
     <Compile Include="CustomerScreens\MenuItemDeletionConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManagementScreens\AddForm.Designer.vb">
+      <DependentUpon>AddForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\AddForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\ItemDeletionConfirmation.Designer.vb">
+      <DependentUpon>ItemDeletionConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\ItemDeletionConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManagementScreens\ManagemantDashboard.Designer.vb">
       <DependentUpon>ManagemantDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="ManagementScreens\ManagemantDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\PlaceOrderConfirmation.Designer.vb">
+      <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\PlaceOrderConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -269,8 +287,17 @@
     <EmbeddedResource Include="CustomerScreens\MenuItemDeletionConfirmation.resx">
       <DependentUpon>MenuItemDeletionConfirmation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\AddForm.resx">
+      <DependentUpon>AddForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\ItemDeletionConfirmation.resx">
+      <DependentUpon>ItemDeletionConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\ManagemantDashboard.resx">
       <DependentUpon>ManagemantDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\PlaceOrderConfirmation.resx">
+      <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
