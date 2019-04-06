@@ -260,11 +260,11 @@
                 End If
         End Select
 
-        FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) = strOrderLineItem
+        'FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) = strOrderLineItem
 
-        For i As Integer = 0 To 3
-            FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) += strCustomization(i)
-        Next
+        'For i As Integer = 0 To 3
+        '    FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) += strCustomization(i)
+        'Next
 
         'If there is an item on the order already, intIndex is set to the SelectedIndex of lstOrderSummary
 

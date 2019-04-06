@@ -83,15 +83,15 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If blnPaid = True Then
-            FoHSDashboard.lstCurrentOrders.Items(1) = "Order 2 [PAID]"
-            FoHSDashboard.btnCash.Enabled = False
-            FoHSDashboard.Show()
-            MessageBox.Show("Payment Accepted")
-            Me.Hide()
-        Else
-            MessageBox.Show("Error: You did not enter a paid amount.")
-        End If
+        'If blnPaid = True Then
+        '    FoHSDashboard.lstCurrentOrders.Items(1) = "Order 2 [PAID]"
+        '    FoHSDashboard.btnCash.Enabled = False
+        '    FoHSDashboard.Show()
+        '    MessageBox.Show("Payment Accepted")
+        '    Me.Hide()
+        'Else
+        '    MessageBox.Show("Error: You did not enter a paid amount.")
+        'End If
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

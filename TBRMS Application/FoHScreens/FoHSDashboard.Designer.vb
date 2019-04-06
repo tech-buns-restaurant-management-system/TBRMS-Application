@@ -23,17 +23,22 @@ Partial Class FoHSDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FoHSDashboard))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRunOrder = New System.Windows.Forms.Button()
-        Me.btnOrderDetails = New System.Windows.Forms.Button()
-        Me.lstCurrentOrders = New System.Windows.Forms.ListBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnCash = New System.Windows.Forms.Button()
         Me.btnDeleteItem = New System.Windows.Forms.Button()
         Me.btnEditItem = New System.Windows.Forms.Button()
-        Me.lstOrderDetails = New System.Windows.Forms.ListBox()
+        Me.dgvOrderList = New System.Windows.Forms.DataGridView()
+        Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvOrderList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -50,32 +55,12 @@ Partial Class FoHSDashboard
         'btnRunOrder
         '
         Me.btnRunOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnRunOrder.Location = New System.Drawing.Point(75, 654)
+        Me.btnRunOrder.Location = New System.Drawing.Point(126, 636)
         Me.btnRunOrder.Name = "btnRunOrder"
-        Me.btnRunOrder.Size = New System.Drawing.Size(379, 34)
+        Me.btnRunOrder.Size = New System.Drawing.Size(379, 70)
         Me.btnRunOrder.TabIndex = 12
         Me.btnRunOrder.Text = "Run Order"
         Me.btnRunOrder.UseVisualStyleBackColor = True
-        '
-        'btnOrderDetails
-        '
-        Me.btnOrderDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnOrderDetails.Location = New System.Drawing.Point(75, 574)
-        Me.btnOrderDetails.Name = "btnOrderDetails"
-        Me.btnOrderDetails.Size = New System.Drawing.Size(379, 34)
-        Me.btnOrderDetails.TabIndex = 11
-        Me.btnOrderDetails.Text = "Order Details"
-        Me.btnOrderDetails.UseVisualStyleBackColor = True
-        '
-        'lstCurrentOrders
-        '
-        Me.lstCurrentOrders.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstCurrentOrders.FormattingEnabled = True
-        Me.lstCurrentOrders.ItemHeight = 20
-        Me.lstCurrentOrders.Location = New System.Drawing.Point(75, 164)
-        Me.lstCurrentOrders.Name = "lstCurrentOrders"
-        Me.lstCurrentOrders.Size = New System.Drawing.Size(379, 404)
-        Me.lstCurrentOrders.TabIndex = 10
         '
         'PictureBox1
         '
@@ -90,20 +75,21 @@ Partial Class FoHSDashboard
         '
         'btnBack
         '
+        Me.btnBack.BackColor = System.Drawing.SystemColors.Control
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Location = New System.Drawing.Point(32, 32)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(80, 80)
         Me.btnBack.TabIndex = 15
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'btnCash
         '
         Me.btnCash.Enabled = False
         Me.btnCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnCash.Location = New System.Drawing.Point(75, 614)
+        Me.btnCash.Location = New System.Drawing.Point(126, 560)
         Me.btnCash.Name = "btnCash"
-        Me.btnCash.Size = New System.Drawing.Size(379, 34)
+        Me.btnCash.Size = New System.Drawing.Size(379, 70)
         Me.btnCash.TabIndex = 17
         Me.btnCash.Text = "Cash Payment"
         Me.btnCash.UseVisualStyleBackColor = True
@@ -111,9 +97,9 @@ Partial Class FoHSDashboard
         'btnDeleteItem
         '
         Me.btnDeleteItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnDeleteItem.Location = New System.Drawing.Point(826, 614)
+        Me.btnDeleteItem.Location = New System.Drawing.Point(774, 636)
         Me.btnDeleteItem.Name = "btnDeleteItem"
-        Me.btnDeleteItem.Size = New System.Drawing.Size(379, 34)
+        Me.btnDeleteItem.Size = New System.Drawing.Size(379, 70)
         Me.btnDeleteItem.TabIndex = 20
         Me.btnDeleteItem.Text = "Delete Item"
         Me.btnDeleteItem.UseVisualStyleBackColor = True
@@ -121,22 +107,78 @@ Partial Class FoHSDashboard
         'btnEditItem
         '
         Me.btnEditItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnEditItem.Location = New System.Drawing.Point(826, 574)
+        Me.btnEditItem.Location = New System.Drawing.Point(774, 560)
         Me.btnEditItem.Name = "btnEditItem"
-        Me.btnEditItem.Size = New System.Drawing.Size(379, 34)
+        Me.btnEditItem.Size = New System.Drawing.Size(379, 70)
         Me.btnEditItem.TabIndex = 19
         Me.btnEditItem.Text = "Edit Item"
         Me.btnEditItem.UseVisualStyleBackColor = True
         '
-        'lstOrderDetails
+        'dgvOrderList
         '
-        Me.lstOrderDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lstOrderDetails.FormattingEnabled = True
-        Me.lstOrderDetails.ItemHeight = 20
-        Me.lstOrderDetails.Location = New System.Drawing.Point(826, 164)
-        Me.lstOrderDetails.Name = "lstOrderDetails"
-        Me.lstOrderDetails.Size = New System.Drawing.Size(379, 404)
-        Me.lstOrderDetails.TabIndex = 18
+        Me.dgvOrderList.AllowUserToAddRows = False
+        Me.dgvOrderList.AllowUserToDeleteRows = False
+        Me.dgvOrderList.AllowUserToResizeColumns = False
+        Me.dgvOrderList.AllowUserToResizeRows = False
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderList.DefaultCellStyle = DataGridViewCellStyle6
+        Me.dgvOrderList.Location = New System.Drawing.Point(126, 164)
+        Me.dgvOrderList.MultiSelect = False
+        Me.dgvOrderList.Name = "dgvOrderList"
+        Me.dgvOrderList.ReadOnly = True
+        Me.dgvOrderList.RowHeadersVisible = False
+        Me.dgvOrderList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvOrderList.Size = New System.Drawing.Size(379, 390)
+        Me.dgvOrderList.TabIndex = 21
+        '
+        'dgvOrderDetails
+        '
+        Me.dgvOrderDetails.AllowUserToAddRows = False
+        Me.dgvOrderDetails.AllowUserToDeleteRows = False
+        Me.dgvOrderDetails.AllowUserToResizeColumns = False
+        Me.dgvOrderDetails.AllowUserToResizeRows = False
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrderDetails.DefaultCellStyle = DataGridViewCellStyle8
+        Me.dgvOrderDetails.Location = New System.Drawing.Point(774, 164)
+        Me.dgvOrderDetails.MultiSelect = False
+        Me.dgvOrderDetails.Name = "dgvOrderDetails"
+        Me.dgvOrderDetails.ReadOnly = True
+        Me.dgvOrderDetails.RowHeadersVisible = False
+        Me.dgvOrderDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvOrderDetails.Size = New System.Drawing.Size(379, 390)
+        Me.dgvOrderDetails.TabIndex = 23
         '
         'FoHSDashboard
         '
@@ -144,21 +186,22 @@ Partial Class FoHSDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
+        Me.Controls.Add(Me.dgvOrderDetails)
+        Me.Controls.Add(Me.dgvOrderList)
         Me.Controls.Add(Me.btnDeleteItem)
         Me.Controls.Add(Me.btnEditItem)
-        Me.Controls.Add(Me.lstOrderDetails)
         Me.Controls.Add(Me.btnCash)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnRunOrder)
-        Me.Controls.Add(Me.btnOrderDetails)
-        Me.Controls.Add(Me.lstCurrentOrders)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FoHSDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvOrderList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,12 +209,11 @@ Partial Class FoHSDashboard
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnRunOrder As Button
-    Friend WithEvents btnOrderDetails As Button
-    Friend WithEvents lstCurrentOrders As ListBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnBack As Button
     Friend WithEvents btnCash As Button
     Friend WithEvents btnDeleteItem As Button
     Friend WithEvents btnEditItem As Button
-    Friend WithEvents lstOrderDetails As ListBox
+    Friend WithEvents dgvOrderList As DataGridView
+    Friend WithEvents dgvOrderDetails As DataGridView
 End Class
