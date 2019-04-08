@@ -273,12 +273,6 @@
     <Compile Include="CustomerScreens\CardThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewTestRecordForm.Designer.vb">
-      <DependentUpon>NewTestRecordForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NewTestRecordForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
@@ -367,9 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\CardThankYouScreen.resx">
       <DependentUpon>CardThankYouScreen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewTestRecordForm.resx">
-      <DependentUpon>NewTestRecordForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

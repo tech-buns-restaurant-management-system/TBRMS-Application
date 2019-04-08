@@ -259,61 +259,6 @@
                     strCustomization(0) = " E-Ice"
                 End If
         End Select
-
-        'FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) = strOrderLineItem
-
-        'For i As Integer = 0 To 3
-        '    FoHSDashboard.lstOrderDetails.Items(FoHSDashboard.lstOrderDetails.SelectedIndex) += strCustomization(i)
-        'Next
-
-        'If there is an item on the order already, intIndex is set to the SelectedIndex of lstOrderSummary
-
-        ''If this is a new item, the array is extended to account for it
-        'If CustomerOrderDashboard.blnEditItem = False Then
-        '    If CustomerOrderDashboard.strOrderLine.Length < 2 Then
-        '        Dim intNewLength As Integer = CustomerOrderDashboard.strOrderLine.Length
-        '        ReDim CustomerOrderDashboard.strOrderLine(intNewLength)
-        '    Else
-        '        Dim intNewLength As Integer = CustomerOrderDashboard.strOrderLine.Length + 1
-        '        ReDim Preserve CustomerOrderDashboard.strOrderLine(intNewLength)
-        '    End If
-
-        '    'Sets the Item slot of strOrderLine array to strOrderLineItem 
-        '    CustomerOrderDashboard.strOrderLine(CustomerOrderDashboard.strOrderLine.Length - 2) = strOrderLineItem
-
-        '    'Resets the customization of the item
-        '    CustomerOrderDashboard.strOrderLine(CustomerOrderDashboard.strOrderLine.Length - 1) = ""
-
-        '    'Iterates through the strCustomization array and stores the values in the Customization slot of strOrderLine
-        '    For i As Integer = 0 To 3
-        '        CustomerOrderDashboard.strOrderLine(CustomerOrderDashboard.strOrderLine.Length - 1) += strCustomization(i)
-        '    Next
-
-        '    'If an item is being edited, the array fields are overwritten
-        'ElseIf CustomerOrderDashboard.blnEditItem = True Then
-
-        '    'Sets the Item slot of strOrderLine array to strOrderLineItem 
-        '    CustomerOrderDashboard.strOrderLine(intIndex + (1 * intIndex)) = strOrderLineItem
-
-        '    'Resets the customization of the item
-        '    CustomerOrderDashboard.strOrderLine(intIndex + (1 * intIndex) + 1) = ""
-
-        '    'Iterates through the strCustomization array and stores the values in the Customization slot of strOrderLine
-        '    For i As Integer = 0 To 3
-        '        CustomerOrderDashboard.strOrderLine(intIndex + (1 * intIndex) + 1) += strCustomization(i)
-        '    Next
-
-        '    'Resets the EditItem variable 
-        '    CustomerOrderDashboard.blnEditItem = False
-        'End If
-
-        ''Resets lstOrderSummary on the CustomerOrderDashboard screen 
-        'CustomerOrderDashboard.lstOrderSummary.Items.Clear()
-
-        ''Iterates through strOrderLine and lists each item and it's customizations per line in lstOrderSummary
-        'For i As Integer = 0 To CustomerOrderDashboard.strOrderLine.Length - 2 Step 2
-        '    CustomerOrderDashboard.lstOrderSummary.Items.Add(CustomerOrderDashboard.strOrderLine(i) + CustomerOrderDashboard.strOrderLine(i + 1))
-        'Next
     End Function
 
     Function SetIngredients()
