@@ -273,6 +273,12 @@
     <Compile Include="CustomerScreens\CardThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TableTagEntry.Designer.vb">
+      <DependentUpon>TableTagEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TableTagEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\CardThankYouScreen.resx">
       <DependentUpon>CardThankYouScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableTagEntry.resx">
+      <DependentUpon>TableTagEntry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>

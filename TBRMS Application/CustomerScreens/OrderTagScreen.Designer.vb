@@ -40,6 +40,7 @@ Partial Class OrderTagScreen
         '
         'btnClear
         '
+        Me.btnClear.FlatAppearance.BorderSize = 0
         Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClear.Location = New System.Drawing.Point(499, 555)
         Me.btnClear.Name = "btnClear"
@@ -50,6 +51,7 @@ Partial Class OrderTagScreen
         '
         'btnEnter
         '
+        Me.btnEnter.FlatAppearance.BorderSize = 0
         Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnter.Location = New System.Drawing.Point(699, 555)
         Me.btnEnter.Name = "btnEnter"
@@ -72,6 +74,7 @@ Partial Class OrderTagScreen
         '
         'btn6
         '
+        Me.btn6.FlatAppearance.BorderSize = 0
         Me.btn6.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn6.Location = New System.Drawing.Point(699, 383)
         Me.btn6.Name = "btn6"
@@ -82,6 +85,7 @@ Partial Class OrderTagScreen
         '
         'btn5
         '
+        Me.btn5.FlatAppearance.BorderSize = 0
         Me.btn5.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn5.Location = New System.Drawing.Point(599, 383)
         Me.btn5.Name = "btn5"
@@ -92,6 +96,7 @@ Partial Class OrderTagScreen
         '
         'btn4
         '
+        Me.btn4.FlatAppearance.BorderSize = 0
         Me.btn4.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn4.Location = New System.Drawing.Point(499, 383)
         Me.btn4.Name = "btn4"
@@ -102,6 +107,7 @@ Partial Class OrderTagScreen
         '
         'btn0
         '
+        Me.btn0.FlatAppearance.BorderSize = 0
         Me.btn0.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn0.Location = New System.Drawing.Point(599, 555)
         Me.btn0.Name = "btn0"
@@ -112,6 +118,7 @@ Partial Class OrderTagScreen
         '
         'btn9
         '
+        Me.btn9.FlatAppearance.BorderSize = 0
         Me.btn9.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn9.Location = New System.Drawing.Point(699, 469)
         Me.btn9.Name = "btn9"
@@ -122,6 +129,7 @@ Partial Class OrderTagScreen
         '
         'btn8
         '
+        Me.btn8.FlatAppearance.BorderSize = 0
         Me.btn8.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn8.Location = New System.Drawing.Point(599, 469)
         Me.btn8.Name = "btn8"
@@ -132,6 +140,7 @@ Partial Class OrderTagScreen
         '
         'btn7
         '
+        Me.btn7.FlatAppearance.BorderSize = 0
         Me.btn7.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn7.Location = New System.Drawing.Point(499, 469)
         Me.btn7.Name = "btn7"
@@ -142,6 +151,7 @@ Partial Class OrderTagScreen
         '
         'btn3
         '
+        Me.btn3.FlatAppearance.BorderSize = 0
         Me.btn3.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn3.Location = New System.Drawing.Point(699, 297)
         Me.btn3.Name = "btn3"
@@ -152,6 +162,7 @@ Partial Class OrderTagScreen
         '
         'btn2
         '
+        Me.btn2.FlatAppearance.BorderSize = 0
         Me.btn2.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn2.Location = New System.Drawing.Point(599, 297)
         Me.btn2.Name = "btn2"
@@ -162,6 +173,7 @@ Partial Class OrderTagScreen
         '
         'btn1
         '
+        Me.btn1.FlatAppearance.BorderSize = 0
         Me.btn1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn1.Location = New System.Drawing.Point(499, 297)
         Me.btn1.Name = "btn1"

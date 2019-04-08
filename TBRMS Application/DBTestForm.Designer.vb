@@ -23,11 +23,11 @@ Partial Class DBTestForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DBTestForm))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.AzureTBDB = New TBRMS_Application.AzureTBDB()
         Me.AzureTBDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
@@ -47,6 +47,7 @@ Partial Class DBTestForm
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.tmrOrderSummarySlider = New System.Windows.Forms.Timer(Me.components)
         Me.pnlOrderSumCaller = New System.Windows.Forms.Panel()
+        Me.btnCheckout = New System.Windows.Forms.Button()
         Me.lblTax = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblSubtotal = New System.Windows.Forms.Label()
@@ -91,7 +92,6 @@ Partial Class DBTestForm
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.picMeme = New System.Windows.Forms.PictureBox()
-        Me.btnCheckout = New System.Windows.Forms.Button()
         CType(Me.AzureTBDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AzureTBDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvMenuItems, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,14 +145,14 @@ Partial Class DBTestForm
         Me.dgvMenuItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvMenuItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMenuItems.ColumnHeadersVisible = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMenuItems.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMenuItems.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvMenuItems.GridColor = System.Drawing.SystemColors.MenuText
         Me.dgvMenuItems.Location = New System.Drawing.Point(441, 220)
         Me.dgvMenuItems.MultiSelect = False
@@ -178,14 +178,14 @@ Partial Class DBTestForm
         Me.dgvCategories.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCategories.ColumnHeadersVisible = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCategories.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCategories.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvCategories.GridColor = System.Drawing.SystemColors.MenuText
         Me.dgvCategories.Location = New System.Drawing.Point(70, 220)
         Me.dgvCategories.MultiSelect = False
@@ -268,7 +268,7 @@ Partial Class DBTestForm
         Me.pnlOrderSummary.Controls.Add(Me.dgvOrderSummary)
         Me.pnlOrderSummary.Controls.Add(Me.btnDelete)
         Me.pnlOrderSummary.Controls.Add(Me.btnEdit)
-        Me.pnlOrderSummary.Location = New System.Drawing.Point(1270, -1)
+        Me.pnlOrderSummary.Location = New System.Drawing.Point(859, -1)
         Me.pnlOrderSummary.Name = "pnlOrderSummary"
         Me.pnlOrderSummary.Size = New System.Drawing.Size(420, 722)
         Me.pnlOrderSummary.TabIndex = 23
@@ -316,23 +316,23 @@ Partial Class DBTestForm
         Me.dgvOrderSummary.AllowUserToResizeRows = False
         Me.dgvOrderSummary.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgvOrderSummary.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOrderSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrderSummary.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOrderSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOrderSummary.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrderSummary.DefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOrderSummary.GridColor = System.Drawing.SystemColors.MenuText
         Me.dgvOrderSummary.Location = New System.Drawing.Point(40, 90)
         Me.dgvOrderSummary.MultiSelect = False
@@ -353,7 +353,7 @@ Partial Class DBTestForm
         Me.btnDelete.FlatAppearance.BorderSize = 0
         Me.btnDelete.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -370,7 +370,7 @@ Partial Class DBTestForm
         Me.btnEdit.FlatAppearance.BorderSize = 0
         Me.btnEdit.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -399,6 +399,23 @@ Partial Class DBTestForm
         Me.pnlOrderSumCaller.Name = "pnlOrderSumCaller"
         Me.pnlOrderSumCaller.Size = New System.Drawing.Size(1280, 70)
         Me.pnlOrderSumCaller.TabIndex = 24
+        '
+        'btnCheckout
+        '
+        Me.btnCheckout.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatAppearance.BorderSize = 0
+        Me.btnCheckout.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
+        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnCheckout.Location = New System.Drawing.Point(861, 10)
+        Me.btnCheckout.Name = "btnCheckout"
+        Me.btnCheckout.Size = New System.Drawing.Size(340, 50)
+        Me.btnCheckout.TabIndex = 23
+        Me.btnCheckout.Text = "Checkout"
+        Me.btnCheckout.UseVisualStyleBackColor = False
         '
         'lblTax
         '
@@ -546,7 +563,7 @@ Partial Class DBTestForm
         Me.btnDeleteSearch.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnDeleteSearch.FlatAppearance.BorderSize = 0
         Me.btnDeleteSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnDeleteSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnDeleteSearch.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnDeleteSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDeleteSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -562,7 +579,7 @@ Partial Class DBTestForm
         Me.btnSpace.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnSpace.FlatAppearance.BorderSize = 0
         Me.btnSpace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnSpace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnSpace.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSpace.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSpace.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -589,7 +606,7 @@ Partial Class DBTestForm
         Me.btnHide.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnHide.FlatAppearance.BorderSize = 0
         Me.btnHide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnHide.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnHide.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHide.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -604,7 +621,7 @@ Partial Class DBTestForm
         Me.btnSearch.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnSearch.FlatAppearance.BorderSize = 0
         Me.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -620,7 +637,7 @@ Partial Class DBTestForm
         Me.btnO.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnO.FlatAppearance.BorderSize = 0
         Me.btnO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnO.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnO.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -636,7 +653,7 @@ Partial Class DBTestForm
         Me.btnP.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnP.FlatAppearance.BorderSize = 0
         Me.btnP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnP.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnP.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -652,7 +669,7 @@ Partial Class DBTestForm
         Me.btnU.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnU.FlatAppearance.BorderSize = 0
         Me.btnU.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnU.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnU.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnU.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnU.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnU.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -668,7 +685,7 @@ Partial Class DBTestForm
         Me.btnI.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnI.FlatAppearance.BorderSize = 0
         Me.btnI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnI.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnI.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnI.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -684,7 +701,7 @@ Partial Class DBTestForm
         Me.btnE.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnE.FlatAppearance.BorderSize = 0
         Me.btnE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnE.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnE.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnE.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -700,7 +717,7 @@ Partial Class DBTestForm
         Me.btnT.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnT.FlatAppearance.BorderSize = 0
         Me.btnT.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnT.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnT.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnT.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -716,7 +733,7 @@ Partial Class DBTestForm
         Me.btnY.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnY.FlatAppearance.BorderSize = 0
         Me.btnY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnY.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnY.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnY.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnY.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -732,7 +749,7 @@ Partial Class DBTestForm
         Me.btnR.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnR.FlatAppearance.BorderSize = 0
         Me.btnR.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnR.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnR.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnR.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnR.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnR.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -748,7 +765,7 @@ Partial Class DBTestForm
         Me.btnK.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnK.FlatAppearance.BorderSize = 0
         Me.btnK.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnK.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnK.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnK.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -764,7 +781,7 @@ Partial Class DBTestForm
         Me.btnL.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnL.FlatAppearance.BorderSize = 0
         Me.btnL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnL.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnL.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnL.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -780,7 +797,7 @@ Partial Class DBTestForm
         Me.btnD.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnD.FlatAppearance.BorderSize = 0
         Me.btnD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnD.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnD.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnD.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -796,7 +813,7 @@ Partial Class DBTestForm
         Me.btnF.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnF.FlatAppearance.BorderSize = 0
         Me.btnF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnF.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnF.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnF.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -812,7 +829,7 @@ Partial Class DBTestForm
         Me.btnG.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnG.FlatAppearance.BorderSize = 0
         Me.btnG.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnG.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnG.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnG.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnG.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -828,7 +845,7 @@ Partial Class DBTestForm
         Me.btnH.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnH.FlatAppearance.BorderSize = 0
         Me.btnH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnH.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnH.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnH.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -844,7 +861,7 @@ Partial Class DBTestForm
         Me.btnJ.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnJ.FlatAppearance.BorderSize = 0
         Me.btnJ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnJ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnJ.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnJ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnJ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -860,7 +877,7 @@ Partial Class DBTestForm
         Me.btnC.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnC.FlatAppearance.BorderSize = 0
         Me.btnC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnC.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnC.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -876,7 +893,7 @@ Partial Class DBTestForm
         Me.btnV.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnV.FlatAppearance.BorderSize = 0
         Me.btnV.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnV.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnV.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnV.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnV.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnV.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -892,7 +909,7 @@ Partial Class DBTestForm
         Me.btnB.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnB.FlatAppearance.BorderSize = 0
         Me.btnB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnB.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnB.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -908,7 +925,7 @@ Partial Class DBTestForm
         Me.btnN.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnN.FlatAppearance.BorderSize = 0
         Me.btnN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnN.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnN.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -924,7 +941,7 @@ Partial Class DBTestForm
         Me.btnM.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnM.FlatAppearance.BorderSize = 0
         Me.btnM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnM.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnM.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnM.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -940,7 +957,7 @@ Partial Class DBTestForm
         Me.btnW.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnW.FlatAppearance.BorderSize = 0
         Me.btnW.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnW.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnW.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnW.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -956,7 +973,7 @@ Partial Class DBTestForm
         Me.btnS.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnS.FlatAppearance.BorderSize = 0
         Me.btnS.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnS.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnS.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnS.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -972,7 +989,7 @@ Partial Class DBTestForm
         Me.btnX.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnX.FlatAppearance.BorderSize = 0
         Me.btnX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnX.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnX.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnX.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -988,7 +1005,7 @@ Partial Class DBTestForm
         Me.btnZ.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnZ.FlatAppearance.BorderSize = 0
         Me.btnZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnZ.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnZ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnZ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -1004,7 +1021,7 @@ Partial Class DBTestForm
         Me.btnA.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnA.FlatAppearance.BorderSize = 0
         Me.btnA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnA.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnA.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -1020,7 +1037,7 @@ Partial Class DBTestForm
         Me.btnQ.BackColor = System.Drawing.SystemColors.ControlLight
         Me.btnQ.FlatAppearance.BorderSize = 0
         Me.btnQ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnQ.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnQ.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQ.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
@@ -1058,23 +1075,6 @@ Partial Class DBTestForm
         Me.picMeme.TabIndex = 30
         Me.picMeme.TabStop = False
         Me.picMeme.Visible = False
-        '
-        'btnCheckout
-        '
-        Me.btnCheckout.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCheckout.FlatAppearance.BorderSize = 0
-        Me.btnCheckout.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCheckout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(187, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnCheckout.Location = New System.Drawing.Point(861, 10)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(340, 50)
-        Me.btnCheckout.TabIndex = 23
-        Me.btnCheckout.Text = "Checkout"
-        Me.btnCheckout.UseVisualStyleBackColor = False
         '
         'DBTestForm
         '
