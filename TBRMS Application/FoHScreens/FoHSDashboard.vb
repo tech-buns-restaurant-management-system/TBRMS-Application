@@ -3,24 +3,24 @@
     Public strSelectedItem As String = ""
     Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
-    Private Sub btnEditItem_Click(sender As Object, e As EventArgs) Handles btnEditItem.Click
-        'If lstOrderDetails.SelectedIndex = -1 Then
-        '    MessageBox.Show("Error: No order item is selected")
-        'Else
-        '    FoHMenuItemCustomization.lblItem.Text = lstOrderDetails.SelectedItem
-        '    FoHMenuItemCustomization.SetIngredients()
-        '    FoHMenuItemCustomization.Show()
-        '    Me.Hide()
-        'End If
-    End Sub
+    'Private Sub btnEditItem_Click(sender As Object, e As EventArgs)
+    '    'If lstOrderDetails.SelectedIndex = -1 Then
+    '    '    MessageBox.Show("Error: No order item is selected")
+    '    'Else
+    '    '    FoHMenuItemCustomization.lblItem.Text = lstOrderDetails.SelectedItem
+    '    '    FoHMenuItemCustomization.SetIngredients()
+    '    '    FoHMenuItemCustomization.Show()
+    '    '    Me.Hide()
+    '    'End If
+    'End Sub
 
-    Private Sub btnDeleteItem_Click(sender As Object, e As EventArgs) Handles btnDeleteItem.Click
-        If (strSelectedItem = "") Then
-            MessageBox.Show("Error: No item selected.")
-        Else
-            FoHMenuItemDeletionConfirmation.Show()
-        End If
-    End Sub
+    'Private Sub btnDeleteItem_Click(sender As Object, e As EventArgs)
+    '    If (strSelectedItem = "") Then
+    '        MessageBox.Show("Error: No item selected.")
+    '    Else
+    '        FoHMenuItemDeletionConfirmation.Show()
+    '    End If
+    'End Sub
 
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnCash.Click
         FoHCashPaymentScreen.dblDue = 16.95
