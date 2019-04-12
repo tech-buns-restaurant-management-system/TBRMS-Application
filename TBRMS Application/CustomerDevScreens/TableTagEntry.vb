@@ -1,8 +1,10 @@
 ﻿Public Class TableTagEntry
     Public strTableTag As String = ""
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
-        If CInt(txtTableTag.Text) > 0 And txtTableTag.Text.Length = 2 Then
+        If CInt(txtTableTag.Text) > 0 Then
             strTableTag = txtTableTag.Text
+            txtTableTag.Clear()
+            PaymentSelection.Show()
             Me.Hide()
         Else
             MessageBox.Show("Error: Invalid Order Tag")

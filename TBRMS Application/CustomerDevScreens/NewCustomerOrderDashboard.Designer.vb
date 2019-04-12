@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class DBTestForm
+Partial Class NewCustomerOrderDashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -25,7 +25,7 @@ Partial Class DBTestForm
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DBTestForm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NewCustomerOrderDashboard))
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.AzureTBDB = New TBRMS_Application.AzureTBDB()
@@ -39,6 +39,7 @@ Partial Class DBTestForm
         Me.picSearch = New System.Windows.Forms.PictureBox()
         Me.picOrderSummary = New System.Windows.Forms.PictureBox()
         Me.pnlOrderSummary = New System.Windows.Forms.Panel()
+        Me.btnCheckout = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.picCloseArrow = New System.Windows.Forms.PictureBox()
@@ -47,7 +48,6 @@ Partial Class DBTestForm
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.tmrOrderSummarySlider = New System.Windows.Forms.Timer(Me.components)
         Me.pnlOrderSumCaller = New System.Windows.Forms.Panel()
-        Me.btnCheckout = New System.Windows.Forms.Button()
         Me.lblTax = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblSubtotal = New System.Windows.Forms.Label()
@@ -128,11 +128,11 @@ Partial Class DBTestForm
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label8.Location = New System.Drawing.Point(394, 23)
+        Me.Label8.Location = New System.Drawing.Point(443, 23)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(492, 55)
+        Me.Label8.Size = New System.Drawing.Size(395, 55)
         Me.Label8.TabIndex = 9
-        Me.Label8.Text = "Design Concept Form"
+        Me.Label8.Text = "Place Your Order"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dgvMenuItems
@@ -264,6 +264,7 @@ Partial Class DBTestForm
         'pnlOrderSummary
         '
         Me.pnlOrderSummary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlOrderSummary.Controls.Add(Me.btnCheckout)
         Me.pnlOrderSummary.Controls.Add(Me.Panel1)
         Me.pnlOrderSummary.Controls.Add(Me.dgvOrderSummary)
         Me.pnlOrderSummary.Controls.Add(Me.btnDelete)
@@ -272,6 +273,23 @@ Partial Class DBTestForm
         Me.pnlOrderSummary.Name = "pnlOrderSummary"
         Me.pnlOrderSummary.Size = New System.Drawing.Size(420, 722)
         Me.pnlOrderSummary.TabIndex = 23
+        '
+        'btnCheckout
+        '
+        Me.btnCheckout.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatAppearance.BorderSize = 0
+        Me.btnCheckout.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
+        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.btnCheckout.Location = New System.Drawing.Point(40, 650)
+        Me.btnCheckout.Name = "btnCheckout"
+        Me.btnCheckout.Size = New System.Drawing.Size(340, 50)
+        Me.btnCheckout.TabIndex = 28
+        Me.btnCheckout.Text = "Checkout"
+        Me.btnCheckout.UseVisualStyleBackColor = False
         '
         'Panel1
         '
@@ -339,11 +357,12 @@ Partial Class DBTestForm
         Me.dgvOrderSummary.Name = "dgvOrderSummary"
         Me.dgvOrderSummary.ReadOnly = True
         Me.dgvOrderSummary.RowHeadersVisible = False
+        Me.dgvOrderSummary.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.dgvOrderSummary.RowTemplate.Height = 70
         Me.dgvOrderSummary.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvOrderSummary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvOrderSummary.ShowCellToolTips = False
-        Me.dgvOrderSummary.Size = New System.Drawing.Size(340, 490)
+        Me.dgvOrderSummary.Size = New System.Drawing.Size(340, 430)
         Me.dgvOrderSummary.TabIndex = 24
         Me.dgvOrderSummary.TabStop = False
         '
@@ -357,7 +376,7 @@ Partial Class DBTestForm
         Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnDelete.Location = New System.Drawing.Point(40, 650)
+        Me.btnDelete.Location = New System.Drawing.Point(40, 590)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(340, 50)
         Me.btnDelete.TabIndex = 23
@@ -374,7 +393,7 @@ Partial Class DBTestForm
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnEdit.Location = New System.Drawing.Point(40, 590)
+        Me.btnEdit.Location = New System.Drawing.Point(40, 530)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(340, 50)
         Me.btnEdit.TabIndex = 22
@@ -383,12 +402,11 @@ Partial Class DBTestForm
         '
         'tmrOrderSummarySlider
         '
-        Me.tmrOrderSummarySlider.Interval = 1
+        Me.tmrOrderSummarySlider.Interval = 5
         '
         'pnlOrderSumCaller
         '
         Me.pnlOrderSumCaller.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.pnlOrderSumCaller.Controls.Add(Me.btnCheckout)
         Me.pnlOrderSumCaller.Controls.Add(Me.lblTax)
         Me.pnlOrderSumCaller.Controls.Add(Me.Label7)
         Me.pnlOrderSumCaller.Controls.Add(Me.lblSubtotal)
@@ -399,23 +417,6 @@ Partial Class DBTestForm
         Me.pnlOrderSumCaller.Name = "pnlOrderSumCaller"
         Me.pnlOrderSumCaller.Size = New System.Drawing.Size(1280, 70)
         Me.pnlOrderSumCaller.TabIndex = 24
-        '
-        'btnCheckout
-        '
-        Me.btnCheckout.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCheckout.FlatAppearance.BorderSize = 0
-        Me.btnCheckout.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCheckout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnCheckout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnCheckout.Location = New System.Drawing.Point(861, 10)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(340, 50)
-        Me.btnCheckout.TabIndex = 23
-        Me.btnCheckout.Text = "Checkout"
-        Me.btnCheckout.UseVisualStyleBackColor = False
         '
         'lblTax
         '
@@ -520,8 +521,7 @@ Partial Class DBTestForm
         '
         'pnlKeyboard
         '
-        Me.pnlKeyboard.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.pnlKeyboard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlKeyboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.pnlKeyboard.Controls.Add(Me.btnDeleteSearch)
         Me.pnlKeyboard.Controls.Add(Me.btnSpace)
         Me.pnlKeyboard.Controls.Add(Me.picHide)
@@ -1076,7 +1076,7 @@ Partial Class DBTestForm
         Me.picMeme.TabStop = False
         Me.picMeme.Visible = False
         '
-        'DBTestForm
+        'NewCustomerOrderDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1094,7 +1094,7 @@ Partial Class DBTestForm
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "DBTestForm"
+        Me.Name = "NewCustomerOrderDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.AzureTBDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AzureTBDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

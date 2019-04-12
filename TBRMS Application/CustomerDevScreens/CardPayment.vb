@@ -1,6 +1,6 @@
-﻿Public Class CardPaymentForm
+﻿Public Class CardPayment
     Dim intSecond As Integer
-    Private Sub CardPaymentScreen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CardPayment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
         Timer1.Start()
     End Sub
@@ -9,7 +9,9 @@
         intSecond += 1
         If intSecond >= 10 Then
             Timer1.Stop()
-            CardThankYouScreen.Show()
+            ThankYouScreen.Timer1.Enabled = True
+            ThankYouScreen.Timer1.Start()
+            ThankYouScreen.Show()
             Me.Hide()
             intSecond = 0
         End If

@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub btnCard_Click(sender As Object, e As EventArgs) Handles btnCard.Click
-        CardPaymentScreen.Show()
+        CardPaymentForm.Show()
         Me.Hide()
     End Sub
 End Class

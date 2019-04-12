@@ -41,7 +41,12 @@
 
     End Sub
 
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnLogOut_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogOut.MouseDown
+        picLogOut.BackColor = Color.FromArgb(207, 211, 216)
+    End Sub
+
+    Private Sub btnLogOut_MouseUp(sender As Object, e As MouseEventArgs) Handles btnLogOut.MouseUp
+        picLogOut.BackColor = Color.FromArgb(227, 227, 227)
         End
     End Sub
 
@@ -322,8 +327,34 @@
         End If
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        DBTestForm.Show()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCustomerTest.Click
+        CusSplashScreen.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnShift_MouseDown(sender As Object, e As MouseEventArgs) Handles btnShift.MouseDown
+        picShift.BackColor = Color.FromArgb(207, 211, 216)
+    End Sub
+
+    Private Sub btnShift_MouseUp(sender As Object, e As MouseEventArgs) Handles btnShift.MouseUp
+        picShift.BackColor = Color.FromArgb(227, 227, 227)
+    End Sub
+
+    Private Sub txtUser_MouseDown(sender As Object, e As MouseEventArgs) Handles txtUser.MouseDown
+        txtUser.BackColor = Color.FromArgb(207, 211, 216)
+    End Sub
+
+    Private Sub txtUser_MouseUp(sender As Object, e As MouseEventArgs) Handles txtUser.MouseUp
+        txtUser.BackColor = Color.FromArgb(227, 227, 227)
+    End Sub
+
+    Private Sub txtPass_MouseDown(sender As Object, e As MouseEventArgs) Handles txtPass.MouseDown
+        txtPass.BackColor = Color.FromArgb(207, 211, 216)
+    End Sub
+
+    Private Sub txtPass_MouseUp(sender As Object, e As MouseEventArgs) Handles txtPass.MouseUp
+        txtPass.BackColor = Color.FromArgb(227, 227, 227)
+    End Sub
+
+
 End Class
