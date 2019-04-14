@@ -1,6 +1,6 @@
 ﻿Public Class ManagemantDashboard
     Public Identifier As String
-    Private Sub btnSuppliersPortal_Click(sender As Object, e As EventArgs) Handles btnSuppliersPortal.Click
+    Private Sub btnSuppliersPortal_Click(sender As Object, e As EventArgs)
         lsbPortalDisplay.Items.Clear()
         btnOpt1.Visible = True
         btnOpt2.Visible = True
@@ -19,7 +19,7 @@
         lblOrder.Visible = False
     End Sub
 
-    Private Sub btnInventoryItemsPortal_Click(sender As Object, e As EventArgs) Handles btnInventoryItemsPortal.Click
+    Private Sub btnInventoryItemsPortal_Click(sender As Object, e As EventArgs)
         lsbInventoryItems.Items.Clear()
         lsbInventoryOrder.Items.Clear()
         btnOpt1.Visible = True
@@ -42,7 +42,7 @@
         lblOrder.Visible = True
     End Sub
 
-    Private Sub btnMenuItemsPortal_Click(sender As Object, e As EventArgs) Handles btnMenuItemsPortal.Click
+    Private Sub btnMenuItemsPortal_Click(sender As Object, e As EventArgs)
         lsbPortalDisplay.Items.Clear()
         btnOpt1.Visible = True
         btnOpt2.Visible = True
@@ -61,7 +61,7 @@
         lblOrder.Visible = False
     End Sub
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+    Private Sub btnBack_Click(sender As Object, e As EventArgs)
         WelcomeScreen.Show()
         btnOpt1.Visible = False
         btnOpt2.Visible = False
@@ -78,7 +78,7 @@
 
 
 
-    Private Sub btnOpt1_Click(sender As Object, e As EventArgs) Handles btnOpt1.Click
+    Private Sub btnOpt1_Click(sender As Object, e As EventArgs)
         If btnOpt1.Text = "Add New Supplier" Then
             AddForm.txtAddName.Clear()
             AddForm.BtnSave.Text = "Add Supplier"
@@ -105,7 +105,7 @@
         End If
     End Sub
 
-    Private Sub btnOpt2_Click(sender As Object, e As EventArgs) Handles btnOpt2.Click
+    Private Sub btnOpt2_Click(sender As Object, e As EventArgs)
         If btnOpt2.Text = "View/Edit Supplier Information" Then
             AddForm.txtAddName.Clear()
             AddForm.txtAddName.Text = lsbPortalDisplay.SelectedItem
@@ -135,7 +135,7 @@
             Identifier = "m2"
         End If
     End Sub
-    Private Sub btnOpt3_Click(sender As Object, e As EventArgs) Handles btnOpt3.Click
+    Private Sub btnOpt3_Click(sender As Object, e As EventArgs)
 
         If btnOpt3.Text = "Delete Menu Item" Or btnOpt3.Text = "Delete Supplier" Then
             If lsbPortalDisplay.SelectedIndex <> -1 Then
@@ -149,7 +149,7 @@
 
     End Sub
 
-    Private Sub btnAddtoOrder_Click(sender As Object, e As EventArgs) Handles btnAddtoOrder.Click
+    Private Sub btnAddtoOrder_Click(sender As Object, e As EventArgs)
         lsbInventoryOrder.Items.Add(lsbInventoryItems.SelectedItem)
     End Sub
 

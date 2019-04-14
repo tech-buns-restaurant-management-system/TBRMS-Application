@@ -22,188 +22,193 @@ Partial Class ManagemantDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManagemantDashboard))
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnInventoryItemsPortal = New System.Windows.Forms.Button()
-        Me.btnMenuItemsPortal = New System.Windows.Forms.Button()
-        Me.btnSuppliersPortal = New System.Windows.Forms.Button()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.btnOpt1 = New System.Windows.Forms.Button()
-        Me.btnOpt2 = New System.Windows.Forms.Button()
-        Me.btnOpt3 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lsbPortalDisplay = New System.Windows.Forms.ListBox()
-        Me.lsbInventoryOrder = New System.Windows.Forms.ListBox()
-        Me.lsbInventoryItems = New System.Windows.Forms.ListBox()
-        Me.btnAddtoOrder = New System.Windows.Forms.Button()
-        Me.btnBack = New System.Windows.Forms.Button()
-        Me.lblOrder = New System.Windows.Forms.Label()
-        Me.lblAll = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AzureTBDB = New TBRMS_Application.AzureTBDB()
+        Me.AzureTBDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.picOrderSummary = New System.Windows.Forms.PictureBox()
+        Me.pnlOrderSummary = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.picCloseArrow = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        CType(Me.AzureTBDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AzureTBDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.picOrderSummary, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlOrderSummary.SuspendLayout()
+        CType(Me.picCloseArrow, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'AzureTBDB
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(245, 36)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(775, 55)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Top Buns Management Dashboard"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.AzureTBDB.DataSetName = "AzureTBDB"
+        Me.AzureTBDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'btnInventoryItemsPortal
+        'AzureTBDBBindingSource
         '
-        Me.btnInventoryItemsPortal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnInventoryItemsPortal.Location = New System.Drawing.Point(44, 316)
-        Me.btnInventoryItemsPortal.Name = "btnInventoryItemsPortal"
-        Me.btnInventoryItemsPortal.Size = New System.Drawing.Size(379, 161)
-        Me.btnInventoryItemsPortal.TabIndex = 21
-        Me.btnInventoryItemsPortal.Text = "Inventory Items Portal"
-        Me.btnInventoryItemsPortal.UseVisualStyleBackColor = True
+        Me.AzureTBDBBindingSource.DataSource = Me.AzureTBDB
+        Me.AzureTBDBBindingSource.Position = 0
         '
-        'btnMenuItemsPortal
+        'DataGridView1
         '
-        Me.btnMenuItemsPortal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnMenuItemsPortal.Location = New System.Drawing.Point(44, 483)
-        Me.btnMenuItemsPortal.Name = "btnMenuItemsPortal"
-        Me.btnMenuItemsPortal.Size = New System.Drawing.Size(379, 161)
-        Me.btnMenuItemsPortal.TabIndex = 20
-        Me.btnMenuItemsPortal.Text = "Menu Items Portal"
-        Me.btnMenuItemsPortal.UseVisualStyleBackColor = True
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.DataSource = Me.AzureTBDBBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(388, 118)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(639, 548)
+        Me.DataGridView1.TabIndex = 30
         '
-        'btnSuppliersPortal
+        'Panel2
         '
-        Me.btnSuppliersPortal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.btnSuppliersPortal.Location = New System.Drawing.Point(44, 149)
-        Me.btnSuppliersPortal.Name = "btnSuppliersPortal"
-        Me.btnSuppliersPortal.Size = New System.Drawing.Size(379, 161)
-        Me.btnSuppliersPortal.TabIndex = 19
-        Me.btnSuppliersPortal.Text = "Suppliers Portal"
-        Me.btnSuppliersPortal.UseVisualStyleBackColor = True
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.picOrderSummary)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1280, 100)
+        Me.Panel2.TabIndex = 31
         '
-        'FlowLayoutPanel1
+        'Label8
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnOpt1)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnOpt2)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnOpt3)
-        Me.FlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(906, 149)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(318, 495)
-        Me.FlowLayoutPanel1.TabIndex = 22
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(253, 19)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(775, 55)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "Top Buns Management Dashboard"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnOpt1
+        'picOrderSummary
         '
-        Me.btnOpt1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOpt1.Location = New System.Drawing.Point(3, 3)
-        Me.btnOpt1.Name = "btnOpt1"
-        Me.btnOpt1.Size = New System.Drawing.Size(315, 158)
-        Me.btnOpt1.TabIndex = 1
-        Me.btnOpt1.Text = "Option 1"
-        Me.btnOpt1.UseVisualStyleBackColor = True
-        Me.btnOpt1.Visible = False
+        Me.picOrderSummary.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.picOrderSummary.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picOrderSummary.Image = CType(resources.GetObject("picOrderSummary.Image"), System.Drawing.Image)
+        Me.picOrderSummary.Location = New System.Drawing.Point(67, 0)
+        Me.picOrderSummary.Name = "picOrderSummary"
+        Me.picOrderSummary.Size = New System.Drawing.Size(100, 100)
+        Me.picOrderSummary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picOrderSummary.TabIndex = 22
+        Me.picOrderSummary.TabStop = False
         '
-        'btnOpt2
+        'pnlOrderSummary
         '
-        Me.btnOpt2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOpt2.Location = New System.Drawing.Point(3, 167)
-        Me.btnOpt2.Name = "btnOpt2"
-        Me.btnOpt2.Size = New System.Drawing.Size(315, 158)
-        Me.btnOpt2.TabIndex = 2
-        Me.btnOpt2.Text = "Option 2"
-        Me.btnOpt2.UseVisualStyleBackColor = True
-        Me.btnOpt2.Visible = False
+        Me.pnlOrderSummary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.pnlOrderSummary.Controls.Add(Me.picCloseArrow)
+        Me.pnlOrderSummary.Controls.Add(Me.Button4)
+        Me.pnlOrderSummary.Controls.Add(Me.Button3)
+        Me.pnlOrderSummary.Controls.Add(Me.Button2)
+        Me.pnlOrderSummary.Controls.Add(Me.Button1)
+        Me.pnlOrderSummary.Location = New System.Drawing.Point(-1, -2)
+        Me.pnlOrderSummary.Name = "pnlOrderSummary"
+        Me.pnlOrderSummary.Size = New System.Drawing.Size(383, 719)
+        Me.pnlOrderSummary.TabIndex = 32
         '
-        'btnOpt3
+        'Button1
         '
-        Me.btnOpt3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOpt3.Location = New System.Drawing.Point(3, 331)
-        Me.btnOpt3.Name = "btnOpt3"
-        Me.btnOpt3.Size = New System.Drawing.Size(315, 158)
-        Me.btnOpt3.TabIndex = 3
-        Me.btnOpt3.Text = "Option 3"
-        Me.btnOpt3.UseVisualStyleBackColor = True
-        Me.btnOpt3.Visible = False
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(3, 86)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(378, 152)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Order View"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'Button2
         '
-        Me.PictureBox1.Enabled = False
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 23
-        Me.PictureBox1.TabStop = False
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(3, 244)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(378, 152)
+        Me.Button2.TabIndex = 30
+        Me.Button2.Text = "Inventory View"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'lsbPortalDisplay
+        'Button3
         '
-        Me.lsbPortalDisplay.FormattingEnabled = True
-        Me.lsbPortalDisplay.Location = New System.Drawing.Point(433, 149)
-        Me.lsbPortalDisplay.Name = "lsbPortalDisplay"
-        Me.lsbPortalDisplay.Size = New System.Drawing.Size(470, 498)
-        Me.lsbPortalDisplay.TabIndex = 24
-        Me.lsbPortalDisplay.Visible = False
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(3, 402)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(378, 152)
+        Me.Button3.TabIndex = 31
+        Me.Button3.Text = "Supplier View"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'lsbInventoryOrder
+        'Button4
         '
-        Me.lsbInventoryOrder.FormattingEnabled = True
-        Me.lsbInventoryOrder.Location = New System.Drawing.Point(433, 149)
-        Me.lsbInventoryOrder.Name = "lsbInventoryOrder"
-        Me.lsbInventoryOrder.Size = New System.Drawing.Size(202, 498)
-        Me.lsbInventoryOrder.TabIndex = 25
-        Me.lsbInventoryOrder.Visible = False
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(3, 560)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(378, 152)
+        Me.Button4.TabIndex = 32
+        Me.Button4.Text = "Menu View"
+        Me.Button4.UseVisualStyleBackColor = True
         '
-        'lsbInventoryItems
+        'picCloseArrow
         '
-        Me.lsbInventoryItems.FormattingEnabled = True
-        Me.lsbInventoryItems.Location = New System.Drawing.Point(701, 149)
-        Me.lsbInventoryItems.Name = "lsbInventoryItems"
-        Me.lsbInventoryItems.Size = New System.Drawing.Size(202, 498)
-        Me.lsbInventoryItems.TabIndex = 26
-        Me.lsbInventoryItems.Visible = False
+        Me.picCloseArrow.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.picCloseArrow.Image = CType(resources.GetObject("picCloseArrow.Image"), System.Drawing.Image)
+        Me.picCloseArrow.Location = New System.Drawing.Point(3, 3)
+        Me.picCloseArrow.Name = "picCloseArrow"
+        Me.picCloseArrow.Size = New System.Drawing.Size(76, 77)
+        Me.picCloseArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picCloseArrow.TabIndex = 33
+        Me.picCloseArrow.TabStop = False
         '
-        'btnAddtoOrder
+        'Panel1
         '
-        Me.btnAddtoOrder.Location = New System.Drawing.Point(641, 379)
-        Me.btnAddtoOrder.Name = "btnAddtoOrder"
-        Me.btnAddtoOrder.Size = New System.Drawing.Size(54, 40)
-        Me.btnAddtoOrder.TabIndex = 28
-        Me.btnAddtoOrder.Text = "Add to Order"
-        Me.btnAddtoOrder.UseVisualStyleBackColor = True
-        Me.btnAddtoOrder.Visible = False
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Button7)
+        Me.Panel1.Controls.Add(Me.Button5)
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Location = New System.Drawing.Point(388, 664)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(639, 55)
+        Me.Panel1.TabIndex = 33
         '
-        'btnBack
+        'Button6
         '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(32, 32)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(80, 80)
-        Me.btnBack.TabIndex = 29
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(429, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(203, 38)
+        Me.Button6.TabIndex = 31
+        Me.Button6.Text = "Option 3"
+        Me.Button6.UseVisualStyleBackColor = True
         '
-        'lblOrder
+        'Button5
         '
-        Me.lblOrder.AutoSize = True
-        Me.lblOrder.Location = New System.Drawing.Point(492, 133)
-        Me.lblOrder.Name = "lblOrder"
-        Me.lblOrder.Size = New System.Drawing.Size(49, 13)
-        Me.lblOrder.TabIndex = 30
-        Me.lblOrder.Text = "To Order"
-        Me.lblOrder.Visible = False
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(220, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(203, 38)
+        Me.Button5.TabIndex = 32
+        Me.Button5.Text = "Option 2"
+        Me.Button5.UseVisualStyleBackColor = True
         '
-        'lblAll
+        'Button7
         '
-        Me.lblAll.AutoSize = True
-        Me.lblAll.Location = New System.Drawing.Point(776, 133)
-        Me.lblAll.Name = "lblAll"
-        Me.lblAll.Size = New System.Drawing.Size(46, 13)
-        Me.lblAll.TabIndex = 31
-        Me.lblAll.Text = "All Items"
-        Me.lblAll.Visible = False
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(3, 3)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(211, 38)
+        Me.Button7.TabIndex = 33
+        Me.Button7.Text = "Option 1"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'ManagemantDashboard
         '
@@ -211,46 +216,42 @@ Partial Class ManagemantDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
-        Me.Controls.Add(Me.lblAll)
-        Me.Controls.Add(Me.lblOrder)
-        Me.Controls.Add(Me.btnAddtoOrder)
-        Me.Controls.Add(Me.lsbInventoryItems)
-        Me.Controls.Add(Me.lsbInventoryOrder)
-        Me.Controls.Add(Me.lsbPortalDisplay)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.btnInventoryItemsPortal)
-        Me.Controls.Add(Me.btnMenuItemsPortal)
-        Me.Controls.Add(Me.btnSuppliersPortal)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnBack)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlOrderSummary)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.DataGridView1)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ManagemantDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AzureTBDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AzureTBDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.picOrderSummary, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlOrderSummary.ResumeLayout(False)
+        CType(Me.picCloseArrow, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnInventoryItemsPortal As Button
-    Friend WithEvents btnMenuItemsPortal As Button
-    Friend WithEvents btnSuppliersPortal As Button
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents btnOpt1 As Button
-    Friend WithEvents btnOpt2 As Button
-    Friend WithEvents btnOpt3 As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lsbPortalDisplay As ListBox
-    Friend WithEvents lsbInventoryOrder As ListBox
-    Friend WithEvents lsbInventoryItems As ListBox
-    Friend WithEvents btnAddtoOrder As Button
-    Friend WithEvents btnBack As Button
-    Friend WithEvents lblOrder As Label
-    Friend WithEvents lblAll As Label
+    Friend WithEvents AzureTBDB As AzureTBDB
+    Friend WithEvents AzureTBDBBindingSource As BindingSource
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents picOrderSummary As PictureBox
+    Friend WithEvents pnlOrderSummary As Panel
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents picCloseArrow As PictureBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class
