@@ -54,7 +54,7 @@
         If (strPIN.Length = 4 And strPIN = "1234") Then
             Me.Hide()
             WelcomeScreen.Show()
-            CustomerSplashScreen.Hide()
+            CusSplashScreen.Hide()
             strPIN = ""
         ElseIf (strPIN.Length = 4 And strPIN <> "1234") Then
             Me.Hide()

@@ -2,6 +2,7 @@
     Public dblDue As Double
     Dim dblPaid, dblChange As Double
     Dim blnPaid As Boolean = False
+    Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         txtPaid.ReadOnly = True
@@ -16,7 +17,9 @@
             txtPaid.Text = String.Format("{0:C}", dblPaid)
 
             txtChange.Text = String.Format("{0:C}", dblChange)
-            blnPaid = True
+
+            MessageBox.Show("Confirm That Change Has Been Given to Customer.")
+            btnSave.Enabled = True
         End If
     End Sub
 
@@ -83,15 +86,20 @@
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        'If blnPaid = True Then
-        '    FoHSDashboard.lstCurrentOrders.Items(1) = "Order 2 [PAID]"
-        '    FoHSDashboard.btnCash.Enabled = False
-        '    FoHSDashboard.Show()
-        '    MessageBox.Show("Payment Accepted")
-        '    Me.Hide()
-        'Else
-        '    MessageBox.Show("Error: You did not enter a paid amount.")
-        'End If
+        Dim updateQuery As String = "UPDATE CustomerOrder SET OrderPaid = 'TRUE' WHERE CusOrder_ID = '" + FoHSDashboard.strSelectedOrder + "';"
+
+        ExecuteQuery(updateQuery)
+
+        txtDue.Clear()
+        txtPaid.Clear()
+        txtChange.Clear()
+
+        dblChange = 0
+        dblPaid = 0
+        dblDue = 0
+
+        FoHSDashboard.FetchOrderList()
+        Me.Hide()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -99,4 +107,11 @@
         txtChange.Clear()
         blnPaid = False
     End Sub
+
+    Function ExecuteQuery(query As String)
+        Dim command As New SqlClient.SqlCommand(query, connection)
+        connection.Open()
+        command.ExecuteNonQuery()
+        connection.Close()
+    End Function
 End Class

@@ -18,7 +18,8 @@
         Dim strDate As String = DateString
         Dim strTime As String = TimeString
 
-        Dim insertOrderQuery As String = "INSERT INTO CustomerOrder VALUES ('" + DateString + "', '" + TimeString + "', '" + TableTagEntry.strTableTag + "', '" + CStr(PaymentSelection.blnPaid) + "', 'False');"
+        Dim insertOrderQuery As String = "INSERT INTO CustomerOrder VALUES ('" + DateString + "', '" + TimeString + "', '" + TableTagEntry.strTableTag + "', '" +
+                                         CStr(PaymentSelection.blnPaid) + "', 'False', " + CStr(NewCustomerOrderDashboard.dblOrderTotal) + ");"
 
         ExecuteQuery(insertOrderQuery)
 

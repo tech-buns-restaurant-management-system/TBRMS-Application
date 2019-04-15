@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CancelOrderConfirmation
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class ExitManagementConfirmation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CancelOrderConfirmation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblMessage = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -35,8 +35,8 @@ Partial Class CancelOrderConfirmation
         Me.lblMessage.Location = New System.Drawing.Point(-1, 10)
         Me.lblMessage.Name = "lblMessage"
         Me.lblMessage.Size = New System.Drawing.Size(340, 70)
-        Me.lblMessage.TabIndex = 32
-        Me.lblMessage.Text = "Are you sure that you'd like to cancel your order?"
+        Me.lblMessage.TabIndex = 35
+        Me.lblMessage.Text = "Are you sure that you'd like to exit Management Mode?"
         Me.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblMessage.Visible = False
         '
@@ -51,7 +51,7 @@ Partial Class CancelOrderConfirmation
         Me.btnCancel.Location = New System.Drawing.Point(180, 95)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(140, 50)
-        Me.btnCancel.TabIndex = 31
+        Me.btnCancel.TabIndex = 34
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         Me.btnCancel.Visible = False
@@ -67,12 +67,12 @@ Partial Class CancelOrderConfirmation
         Me.btnContinue.Location = New System.Drawing.Point(20, 95)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(140, 50)
-        Me.btnContinue.TabIndex = 30
+        Me.btnContinue.TabIndex = 33
         Me.btnContinue.Text = "Continue"
         Me.btnContinue.UseVisualStyleBackColor = False
         Me.btnContinue.Visible = False
         '
-        'CancelOrderConfirmation
+        'ExitManagementConfirmation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -82,8 +82,9 @@ Partial Class CancelOrderConfirmation
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnContinue)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "CancelOrderConfirmation"
+        Me.Name = "ExitManagementConfirmation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
 

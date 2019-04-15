@@ -1,15 +1,18 @@
 ﻿Public Class NewCustomerOrderDashboard
     Dim dblOrderPrice(0), dblSubtotal, dblOrderTax As Double
-    Public intItemNum As Integer
     Dim intTicks As Integer = 0
     Dim intXCoor As Integer = 1281
     Dim intYCoor As Integer = 720
     Dim blnSliderOpen As Boolean = False
     Dim blnOrderSummarySlider As Boolean = False
     Dim strMeme As String = ""
+    Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+
+    Public intItemNum As Integer
     Public intSelectedIndex As Integer = -1
     Public strItems(), strMods(), strIngredients As String
-    Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+    Public dblOrderTotal As Double
+
     'Form Load Function
     Private Sub DBTestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pnlOrderSummary.Location = New Point(intXCoor, -1)
@@ -20,6 +23,10 @@
 
     'MainOrderForm Functions
     Private Sub picBack_Click(sender As Object, e As EventArgs) Handles picBack.Click
+        If (blnOrderSummarySlider = True) Then
+            tmrOrderSummarySlider.Start()
+        End If
+
         CancelOrderConfirmation.Width = 0
         CancelOrderConfirmation.Height = 0
         CancelOrderConfirmation.Show()
@@ -77,8 +84,6 @@
         CustomizeItem.pnlIng3.Visible = False
         CustomizeItem.pnlIng4.Visible = False
 
-        MessageBox.Show(CustomizeItem.intIngCount)
-
         Select Case CustomizeItem.intIngCount
             Case 1
                 CustomizeItem.intIngAmount(0) = 2
@@ -126,6 +131,7 @@
 
         CustomizeItem.Height = 0
         CustomizeItem.Width = 0
+        CustomizeItem.btnSave.Text = "Add Item"
         CustomizeItem.Show()
         CustomizeItem.Grow()
     End Sub
@@ -339,8 +345,9 @@
             Next
 
             CustomizeItem.Height = 0
-            CustomizeItem.Width = 0
-            CustomizeItem.Show()
+        CustomizeItem.Width = 0
+        CustomizeItem.btnSave.Text = "Update Item"
+        CustomizeItem.Show()
             CustomizeItem.Grow()
     End Sub
 
@@ -361,6 +368,8 @@
         dgvOrderSummary.Rows.Clear()
         dgvCategories.Rows.Clear()
         dgvMenuItems.Rows.Clear()
+
+        dblOrderTotal = dblSubtotal + dblOrderTax
 
         dblSubtotal = 0
         dblOrderTax = 0

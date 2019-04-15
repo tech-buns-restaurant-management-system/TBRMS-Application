@@ -193,12 +193,53 @@
         Dim strMods As String
 
         For j As Integer = 0 To intIngCount - 1
-            If strModCodes(j + 1) <> "" Then
-                strMods += strModCodes(j) + " "
+
+            If (NewCustomerOrderDashboard.intSelectedIndex = -1) Then
+                If strModCodes(j + 1) <> "" Then
+                    strMods += strModCodes(j) + " "
+                Else
+                    strMods += strModCodes(j)
+                End If
+
             Else
-                strMods += strModCodes(j)
+                If strModCodes(j + 1) <> "" Then
+                    strMods += strModCodes(j) + " "
+                Else
+                    strMods += strModCodes(j)
+                End If
             End If
         Next
+
+        If NewCustomerOrderDashboard.intSelectedIndex = -1 Then
+            Select Case intIngCount
+                Case 1
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text)
+                Case 2
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text)
+                Case 3
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, lblIng3Amount.Text)
+                Case 4
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, lblIng3Amount.Text, lblIng4Amount.Text)
+            End Select
+
+        Else
+            Select Case intIngCount
+                Case 1
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                Case 2
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                Case 3
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
+                Case 4
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng4") = lblIng4Amount.Text
+            End Select
+        End If
 
         If (NewCustomerOrderDashboard.intSelectedIndex = -1) Then
             NewCustomerOrderDashboard.dgvOrderSummary.Rows.Add(lblItemName.Text, strMods)

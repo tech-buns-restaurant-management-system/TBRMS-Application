@@ -1,10 +1,13 @@
 ﻿Public Class WelcomeScreen
-    Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
+    Private Sub btnLogOut_Click(sender As Object, e As EventArgs)
         LogOutConfirmation.Show()
     End Sub
 
     Private Sub btnCustomerOrder_Click(sender As Object, e As EventArgs) Handles btnCustomerOrder.Click
+        CustomerModeConfirmation.Height = 0
+        CustomerModeConfirmation.Width = 0
         CustomerModeConfirmation.Show()
+        CustomerModeConfirmation.Grow()
     End Sub
 
     Private Sub btnFOH_Click(sender As Object, e As EventArgs) Handles btnFOH.Click

@@ -73,7 +73,6 @@ Partial Class LoginSplash
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
-        Me.btnCustomerTest = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.pnlSlider.SuspendLayout()
         CType(Me.picShift, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -784,7 +783,7 @@ Partial Class LoginSplash
         Me.lblForgotPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.lblForgotPassword.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.lblForgotPassword.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblForgotPassword.Location = New System.Drawing.Point(720, 94)
+        Me.lblForgotPassword.Location = New System.Drawing.Point(720, 96)
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 23
@@ -797,7 +796,7 @@ Partial Class LoginSplash
         Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.txtUser.Location = New System.Drawing.Point(607, 22)
+        Me.txtUser.Location = New System.Drawing.Point(607, 24)
         Me.txtUser.MaxLength = 20
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(202, 31)
@@ -809,7 +808,7 @@ Partial Class LoginSplash
         Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPass.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.txtPass.Location = New System.Drawing.Point(607, 59)
+        Me.txtPass.Location = New System.Drawing.Point(607, 61)
         Me.txtPass.MaxLength = 8
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -823,7 +822,7 @@ Partial Class LoginSplash
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(467, 59)
+        Me.Label2.Location = New System.Drawing.Point(467, 61)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(134, 31)
         Me.Label2.TabIndex = 21
@@ -835,7 +834,7 @@ Partial Class LoginSplash
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(462, 22)
+        Me.Label1.Location = New System.Drawing.Point(462, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(139, 31)
         Me.Label1.TabIndex = 20
@@ -849,33 +848,16 @@ Partial Class LoginSplash
         Me.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(469, 129)
+        Me.btnLogin.Location = New System.Drawing.Point(469, 126)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(340, 50)
         Me.btnLogin.TabIndex = 22
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'btnCustomerTest
-        '
-        Me.btnCustomerTest.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCustomerTest.FlatAppearance.BorderSize = 0
-        Me.btnCustomerTest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
-        Me.btnCustomerTest.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
-        Me.btnCustomerTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCustomerTest.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCustomerTest.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnCustomerTest.Location = New System.Drawing.Point(956, 66)
-        Me.btnCustomerTest.Name = "btnCustomerTest"
-        Me.btnCustomerTest.Size = New System.Drawing.Size(172, 69)
-        Me.btnCustomerTest.TabIndex = 26
-        Me.btnCustomerTest.Text = "Customer Test"
-        Me.btnCustomerTest.UseVisualStyleBackColor = False
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.btnCustomerTest)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btnLogin)
         Me.Panel2.Controls.Add(Me.picLogOut)
@@ -959,6 +941,5 @@ Partial Class LoginSplash
     Friend WithEvents btn1 As Button
     Friend WithEvents picShift As PictureBox
     Friend WithEvents btnShift As Button
-    Friend WithEvents btnCustomerTest As Button
     Friend WithEvents Panel2 As Panel
 End Class

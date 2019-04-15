@@ -22,72 +22,42 @@ Partial Class FoHSDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FoHSDashboard))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRunOrder = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.btnCash = New System.Windows.Forms.Button()
         Me.dgvOrderList = New System.Windows.Forms.DataGridView()
         Me.dgvOrderDetails = New System.Windows.Forms.DataGridView()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.picBack = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvOrderList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(356, 36)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(567, 110)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Top Buns Front-of-House" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Dashboard"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnRunOrder
         '
         Me.btnRunOrder.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.btnRunOrder.Enabled = False
         Me.btnRunOrder.FlatAppearance.BorderSize = 0
         Me.btnRunOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(207, Byte), Integer), CType(CType(211, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.btnRunOrder.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnRunOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRunOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.btnRunOrder.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnRunOrder.Location = New System.Drawing.Point(126, 561)
+        Me.btnRunOrder.Location = New System.Drawing.Point(160, 620)
         Me.btnRunOrder.Name = "btnRunOrder"
-        Me.btnRunOrder.Size = New System.Drawing.Size(379, 70)
+        Me.btnRunOrder.Size = New System.Drawing.Size(400, 70)
         Me.btnRunOrder.TabIndex = 12
         Me.btnRunOrder.Text = "Run Order"
         Me.btnRunOrder.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.PictureBox1.Enabled = False
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(36, 36)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(72, 72)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 16
-        Me.PictureBox1.TabStop = False
-        '
-        'btnBack
-        '
-        Me.btnBack.BackColor = System.Drawing.SystemColors.Control
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(32, 32)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(80, 80)
-        Me.btnBack.TabIndex = 15
-        Me.btnBack.UseVisualStyleBackColor = False
         '
         'btnCash
         '
@@ -99,9 +69,9 @@ Partial Class FoHSDashboard
         Me.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCash.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.btnCash.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnCash.Location = New System.Drawing.Point(774, 561)
+        Me.btnCash.Location = New System.Drawing.Point(720, 620)
         Me.btnCash.Name = "btnCash"
-        Me.btnCash.Size = New System.Drawing.Size(379, 70)
+        Me.btnCash.Size = New System.Drawing.Size(400, 70)
         Me.btnCash.TabIndex = 17
         Me.btnCash.Text = "Cash Payment"
         Me.btnCash.UseVisualStyleBackColor = False
@@ -112,31 +82,31 @@ Partial Class FoHSDashboard
         Me.dgvOrderList.AllowUserToDeleteRows = False
         Me.dgvOrderList.AllowUserToResizeColumns = False
         Me.dgvOrderList.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvOrderList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvOrderList.DefaultCellStyle = DataGridViewCellStyle6
-        Me.dgvOrderList.Location = New System.Drawing.Point(126, 164)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderList.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvOrderList.Location = New System.Drawing.Point(160, 200)
         Me.dgvOrderList.MultiSelect = False
         Me.dgvOrderList.Name = "dgvOrderList"
         Me.dgvOrderList.ReadOnly = True
         Me.dgvOrderList.RowHeadersVisible = False
         Me.dgvOrderList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOrderList.Size = New System.Drawing.Size(379, 390)
+        Me.dgvOrderList.Size = New System.Drawing.Size(400, 405)
         Me.dgvOrderList.TabIndex = 21
         '
         'dgvOrderDetails
@@ -145,32 +115,91 @@ Partial Class FoHSDashboard
         Me.dgvOrderDetails.AllowUserToDeleteRows = False
         Me.dgvOrderDetails.AllowUserToResizeColumns = False
         Me.dgvOrderDetails.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvOrderDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOrderDetails.DefaultCellStyle = DataGridViewCellStyle8
-        Me.dgvOrderDetails.Location = New System.Drawing.Point(774, 164)
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrderDetails.DefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvOrderDetails.Location = New System.Drawing.Point(720, 200)
         Me.dgvOrderDetails.MultiSelect = False
         Me.dgvOrderDetails.Name = "dgvOrderDetails"
         Me.dgvOrderDetails.ReadOnly = True
         Me.dgvOrderDetails.RowHeadersVisible = False
         Me.dgvOrderDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOrderDetails.Size = New System.Drawing.Size(379, 390)
+        Me.dgvOrderDetails.Size = New System.Drawing.Size(400, 405)
         Me.dgvOrderDetails.TabIndex = 23
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.picBack)
+        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 30)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1280, 100)
+        Me.Panel2.TabIndex = 27
+        '
+        'picBack
+        '
+        Me.picBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picBack.Image = CType(resources.GetObject("picBack.Image"), System.Drawing.Image)
+        Me.picBack.Location = New System.Drawing.Point(30, 0)
+        Me.picBack.Name = "picBack"
+        Me.picBack.Size = New System.Drawing.Size(100, 100)
+        Me.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picBack.TabIndex = 23
+        Me.picBack.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(344, 23)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(592, 55)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "Front of House Dashboard"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label1.Location = New System.Drawing.Point(160, 145)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(400, 40)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Order List"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label2.Location = New System.Drawing.Point(720, 145)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(400, 40)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "Order Details"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FoHSDashboard
         '
@@ -178,30 +207,32 @@ Partial Class FoHSDashboard
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.dgvOrderDetails)
         Me.Controls.Add(Me.dgvOrderList)
         Me.Controls.Add(Me.btnCash)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnRunOrder)
-        Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FoHSDashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvOrderDetails, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents btnRunOrder As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnBack As Button
     Friend WithEvents btnCash As Button
     Friend WithEvents dgvOrderList As DataGridView
     Friend WithEvents dgvOrderDetails As DataGridView
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents picBack As PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class

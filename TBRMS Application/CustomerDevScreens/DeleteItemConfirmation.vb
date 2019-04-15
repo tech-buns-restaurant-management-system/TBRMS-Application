@@ -67,4 +67,8 @@
     Private Sub CustomizeItem_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
         lblMessage.Focus()
     End Sub
+
+    Private Sub lblMessage_Click(sender As Object, e As EventArgs) Handles lblMessage.Click
+
+    End Sub
 End Class

@@ -1,42 +1,37 @@
 ﻿Public Class FoHSDashboard
-    Public strSelectedOrder As String = ""
-    Public strSelectedItem As String = ""
+    Public strSelectedOrder As String
     Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
-    'Private Sub btnEditItem_Click(sender As Object, e As EventArgs)
-    '    'If lstOrderDetails.SelectedIndex = -1 Then
-    '    '    MessageBox.Show("Error: No order item is selected")
-    '    'Else
-    '    '    FoHMenuItemCustomization.lblItem.Text = lstOrderDetails.SelectedItem
-    '    '    FoHMenuItemCustomization.SetIngredients()
-    '    '    FoHMenuItemCustomization.Show()
-    '    '    Me.Hide()
-    '    'End If
-    'End Sub
-
-    'Private Sub btnDeleteItem_Click(sender As Object, e As EventArgs)
-    '    If (strSelectedItem = "") Then
-    '        MessageBox.Show("Error: No item selected.")
-    '    Else
-    '        FoHMenuItemDeletionConfirmation.Show()
-    '    End If
-    'End Sub
-
     Private Sub btnCash_Click(sender As Object, e As EventArgs) Handles btnCash.Click
-        FoHCashPaymentScreen.dblDue = 16.95
+        connection.Open()
+
+        Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
+        selectQuery.CommandText = "SELECT CO.OrderTotal
+                                   FROM CustomerOrder as CO
+                                   WHERE CO.CusOrder_ID = '" + strSelectedOrder + "';"
+
+        Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+
+        Dim strPrice() As String
+
+        While SQLReader.Read()
+            strPrice = ({SQLReader.Item("OrderTotal").ToString})
+        End While
+
+        connection.Close()
+
+        FoHCashPaymentScreen.dblDue = strPrice(0)
         FoHCashPaymentScreen.txtDue.Text = "$" + CStr(FoHCashPaymentScreen.dblDue)
         FoHCashPaymentScreen.Show()
     End Sub
 
     Private Sub btnRunOrder_Click(sender As Object, e As EventArgs) Handles btnRunOrder.Click
-    End Sub
+        MessageBox.Show("Confirm That All Items Are Ready To Be Run")
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        WelcomeScreen.Show()
-        Me.Hide()
-    End Sub
+        Dim updateQuery As String = "UPDATE CustomerOrder SET OrderComplete = 'TRUE' WHERE CusOrder_ID = '" + strSelectedOrder + "';"
 
-    Private Sub FoHSDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ExecuteQuery(updateQuery)
+
         FetchOrderList()
     End Sub
 
@@ -46,7 +41,6 @@
 
         If e.RowIndex <> -1 Then
             selectedRow = dgvOrderDetails.Rows(index)
-            strSelectedItem = selectedRow.Cells(0).Value.ToString
         End If
     End Sub
 
@@ -59,11 +53,18 @@
             strSelectedOrder = selectedRow.Cells(0).Value.ToString
             FetchOrderDetails()
         End If
+
+        If (selectedRow.Cells(2).Value.ToString = "False") Then
+            btnCash.Enabled = True
+            btnRunOrder.Enabled = False
+        Else
+            btnCash.Enabled = False
+            btnRunOrder.Enabled = True
+        End If
     End Sub
 
     Private Sub dgvOrderList_GotFocus(sender As Object, e As EventArgs) Handles dgvOrderList.GotFocus
         dgvOrderDetails.ClearSelection()
-        strSelectedItem = ""
     End Sub
 
     'SQL Query Functions
@@ -73,25 +74,27 @@
         connection.Open()
 
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
-        selectQuery.CommandText = "SELECT CO.CusOrder_ID as OrderID, CO.OrderTableNum as TableNum, CO.OrderPaid as Paid, SUM(MI.MenuItemPrice) as Price
-                                   FROM CustomerOrder as CO, CustomerOrderLine as COL, MenuItem as MI
+        selectQuery.CommandText = "SELECT CO.CusOrder_ID as OrderID, CO.OrderTableNum as TableNum, CO.OrderPaid as Paid, CO.OrderTotal as Price
+                                   FROM CustomerOrder as CO, CustomerOrderLine as COL
                                    WHERE CO.CusOrder_ID = COL.CusOrder_ID
-                                   AND COL.MenuItem_ID = MI.MenuItem_ID
-                                   GROUP BY CO.CusOrder_ID, CO.OrderTableNum, CO.OrderPaid;"
+                                   AND CO.OrderComplete = 'FALSE';"
 
         Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
 
         dgvOrderList.Columns.Clear()
         dgvOrderList.Rows.Clear()
 
+        dgvOrderDetails.Columns.Clear()
+        dgvOrderDetails.Rows.Clear()
+
         dgvOrderList.Columns.Add("colID", "Order")
         dgvOrderList.Columns.Add("colTableNum", "Table")
         dgvOrderList.Columns.Add("colPaid", "Paid?")
         dgvOrderList.Columns.Add("colPrice", "Price")
 
-        dgvOrderList.Columns("colID").Width = 90
-        dgvOrderList.Columns("colTableNum").Width = 90
-        dgvOrderList.Columns("colPaid").Width = 90
+        dgvOrderList.Columns("colID").Width = 95
+        dgvOrderList.Columns("colTableNum").Width = 95
+        dgvOrderList.Columns("colPaid").Width = 100
         dgvOrderList.Columns("colPrice").Width = 110
 
         While SQLReader.Read()
@@ -105,6 +108,7 @@
         Next
 
         dgvOrderList.ClearSelection()
+
     End Function
 
     Function FetchOrderDetails()
@@ -126,7 +130,7 @@
         dgvOrderDetails.Columns.Add("colItem", "Item Name")
         dgvOrderDetails.Columns.Add("colMods", "Mods")
 
-        dgvOrderDetails.Columns("colItem").Width = 150
+        dgvOrderDetails.Columns("colItem").Width = 170
         dgvOrderDetails.Columns("colMods").Width = 229
 
         While SQLReader.Read()
@@ -148,4 +152,16 @@
         command.ExecuteNonQuery()
         connection.Close()
     End Function
+
+    Private Sub FoHSDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FetchOrderList()
+        dgvOrderList.ClearSelection()
+    End Sub
+
+    Private Sub picBack_Click(sender As Object, e As EventArgs) Handles picBack.Click
+        FoHExitConfirmation.Width = 0
+        FoHExitConfirmation.Height = 0
+        FoHExitConfirmation.Show()
+        FoHExitConfirmation.Grow()
+    End Sub
 End Class

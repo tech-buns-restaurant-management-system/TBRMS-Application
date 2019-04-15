@@ -26,7 +26,10 @@ Partial Class CusSplashScreen
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnStartOrder = New System.Windows.Forms.Button()
+        Me.picBack = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -42,6 +45,7 @@ Partial Class CusSplashScreen
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.picBack)
         Me.Panel2.Location = New System.Drawing.Point(-1, -1)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1280, 100)
@@ -64,6 +68,18 @@ Partial Class CusSplashScreen
         Me.btnStartOrder.Text = "Begin Crafting Your Order"
         Me.btnStartOrder.UseVisualStyleBackColor = False
         '
+        'picBack
+        '
+        Me.picBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picBack.Image = CType(resources.GetObject("picBack.Image"), System.Drawing.Image)
+        Me.picBack.Location = New System.Drawing.Point(30, 0)
+        Me.picBack.Name = "picBack"
+        Me.picBack.Size = New System.Drawing.Size(100, 100)
+        Me.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picBack.TabIndex = 24
+        Me.picBack.TabStop = False
+        '
         'CusSplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -77,6 +93,8 @@ Partial Class CusSplashScreen
         Me.Name = "CusSplashScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -84,4 +102,5 @@ Partial Class CusSplashScreen
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnStartOrder As Button
+    Friend WithEvents picBack As PictureBox
 End Class

@@ -38,7 +38,6 @@
             blnLoggedIn = True
             tmrSlider.Start()
         End If
-
     End Sub
 
     Private Sub btnLogOut_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogOut.MouseDown
@@ -327,7 +326,7 @@
         End If
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnCustomerTest.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         CusSplashScreen.Show()
         Me.Hide()
     End Sub

@@ -63,6 +63,7 @@ Partial Class FoHCashPaymentScreen
         '
         'btnSave
         '
+        Me.btnSave.Enabled = False
         Me.btnSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.Location = New System.Drawing.Point(1168, 32)
         Me.btnSave.Name = "btnSave"
