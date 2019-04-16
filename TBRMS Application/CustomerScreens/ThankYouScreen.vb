@@ -36,6 +36,28 @@
 
             ExecuteQuery(OrderLineQuery)
         Next
+
+        'For i As Integer = 0 To NewCustomerOrderDashboard.strItems.Count
+        '    Dim newConnection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+
+        '    'Gets Inv_IDs of the ingredients used in the Item selected
+        '    Dim strSelect As String = "SELECT Ing.Inv_ID FROM Ingredient as Ing" +
+        '                              "WHERE MI.MenuItem_ID = (SELECT MenuItem_ID FROM MenuItem WHERE MenuItemName = '" + NewCustomerOrderDashboard.strMods(i) + "';"
+
+        '    Dim dtbIng As New DataTable
+
+        '    Using newConnection
+        '        newConnection.Open()
+        '        Using dad As New SqlClient.SqlDataAdapter(strSelect, newConnection)
+        '            dad.Fill(dtbIng)
+        '        End Using
+        '        newConnection.Close()
+        '    End Using
+
+
+        'Next
+
+
     End Function
 
     Function ExecuteQuery(query As String)

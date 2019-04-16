@@ -137,7 +137,7 @@
         Dim counter As Integer = 0
 
         For i As Integer = 0 To dtbInvIDs.Rows.Count - 1
-            If (Not IsDBNull(dtbInvIDs.Rows(i).Item(1))) Then
+            If (dtbInvIDs.Rows(i).Item(1)) <> "--" Then
                 ReDim Preserve strModCodes(i)
                 strModCodes(i) = dtbInvIDs.Rows(i).Item(1)
 
@@ -213,11 +213,11 @@
         If NewCustomerOrderDashboard.intSelectedIndex = -1 Then
             Select Case intIngCount
                 Case 1
-                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text)
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, "", "", "")
                 Case 2
-                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text)
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, "", "")
                 Case 3
-                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, lblIng3Amount.Text)
+                    CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, lblIng3Amount.Text, "")
                 Case 4
                     CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, lblIng2Amount.Text, lblIng3Amount.Text, lblIng4Amount.Text)
             End Select

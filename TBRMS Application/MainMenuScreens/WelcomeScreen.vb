@@ -1,6 +1,6 @@
 ﻿Public Class WelcomeScreen
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs)
-        LogOutConfirmation.Show()
+
     End Sub
 
     Private Sub btnCustomerOrder_Click(sender As Object, e As EventArgs) Handles btnCustomerOrder.Click
@@ -18,5 +18,9 @@
     Private Sub btnManagement_Click(sender As Object, e As EventArgs) Handles btnManagement.Click
         ManagemantDashboard.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub picBack_Click(sender As Object, e As EventArgs) Handles picBack.Click
+        LogOutConfirmation.Show()
     End Sub
 End Class

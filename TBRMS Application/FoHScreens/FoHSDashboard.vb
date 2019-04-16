@@ -75,9 +75,8 @@
 
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
         selectQuery.CommandText = "SELECT CO.CusOrder_ID as OrderID, CO.OrderTableNum as TableNum, CO.OrderPaid as Paid, CO.OrderTotal as Price
-                                   FROM CustomerOrder as CO, CustomerOrderLine as COL
-                                   WHERE CO.CusOrder_ID = COL.CusOrder_ID
-                                   AND CO.OrderComplete = 'FALSE';"
+                                   FROM CustomerOrder as CO
+                                   WHERE CO.OrderComplete = 'FALSE';"
 
         Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
 

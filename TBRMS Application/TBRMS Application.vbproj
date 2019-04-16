@@ -14,7 +14,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>D:\</PublishUrl>
+    <PublishUrl>F:\TBRMS Deliverable 9\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -108,64 +108,70 @@
     <Compile Include="AzureTBDB.vb">
       <DependentUpon>AzureTBDB.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CancelOrderConfirmation.Designer.vb">
+    <Compile Include="CustomerScreens\CancelOrderConfirmation.Designer.vb">
       <DependentUpon>CancelOrderConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CancelOrderConfirmation.vb">
+    <Compile Include="CustomerScreens\CancelOrderConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\CardPayment.Designer.vb">
+    <Compile Include="CustomerScreens\CardPayment.Designer.vb">
       <DependentUpon>CardPayment.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CardPayment.vb">
+    <Compile Include="CustomerScreens\CardPayment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\CashPayment.Designer.vb">
+    <Compile Include="CustomerScreens\CashPayment.Designer.vb">
       <DependentUpon>CashPayment.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CashPayment.vb">
+    <Compile Include="CustomerScreens\CashPayment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\CusSplashScreen.Designer.vb">
+    <Compile Include="CustomerScreens\CusSplashScreen.Designer.vb">
       <DependentUpon>CusSplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CusSplashScreen.vb">
+    <Compile Include="CustomerScreens\CusSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\CustomizeItem.Designer.vb">
+    <Compile Include="CustomerScreens\CustomizeItem.Designer.vb">
       <DependentUpon>CustomizeItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\CustomizeItem.vb">
+    <Compile Include="CustomerScreens\CustomizeItem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\DeleteItemConfirmation.Designer.vb">
+    <Compile Include="CustomerScreens\DeleteItemConfirmation.Designer.vb">
       <DependentUpon>DeleteItemConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\DeleteItemConfirmation.vb">
+    <Compile Include="CustomerScreens\DeleteItemConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\PaymentSelection.Designer.vb">
+    <Compile Include="CustomerScreens\PaymentSelection.Designer.vb">
       <DependentUpon>PaymentSelection.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\PaymentSelection.vb">
+    <Compile Include="CustomerScreens\PaymentSelection.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\ThankYouScreen.Designer.vb">
+    <Compile Include="CustomerScreens\ThankYouScreen.Designer.vb">
       <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\ThankYouScreen.vb">
+    <Compile Include="CustomerScreens\ThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerModeConfirmation.Designer.vb">
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuScreens\CustomerModeConfirmation.Designer.vb">
       <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerModeConfirmation.vb">
+    <Compile Include="MainMenuScreens\CustomerModeConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\NewCustomerOrderDashboard.Designer.vb">
+    <Compile Include="CustomerScreens\NewCustomerOrderDashboard.Designer.vb">
       <DependentUpon>NewCustomerOrderDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\NewCustomerOrderDashboard.vb">
+    <Compile Include="CustomerScreens\NewCustomerOrderDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FoHScreens\FoHCashPaymentScreen.Designer.vb">
@@ -186,16 +192,16 @@
     <Compile Include="FoHScreens\FoHSDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginSplash.Designer.vb">
+    <Compile Include="MainMenuScreens\LoginSplash.Designer.vb">
       <DependentUpon>LoginSplash.vb</DependentUpon>
     </Compile>
-    <Compile Include="LoginSplash.vb">
+    <Compile Include="MainMenuScreens\LoginSplash.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogOutConfirmation.Designer.vb">
+    <Compile Include="MainMenuScreens\LogOutConfirmation.Designer.vb">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="LogOutConfirmation.vb">
+    <Compile Include="MainMenuScreens\LogOutConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagementScreens\AddForm.Designer.vb">
@@ -237,54 +243,57 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="CustomerDevScreens\PINScreen.Designer.vb">
+    <Compile Include="CustomerScreens\PINScreen.Designer.vb">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\PINScreen.vb">
+    <Compile Include="CustomerScreens\PINScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDevScreens\TableTagEntry.Designer.vb">
+    <Compile Include="CustomerScreens\TableTagEntry.Designer.vb">
       <DependentUpon>TableTagEntry.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerDevScreens\TableTagEntry.vb">
+    <Compile Include="CustomerScreens\TableTagEntry.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WelcomeScreen.Designer.vb">
+    <Compile Include="MainMenuScreens\WelcomeScreen.Designer.vb">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeScreen.vb">
+    <Compile Include="MainMenuScreens\WelcomeScreen.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CustomerDevScreens\CancelOrderConfirmation.resx">
+    <EmbeddedResource Include="CustomerScreens\CancelOrderConfirmation.resx">
       <DependentUpon>CancelOrderConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\CardPayment.resx">
+    <EmbeddedResource Include="CustomerScreens\CardPayment.resx">
       <DependentUpon>CardPayment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\CashPayment.resx">
+    <EmbeddedResource Include="CustomerScreens\CashPayment.resx">
       <DependentUpon>CashPayment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\CusSplashScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\CusSplashScreen.resx">
       <DependentUpon>CusSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\CustomizeItem.resx">
+    <EmbeddedResource Include="CustomerScreens\CustomizeItem.resx">
       <DependentUpon>CustomizeItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\DeleteItemConfirmation.resx">
+    <EmbeddedResource Include="CustomerScreens\DeleteItemConfirmation.resx">
       <DependentUpon>DeleteItemConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\PaymentSelection.resx">
+    <EmbeddedResource Include="CustomerScreens\PaymentSelection.resx">
       <DependentUpon>PaymentSelection.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\ThankYouScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\ThankYouScreen.resx">
       <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerModeConfirmation.resx">
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuScreens\CustomerModeConfirmation.resx">
       <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\NewCustomerOrderDashboard.resx">
+    <EmbeddedResource Include="CustomerScreens\NewCustomerOrderDashboard.resx">
       <DependentUpon>NewCustomerOrderDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoHScreens\FoHCashPaymentScreen.resx">
@@ -296,10 +305,10 @@
     <EmbeddedResource Include="FoHScreens\FoHSDashboard.resx">
       <DependentUpon>FoHSDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginSplash.resx">
+    <EmbeddedResource Include="MainMenuScreens\LoginSplash.resx">
       <DependentUpon>LoginSplash.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogOutConfirmation.resx">
+    <EmbeddedResource Include="MainMenuScreens\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\AddForm.resx">
@@ -320,13 +329,13 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\PINScreen.resx">
+    <EmbeddedResource Include="CustomerScreens\PINScreen.resx">
       <DependentUpon>PINScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDevScreens\TableTagEntry.resx">
+    <EmbeddedResource Include="CustomerScreens\TableTagEntry.resx">
       <DependentUpon>TableTagEntry.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeScreen.resx">
+    <EmbeddedResource Include="MainMenuScreens\WelcomeScreen.resx">
       <DependentUpon>WelcomeScreen.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

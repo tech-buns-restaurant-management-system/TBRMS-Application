@@ -326,11 +326,6 @@
         End If
     End Function
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
-        CusSplashScreen.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub btnShift_MouseDown(sender As Object, e As MouseEventArgs) Handles btnShift.MouseDown
         picShift.BackColor = Color.FromArgb(207, 211, 216)
     End Sub
@@ -355,5 +350,8 @@
         txtPass.BackColor = Color.FromArgb(227, 227, 227)
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
 End Class

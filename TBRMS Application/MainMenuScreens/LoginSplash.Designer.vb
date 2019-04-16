@@ -74,6 +74,7 @@ Partial Class LoginSplash
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.pnlSlider.SuspendLayout()
         CType(Me.picShift, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -801,6 +802,7 @@ Partial Class LoginSplash
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(202, 31)
         Me.txtUser.TabIndex = 18
+        Me.txtUser.TabStop = False
         '
         'txtPass
         '
@@ -814,6 +816,7 @@ Partial Class LoginSplash
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(202, 31)
         Me.txtPass.TabIndex = 19
+        Me.txtPass.TabStop = False
         Me.txtPass.UseSystemPasswordChar = True
         '
         'Label2
@@ -871,6 +874,15 @@ Partial Class LoginSplash
         Me.Panel2.Size = New System.Drawing.Size(1280, 200)
         Me.Panel2.TabIndex = 28
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(603, 54)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'LoginSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -878,6 +890,7 @@ Partial Class LoginSplash
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1280, 720)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.pnlSlider)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -942,4 +955,5 @@ Partial Class LoginSplash
     Friend WithEvents picShift As PictureBox
     Friend WithEvents btnShift As Button
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Button1 As Button
 End Class
