@@ -1,13 +1,13 @@
 ﻿Public Class DeleteItemConfirmation
     Function Grow()
 
-        NewCustomerOrderDashboard.picBack.Enabled = False
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = False
-        NewCustomerOrderDashboard.dgvCategories.Enabled = False
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = False
-        NewCustomerOrderDashboard.btnEdit.Enabled = False
-        NewCustomerOrderDashboard.btnDelete.Enabled = False
-        NewCustomerOrderDashboard.btnCheckout.Enabled = False
+        CustomerOrderDashboard.picBack.Enabled = False
+        CustomerOrderDashboard.picOrderSummary.Enabled = False
+        CustomerOrderDashboard.dgvCategories.Enabled = False
+        CustomerOrderDashboard.dgvMenuItems.Enabled = False
+        CustomerOrderDashboard.btnEdit.Enabled = False
+        CustomerOrderDashboard.btnDelete.Enabled = False
+        CustomerOrderDashboard.btnCheckout.Enabled = False
 
         For i As Integer = 1 To 20
 
@@ -43,13 +43,13 @@
 
         Next
 
-        NewCustomerOrderDashboard.picBack.Enabled = True
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = True
-        NewCustomerOrderDashboard.dgvCategories.Enabled = True
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = True
-        NewCustomerOrderDashboard.btnEdit.Enabled = True
-        NewCustomerOrderDashboard.btnDelete.Enabled = True
-        NewCustomerOrderDashboard.btnCheckout.Enabled = True
+        CustomerOrderDashboard.picBack.Enabled = True
+        CustomerOrderDashboard.picOrderSummary.Enabled = True
+        CustomerOrderDashboard.dgvCategories.Enabled = True
+        CustomerOrderDashboard.dgvMenuItems.Enabled = True
+        CustomerOrderDashboard.btnEdit.Enabled = True
+        CustomerOrderDashboard.btnDelete.Enabled = True
+        CustomerOrderDashboard.btnCheckout.Enabled = True
 
         Me.Hide()
     End Function
@@ -60,15 +60,11 @@
 
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         Shrink()
-        NewCustomerOrderDashboard.DeleteItem()
+        CustomerOrderDashboard.DeleteItem()
     End Sub
 
     'This function sets the focus to lblItemName when the user clicks off of the form. This keeps the border from appearing around a button.
     Private Sub CustomizeItem_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
         lblMessage.Focus()
-    End Sub
-
-    Private Sub lblMessage_Click(sender As Object, e As EventArgs) Handles lblMessage.Click
-
     End Sub
 End Class

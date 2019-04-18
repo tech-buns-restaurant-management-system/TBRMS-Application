@@ -1,4 +1,4 @@
-﻿Public Class NewCustomerOrderDashboard
+﻿Public Class CustomerOrderDashboard
     Dim dblOrderPrice(0), dblSubtotal, dblOrderTax As Double
     Dim intTicks As Integer = 0
     Dim intXCoor As Integer = 1281
@@ -42,6 +42,15 @@
         tmrOrderSummarySlider.Start()
     End Sub
 
+    Function ResetPrices()
+        dblSubtotal = 0
+        lblSubtotal.Text = FormatCurrency(dblSubtotal)
+        dblOrderTax = 0
+        lblTax.Text = FormatCurrency(dblOrderTax)
+        intItemNum = 0
+        lblNumItems.Text = intItemNum
+        ReDim dblOrderPrice(0)
+    End Function
     'Category & Menu Item DataGridView Functions
     Private Sub dgvCategories_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategories.CellClick
         Dim index As Integer = e.RowIndex
@@ -244,10 +253,14 @@
 
     Function DeleteItem()
         If (intSelectedIndex < 0) Then
-            MessageBox.Show("Error: No item is selected.")
+            CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
+            CustomerOrderErrorDialog.Show()
+            CustomerOrderErrorDialog.Grow()
         Else
 
             dgvOrderSummary.Rows.RemoveAt(intSelectedIndex)
+            CusSplashScreen.dtbOrderMods.Rows.RemoveAt(intSelectedIndex)
+
             ReDim dblOrderPrice(0)
 
             For i As Integer = 0 To dgvOrderSummary.Rows.Count - 1
@@ -300,7 +313,9 @@
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         If (intSelectedIndex = -1) Then
-            MessageBox.Show("Error: No item selected.")
+            CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
+            CustomerOrderErrorDialog.Show()
+            CustomerOrderErrorDialog.Grow()
         Else
             DeleteItemConfirmation.Height = 0
             DeleteItemConfirmation.Width = 0
@@ -311,49 +326,53 @@
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         If (intSelectedIndex = -1) Then
-            MessageBox.Show("Error: No item selected.")
+            CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
+            CustomerOrderErrorDialog.Show()
+            CustomerOrderErrorDialog.Grow()
             Exit Sub
         End If
 
         Dim selectedRow As DataGridViewRow = dgvOrderSummary.Rows(intSelectedIndex)
         CustomizeItem.lblItemName.Text = selectedRow.Cells(0).Value
 
-            Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+        Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
-            'Gets Inv_IDs of the ignredients used in the Item selected
-            Dim strSelect As String = "SELECT Ing.Inv_ID, Inv.InvModCode FROM Ingredient as Ing, Inventory as Inv, MenuItem as MI " +
+        'Gets Inv_IDs of the ignredients used in the Item selected
+        Dim strSelect As String = "SELECT Ing.Inv_ID, Inv.InvModCode FROM Ingredient as Ing, Inventory as Inv, MenuItem as MI " +
                                "WHERE MI.MenuItem_ID = Ing.MenuItem_ID And Ing.Inv_ID = Inv.Inv_ID And MI.MenuItemName = '" + selectedRow.Cells(0).Value + "';"
 
-            Dim dtbInvIDs As New DataTable
+        Dim dtbInvIDs As New DataTable
 
-            Using connection
-                connection.Open()
-                Using dad As New SqlClient.SqlDataAdapter(strSelect, connection)
-                    dad.Fill(dtbInvIDs)
-                End Using
-                connection.Close()
+        Using connection
+            connection.Open()
+            Using dad As New SqlClient.SqlDataAdapter(strSelect, connection)
+                dad.Fill(dtbInvIDs)
             End Using
+            connection.Close()
+        End Using
 
-            CustomizeItem.GetItemNames(dtbInvIDs, CustomizeItem.strItemNames)
+        CustomizeItem.GetItemNames(dtbInvIDs, CustomizeItem.strItemNames)
 
-            For i As Integer = 0 To 3
-                CustomizeItem.intIngAmount(i) = 2
-                CustomizeItem.lblIng1Amount.Text = "Regular"
-                CustomizeItem.lblIng2Amount.Text = "Regular"
-                CustomizeItem.lblIng3Amount.Text = "Regular"
-                CustomizeItem.lblIng4Amount.Text = "Regular"
-            Next
+        For i As Integer = 0 To 3
+            CustomizeItem.intIngAmount(i) = 2
+            CustomizeItem.lblIng1Amount.Text = "Regular"
+            CustomizeItem.lblIng2Amount.Text = "Regular"
+            CustomizeItem.lblIng3Amount.Text = "Regular"
+            CustomizeItem.lblIng4Amount.Text = "Regular"
+        Next
 
-            CustomizeItem.Height = 0
+        CustomizeItem.Height = 0
         CustomizeItem.Width = 0
         CustomizeItem.btnSave.Text = "Update Item"
         CustomizeItem.Show()
-            CustomizeItem.Grow()
+        CustomizeItem.Grow()
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
         If (dgvOrderSummary.Rows.Count = 0) Then
-            MessageBox.Show("Error: There are no items on the order.")
+            CustomerOrderErrorDialog.lblMessage.Text = "Error: No items are on the order."
+            CustomerOrderErrorDialog.Show()
+            CustomerOrderErrorDialog.Grow()
             Exit Sub
         End If
 
@@ -370,6 +389,8 @@
         dgvMenuItems.Rows.Clear()
 
         dblOrderTotal = dblSubtotal + dblOrderTax
+
+        ReDim dblOrderPrice(0)
 
         dblSubtotal = 0
         dblOrderTax = 0
@@ -665,13 +686,14 @@
         Timer1.Enabled = True
         Timer1.Start()
         picMeme.Visible = True
-        If (intTicks = 1) Then
 
+        If (intTicks = 1) Then
             If strMeme = "Mascot" Then
                 My.Computer.Audio.Play("wow.wav", AudioPlayMode.WaitToComplete)
             ElseIf strMeme = "Shrek" Then
                 My.Computer.Audio.Play("allstar.wav", AudioPlayMode.WaitToComplete)
             End If
+
             intTicks += 1
         ElseIf (intTicks < 3) Then
             intTicks += 1

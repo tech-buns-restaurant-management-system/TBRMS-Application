@@ -32,7 +32,7 @@ Partial Class FoHExitConfirmation
         Me.lblMessage.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMessage.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblMessage.Location = New System.Drawing.Point(0, 10)
+        Me.lblMessage.Location = New System.Drawing.Point(-1, 12)
         Me.lblMessage.Name = "lblMessage"
         Me.lblMessage.Size = New System.Drawing.Size(340, 70)
         Me.lblMessage.TabIndex = 35
@@ -48,7 +48,7 @@ Partial Class FoHExitConfirmation
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(180, 95)
+        Me.btnCancel.Location = New System.Drawing.Point(179, 97)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(140, 50)
         Me.btnCancel.TabIndex = 34
@@ -64,7 +64,7 @@ Partial Class FoHExitConfirmation
         Me.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnContinue.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnContinue.Location = New System.Drawing.Point(20, 95)
+        Me.btnContinue.Location = New System.Drawing.Point(19, 97)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(140, 50)
         Me.btnContinue.TabIndex = 33
@@ -85,6 +85,7 @@ Partial Class FoHExitConfirmation
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FoHExitConfirmation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub

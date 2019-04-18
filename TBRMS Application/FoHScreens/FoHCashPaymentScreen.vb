@@ -19,7 +19,7 @@
             txtChange.Text = String.Format("{0:C}", dblChange)
 
             MessageBox.Show("Confirm That Change Has Been Given to Customer.")
-            btnSave.Enabled = True
+            picSave.Enabled = True
         End If
     End Sub
 
@@ -73,20 +73,8 @@
         End If
     End Function
 
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        FoHSDashboard.Show()
-        txtDue.Clear()
-        txtPaid.Clear()
-        txtChange.Clear()
-        dblDue = 0
-        dblPaid = 0
-        dblChange = 0
-        blnPaid = False
-        Me.Hide()
-    End Sub
-
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        Dim updateQuery As String = "UPDATE CustomerOrder SET OrderPaid = 'TRUE' WHERE CusOrder_ID = '" + FoHSDashboard.strSelectedOrder + "';"
+    Private Sub picSave_Click(sender As Object, e As EventArgs) Handles picSave.Click
+        Dim updateQuery As String = "UPDATE CustomerOrder SET OrderPaid = 'TRUE' WHERE CusOrder_ID = '" + FoHDashboard.strSelectedOrder + "';"
 
         ExecuteQuery(updateQuery)
 
@@ -98,7 +86,7 @@
         dblPaid = 0
         dblDue = 0
 
-        FoHSDashboard.FetchOrderList()
+        FoHDashboard.FetchOrderList()
         Me.Hide()
     End Sub
 
@@ -106,6 +94,18 @@
         txtPaid.Clear()
         txtChange.Clear()
         blnPaid = False
+    End Sub
+
+    Private Sub picBack_Click(sender As Object, e As EventArgs) Handles picBack.Click
+        FoHDashboard.Show()
+        txtDue.Clear()
+        txtPaid.Clear()
+        txtChange.Clear()
+        dblDue = 0
+        dblPaid = 0
+        dblChange = 0
+        blnPaid = False
+        Me.Hide()
     End Sub
 
     Function ExecuteQuery(query As String)

@@ -194,7 +194,7 @@
 
         For j As Integer = 0 To intIngCount - 1
 
-            If (NewCustomerOrderDashboard.intSelectedIndex = -1) Then
+            If (CustomerOrderDashboard.intSelectedIndex = -1) Then
                 If strModCodes(j + 1) <> "" Then
                     strMods += strModCodes(j) + " "
                 Else
@@ -210,7 +210,7 @@
             End If
         Next
 
-        If NewCustomerOrderDashboard.intSelectedIndex = -1 Then
+        If CustomerOrderDashboard.intSelectedIndex = -1 Then
             Select Case intIngCount
                 Case 1
                     CusSplashScreen.dtbOrderMods.Rows.Add(lblIng1Amount.Text, "", "", "")
@@ -225,40 +225,45 @@
         Else
             Select Case intIngCount
                 Case 1
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng2") = ""
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng3") = ""
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng4") = ""
                 Case 2
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng3") = ""
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng4") = ""
                 Case 3
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng4") = ""
                 Case 4
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
-                    CusSplashScreen.dtbOrderMods.Rows(NewCustomerOrderDashboard.intSelectedIndex)("colIng4") = lblIng4Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng1") = lblIng1Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng2") = lblIng2Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng3") = lblIng3Amount.Text
+                    CusSplashScreen.dtbOrderMods.Rows(CustomerOrderDashboard.intSelectedIndex)("colIng4") = lblIng4Amount.Text
             End Select
         End If
 
-        If (NewCustomerOrderDashboard.intSelectedIndex = -1) Then
-            NewCustomerOrderDashboard.dgvOrderSummary.Rows.Add(lblItemName.Text, strMods)
-            NewCustomerOrderDashboard.dgvOrderSummary.ClearSelection()
-            NewCustomerOrderDashboard.AddItem()
+        If (CustomerOrderDashboard.intSelectedIndex = -1) Then
+            CustomerOrderDashboard.dgvOrderSummary.Rows.Add(lblItemName.Text, strMods)
+            CustomerOrderDashboard.dgvOrderSummary.ClearSelection()
+            CustomerOrderDashboard.AddItem()
         Else
-            NewCustomerOrderDashboard.dgvOrderSummary.Rows(NewCustomerOrderDashboard.intSelectedIndex).Cells(0).Value = lblItemName.Text
-            NewCustomerOrderDashboard.dgvOrderSummary.Rows(NewCustomerOrderDashboard.intSelectedIndex).Cells(1).Value = strMods
+            CustomerOrderDashboard.dgvOrderSummary.Rows(CustomerOrderDashboard.intSelectedIndex).Cells(0).Value = lblItemName.Text
+            CustomerOrderDashboard.dgvOrderSummary.Rows(CustomerOrderDashboard.intSelectedIndex).Cells(1).Value = strMods
         End If
-
 
         Shrink()
     End Sub
 
     Function Grow()
-        NewCustomerOrderDashboard.picBack.Enabled = False
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = False
-        NewCustomerOrderDashboard.dgvCategories.Enabled = False
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = False
+        CustomerOrderDashboard.picBack.Enabled = False
+        CustomerOrderDashboard.picOrderSummary.Enabled = False
+        CustomerOrderDashboard.dgvCategories.Enabled = False
+        CustomerOrderDashboard.dgvMenuItems.Enabled = False
 
         Me.CenterToParent()
         For i As Integer = 1 To 20
@@ -296,10 +301,10 @@
 
         Next
 
-        NewCustomerOrderDashboard.picBack.Enabled = True
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = True
-        NewCustomerOrderDashboard.dgvCategories.Enabled = True
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = True
+        CustomerOrderDashboard.picBack.Enabled = True
+        CustomerOrderDashboard.picOrderSummary.Enabled = True
+        CustomerOrderDashboard.dgvCategories.Enabled = True
+        CustomerOrderDashboard.dgvMenuItems.Enabled = True
 
         Me.Hide()
     End Function

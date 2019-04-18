@@ -6,7 +6,7 @@
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         Shrink()
         WelcomeScreen.Show()
-        ManagemantDashboard.Hide()
+        ManagementDashboard.Hide()
     End Sub
 
     Function Grow()
