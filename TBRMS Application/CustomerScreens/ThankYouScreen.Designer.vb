@@ -118,6 +118,7 @@ Partial Class ThankYouScreen
         Me.DataGridView3.RowHeadersVisible = False
         Me.DataGridView3.Size = New System.Drawing.Size(390, 150)
         Me.DataGridView3.TabIndex = 35
+        Me.DataGridView3.Visible = False
         '
         'DataGridView2
         '
@@ -131,6 +132,7 @@ Partial Class ThankYouScreen
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView2.TabIndex = 34
+        Me.DataGridView2.Visible = False
         '
         'DataGridView1
         '
@@ -144,6 +146,7 @@ Partial Class ThankYouScreen
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView1.TabIndex = 33
+        Me.DataGridView1.Visible = False
         '
         'DataGridView4
         '
@@ -158,6 +161,7 @@ Partial Class ThankYouScreen
         Me.DataGridView4.RowHeadersVisible = False
         Me.DataGridView4.Size = New System.Drawing.Size(240, 150)
         Me.DataGridView4.TabIndex = 36
+        Me.DataGridView4.Visible = False
         '
         'ThankYouScreen
         '
