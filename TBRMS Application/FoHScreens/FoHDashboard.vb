@@ -1,4 +1,4 @@
-﻿Public Class FoHSDashboard
+﻿Public Class FoHDashboard
     Public strSelectedOrder As String
     Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
@@ -48,18 +48,18 @@
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
 
-        If e.RowIndex <> -1 Then
+        If e.RowIndex >= 0 Then
             selectedRow = dgvOrderList.Rows(index)
             strSelectedOrder = selectedRow.Cells(0).Value.ToString
             FetchOrderDetails()
-        End If
 
-        If (selectedRow.Cells(2).Value.ToString = "False") Then
-            btnCash.Enabled = True
-            btnRunOrder.Enabled = False
-        Else
-            btnCash.Enabled = False
-            btnRunOrder.Enabled = True
+            If (selectedRow.Cells(2).Value.ToString = "False") Then
+                btnCash.Enabled = True
+                btnRunOrder.Enabled = False
+            Else
+                btnCash.Enabled = False
+                btnRunOrder.Enabled = True
+            End If
         End If
     End Sub
 
@@ -68,7 +68,6 @@
     End Sub
 
     'SQL Query Functions
-
     Function FetchOrderList()
         'Queries CustomerOrder table and refreshes dgvOrderList with updated list of open orders
         connection.Open()
@@ -106,8 +105,11 @@
             dgvOrderList.Rows(i).Height = 50
         Next
 
-        dgvOrderList.ClearSelection()
+        For Each col As DataGridViewColumn In dgvOrderList.Columns
+            col.SortMode = DataGridViewColumnSortMode.NotSortable
+        Next
 
+        dgvOrderList.ClearSelection()
     End Function
 
     Function FetchOrderDetails()
@@ -140,6 +142,10 @@
 
         For i = 0 To dgvOrderDetails.Rows.Count - 1
             dgvOrderDetails.Rows(i).Height = 50
+        Next
+
+        For Each col As DataGridViewColumn In dgvOrderDetails.Columns
+            col.SortMode = DataGridViewColumnSortMode.NotSortable
         Next
 
         dgvOrderDetails.ClearSelection()

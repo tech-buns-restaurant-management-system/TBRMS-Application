@@ -1,14 +1,13 @@
 ﻿Public Class CancelOrderConfirmation
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         Shrink()
-        NewCustomerOrderDashboard.dgvCategories.Rows.Clear()
-        NewCustomerOrderDashboard.dgvMenuItems.Rows.Clear()
-        NewCustomerOrderDashboard.dgvOrderSummary.Rows.Clear()
-
-
+        CustomerOrderDashboard.dgvCategories.Rows.Clear()
+        CustomerOrderDashboard.dgvMenuItems.Rows.Clear()
+        CustomerOrderDashboard.dgvOrderSummary.Rows.Clear()
+        CustomerOrderDashboard.ResetPrices()
 
         CusSplashScreen.Show()
-        NewCustomerOrderDashboard.Hide()
+        CustomerOrderDashboard.Hide()
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -17,10 +16,11 @@
 
     Function Grow()
 
-        NewCustomerOrderDashboard.picBack.Enabled = False
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = False
-        NewCustomerOrderDashboard.dgvCategories.Enabled = False
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = False
+        CustomerOrderDashboard.picBack.Enabled = False
+        CustomerOrderDashboard.picOrderSummary.Enabled = False
+        CustomerOrderDashboard.dgvCategories.Enabled = False
+        CustomerOrderDashboard.dgvMenuItems.Enabled = False
+
         For i As Integer = 1 To 20
 
             Me.Height = i * 8
@@ -59,10 +59,10 @@
         btnContinue.Visible = False
         btnCancel.Visible = False
 
-        NewCustomerOrderDashboard.picBack.Enabled = True
-        NewCustomerOrderDashboard.picOrderSummary.Enabled = True
-        NewCustomerOrderDashboard.dgvCategories.Enabled = True
-        NewCustomerOrderDashboard.dgvMenuItems.Enabled = True
+        CustomerOrderDashboard.picBack.Enabled = True
+        CustomerOrderDashboard.picOrderSummary.Enabled = True
+        CustomerOrderDashboard.dgvCategories.Enabled = True
+        CustomerOrderDashboard.dgvMenuItems.Enabled = True
 
         Me.Hide()
     End Function

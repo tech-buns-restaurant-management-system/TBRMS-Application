@@ -43,7 +43,7 @@ Partial Class WelcomeScreen
         Me.btnCustomerOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCustomerOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.btnCustomerOrder.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnCustomerOrder.Location = New System.Drawing.Point(79, 390)
+        Me.btnCustomerOrder.Location = New System.Drawing.Point(79, 389)
         Me.btnCustomerOrder.Name = "btnCustomerOrder"
         Me.btnCustomerOrder.Size = New System.Drawing.Size(320, 180)
         Me.btnCustomerOrder.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class WelcomeScreen
         Me.btnFOH.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFOH.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.btnFOH.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnFOH.Location = New System.Drawing.Point(479, 391)
+        Me.btnFOH.Location = New System.Drawing.Point(479, 390)
         Me.btnFOH.Name = "btnFOH"
         Me.btnFOH.Size = New System.Drawing.Size(320, 180)
         Me.btnFOH.TabIndex = 1
@@ -75,7 +75,7 @@ Partial Class WelcomeScreen
         Me.btnManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
         Me.btnManagement.ForeColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnManagement.Location = New System.Drawing.Point(879, 390)
+        Me.btnManagement.Location = New System.Drawing.Point(879, 389)
         Me.btnManagement.Name = "btnManagement"
         Me.btnManagement.Size = New System.Drawing.Size(320, 180)
         Me.btnManagement.TabIndex = 2
@@ -87,7 +87,7 @@ Partial Class WelcomeScreen
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label1.Location = New System.Drawing.Point(256, 25)
+        Me.Label1.Location = New System.Drawing.Point(256, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(769, 110)
         Me.Label1.TabIndex = 3
@@ -96,24 +96,24 @@ Partial Class WelcomeScreen
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label2.Location = New System.Drawing.Point(388, 146)
+        Me.Label2.Location = New System.Drawing.Point(387, 260)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(504, 42)
+        Me.Label2.Size = New System.Drawing.Size(520, 50)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Please Select a Menu Below."
+        Me.Label2.Text = "Please Select a Mode"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Panel2.Controls.Add(Me.picBack)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(-1, 30)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1280, 210)
+        Me.Panel2.Size = New System.Drawing.Size(1280, 150)
         Me.Panel2.TabIndex = 27
         '
         'picBack
@@ -121,7 +121,7 @@ Partial Class WelcomeScreen
         Me.picBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picBack.Image = CType(resources.GetObject("picBack.Image"), System.Drawing.Image)
-        Me.picBack.Location = New System.Drawing.Point(78, 55)
+        Me.picBack.Location = New System.Drawing.Point(30, 25)
         Me.picBack.Name = "picBack"
         Me.picBack.Size = New System.Drawing.Size(100, 100)
         Me.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -136,6 +136,7 @@ Partial Class WelcomeScreen
         Me.ControlBox = False
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.btnManagement)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnFOH)
         Me.Controls.Add(Me.btnCustomerOrder)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

@@ -74,11 +74,12 @@ Partial Class LoginSplash
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.pnlSlider.SuspendLayout()
         CType(Me.picShift, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogOut, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSlider
@@ -153,6 +154,7 @@ Partial Class LoginSplash
         Me.btnShift.Name = "btnShift"
         Me.btnShift.Size = New System.Drawing.Size(65, 65)
         Me.btnShift.TabIndex = 41
+        Me.btnShift.TabStop = False
         Me.btnShift.UseVisualStyleBackColor = False
         '
         'btn9
@@ -168,6 +170,7 @@ Partial Class LoginSplash
         Me.btn9.Name = "btn9"
         Me.btn9.Size = New System.Drawing.Size(65, 65)
         Me.btn9.TabIndex = 40
+        Me.btn9.TabStop = False
         Me.btn9.Text = "9"
         Me.btn9.UseVisualStyleBackColor = False
         '
@@ -184,6 +187,7 @@ Partial Class LoginSplash
         Me.btn0.Name = "btn0"
         Me.btn0.Size = New System.Drawing.Size(65, 65)
         Me.btn0.TabIndex = 39
+        Me.btn0.TabStop = False
         Me.btn0.Text = "0"
         Me.btn0.UseVisualStyleBackColor = False
         '
@@ -200,6 +204,7 @@ Partial Class LoginSplash
         Me.btn7.Name = "btn7"
         Me.btn7.Size = New System.Drawing.Size(65, 65)
         Me.btn7.TabIndex = 38
+        Me.btn7.TabStop = False
         Me.btn7.Text = "7"
         Me.btn7.UseVisualStyleBackColor = False
         '
@@ -216,6 +221,7 @@ Partial Class LoginSplash
         Me.btn8.Name = "btn8"
         Me.btn8.Size = New System.Drawing.Size(65, 65)
         Me.btn8.TabIndex = 37
+        Me.btn8.TabStop = False
         Me.btn8.Text = "8"
         Me.btn8.UseVisualStyleBackColor = False
         '
@@ -232,6 +238,7 @@ Partial Class LoginSplash
         Me.btn3.Name = "btn3"
         Me.btn3.Size = New System.Drawing.Size(65, 65)
         Me.btn3.TabIndex = 36
+        Me.btn3.TabStop = False
         Me.btn3.Text = "3"
         Me.btn3.UseVisualStyleBackColor = False
         '
@@ -248,6 +255,7 @@ Partial Class LoginSplash
         Me.btn5.Name = "btn5"
         Me.btn5.Size = New System.Drawing.Size(65, 65)
         Me.btn5.TabIndex = 35
+        Me.btn5.TabStop = False
         Me.btn5.Text = "5"
         Me.btn5.UseVisualStyleBackColor = False
         '
@@ -264,6 +272,7 @@ Partial Class LoginSplash
         Me.btn6.Name = "btn6"
         Me.btn6.Size = New System.Drawing.Size(65, 65)
         Me.btn6.TabIndex = 34
+        Me.btn6.TabStop = False
         Me.btn6.Text = "6"
         Me.btn6.UseVisualStyleBackColor = False
         '
@@ -280,6 +289,7 @@ Partial Class LoginSplash
         Me.btn4.Name = "btn4"
         Me.btn4.Size = New System.Drawing.Size(65, 65)
         Me.btn4.TabIndex = 33
+        Me.btn4.TabStop = False
         Me.btn4.Text = "4"
         Me.btn4.UseVisualStyleBackColor = False
         '
@@ -296,6 +306,7 @@ Partial Class LoginSplash
         Me.btn2.Name = "btn2"
         Me.btn2.Size = New System.Drawing.Size(65, 65)
         Me.btn2.TabIndex = 32
+        Me.btn2.TabStop = False
         Me.btn2.Text = "2"
         Me.btn2.UseVisualStyleBackColor = False
         '
@@ -312,6 +323,7 @@ Partial Class LoginSplash
         Me.btn1.Name = "btn1"
         Me.btn1.Size = New System.Drawing.Size(65, 65)
         Me.btn1.TabIndex = 31
+        Me.btn1.TabStop = False
         Me.btn1.Text = "1"
         Me.btn1.UseVisualStyleBackColor = False
         '
@@ -328,6 +340,7 @@ Partial Class LoginSplash
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(134, 65)
         Me.btnDelete.TabIndex = 30
+        Me.btnDelete.TabStop = False
         Me.btnDelete.Text = "Delete"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
@@ -344,6 +357,7 @@ Partial Class LoginSplash
         Me.btnO.Name = "btnO"
         Me.btnO.Size = New System.Drawing.Size(65, 65)
         Me.btnO.TabIndex = 25
+        Me.btnO.TabStop = False
         Me.btnO.Text = "o"
         Me.btnO.UseVisualStyleBackColor = False
         '
@@ -360,6 +374,7 @@ Partial Class LoginSplash
         Me.btnP.Name = "btnP"
         Me.btnP.Size = New System.Drawing.Size(65, 65)
         Me.btnP.TabIndex = 24
+        Me.btnP.TabStop = False
         Me.btnP.Text = "p"
         Me.btnP.UseVisualStyleBackColor = False
         '
@@ -376,6 +391,7 @@ Partial Class LoginSplash
         Me.btnU.Name = "btnU"
         Me.btnU.Size = New System.Drawing.Size(65, 65)
         Me.btnU.TabIndex = 23
+        Me.btnU.TabStop = False
         Me.btnU.Text = "u"
         Me.btnU.UseVisualStyleBackColor = False
         '
@@ -392,6 +408,7 @@ Partial Class LoginSplash
         Me.btnI.Name = "btnI"
         Me.btnI.Size = New System.Drawing.Size(65, 65)
         Me.btnI.TabIndex = 22
+        Me.btnI.TabStop = False
         Me.btnI.Text = "i"
         Me.btnI.UseVisualStyleBackColor = False
         '
@@ -408,6 +425,7 @@ Partial Class LoginSplash
         Me.btnE.Name = "btnE"
         Me.btnE.Size = New System.Drawing.Size(65, 65)
         Me.btnE.TabIndex = 21
+        Me.btnE.TabStop = False
         Me.btnE.Text = "e"
         Me.btnE.UseVisualStyleBackColor = False
         '
@@ -424,6 +442,7 @@ Partial Class LoginSplash
         Me.btnT.Name = "btnT"
         Me.btnT.Size = New System.Drawing.Size(65, 65)
         Me.btnT.TabIndex = 20
+        Me.btnT.TabStop = False
         Me.btnT.Text = "t"
         Me.btnT.UseVisualStyleBackColor = False
         '
@@ -440,6 +459,7 @@ Partial Class LoginSplash
         Me.btnY.Name = "btnY"
         Me.btnY.Size = New System.Drawing.Size(65, 65)
         Me.btnY.TabIndex = 19
+        Me.btnY.TabStop = False
         Me.btnY.Text = "y"
         Me.btnY.UseVisualStyleBackColor = False
         '
@@ -456,6 +476,7 @@ Partial Class LoginSplash
         Me.btnR.Name = "btnR"
         Me.btnR.Size = New System.Drawing.Size(65, 65)
         Me.btnR.TabIndex = 18
+        Me.btnR.TabStop = False
         Me.btnR.Text = "r"
         Me.btnR.UseVisualStyleBackColor = False
         '
@@ -472,6 +493,7 @@ Partial Class LoginSplash
         Me.btnK.Name = "btnK"
         Me.btnK.Size = New System.Drawing.Size(65, 65)
         Me.btnK.TabIndex = 17
+        Me.btnK.TabStop = False
         Me.btnK.Text = "k"
         Me.btnK.UseVisualStyleBackColor = False
         '
@@ -488,6 +510,7 @@ Partial Class LoginSplash
         Me.btnL.Name = "btnL"
         Me.btnL.Size = New System.Drawing.Size(65, 65)
         Me.btnL.TabIndex = 16
+        Me.btnL.TabStop = False
         Me.btnL.Text = "l"
         Me.btnL.UseVisualStyleBackColor = False
         '
@@ -504,6 +527,7 @@ Partial Class LoginSplash
         Me.btnD.Name = "btnD"
         Me.btnD.Size = New System.Drawing.Size(65, 65)
         Me.btnD.TabIndex = 15
+        Me.btnD.TabStop = False
         Me.btnD.Text = "d"
         Me.btnD.UseVisualStyleBackColor = False
         '
@@ -520,6 +544,7 @@ Partial Class LoginSplash
         Me.btnF.Name = "btnF"
         Me.btnF.Size = New System.Drawing.Size(65, 65)
         Me.btnF.TabIndex = 14
+        Me.btnF.TabStop = False
         Me.btnF.Text = "f"
         Me.btnF.UseVisualStyleBackColor = False
         '
@@ -536,6 +561,7 @@ Partial Class LoginSplash
         Me.btnG.Name = "btnG"
         Me.btnG.Size = New System.Drawing.Size(65, 65)
         Me.btnG.TabIndex = 13
+        Me.btnG.TabStop = False
         Me.btnG.Text = "g"
         Me.btnG.UseVisualStyleBackColor = False
         '
@@ -552,6 +578,7 @@ Partial Class LoginSplash
         Me.btnH.Name = "btnH"
         Me.btnH.Size = New System.Drawing.Size(65, 65)
         Me.btnH.TabIndex = 12
+        Me.btnH.TabStop = False
         Me.btnH.Text = "h"
         Me.btnH.UseVisualStyleBackColor = False
         '
@@ -568,6 +595,7 @@ Partial Class LoginSplash
         Me.btnJ.Name = "btnJ"
         Me.btnJ.Size = New System.Drawing.Size(65, 65)
         Me.btnJ.TabIndex = 11
+        Me.btnJ.TabStop = False
         Me.btnJ.Text = "j"
         Me.btnJ.UseVisualStyleBackColor = False
         '
@@ -584,6 +612,7 @@ Partial Class LoginSplash
         Me.btnC.Name = "btnC"
         Me.btnC.Size = New System.Drawing.Size(65, 65)
         Me.btnC.TabIndex = 10
+        Me.btnC.TabStop = False
         Me.btnC.Text = "c"
         Me.btnC.UseVisualStyleBackColor = False
         '
@@ -600,6 +629,7 @@ Partial Class LoginSplash
         Me.btnV.Name = "btnV"
         Me.btnV.Size = New System.Drawing.Size(65, 65)
         Me.btnV.TabIndex = 9
+        Me.btnV.TabStop = False
         Me.btnV.Text = "v"
         Me.btnV.UseVisualStyleBackColor = False
         '
@@ -616,6 +646,7 @@ Partial Class LoginSplash
         Me.btnB.Name = "btnB"
         Me.btnB.Size = New System.Drawing.Size(65, 65)
         Me.btnB.TabIndex = 8
+        Me.btnB.TabStop = False
         Me.btnB.Text = "b"
         Me.btnB.UseVisualStyleBackColor = False
         '
@@ -632,6 +663,7 @@ Partial Class LoginSplash
         Me.btnN.Name = "btnN"
         Me.btnN.Size = New System.Drawing.Size(65, 65)
         Me.btnN.TabIndex = 7
+        Me.btnN.TabStop = False
         Me.btnN.Text = "n"
         Me.btnN.UseVisualStyleBackColor = False
         '
@@ -648,6 +680,7 @@ Partial Class LoginSplash
         Me.btnM.Name = "btnM"
         Me.btnM.Size = New System.Drawing.Size(65, 65)
         Me.btnM.TabIndex = 6
+        Me.btnM.TabStop = False
         Me.btnM.Text = "m"
         Me.btnM.UseVisualStyleBackColor = False
         '
@@ -664,6 +697,7 @@ Partial Class LoginSplash
         Me.btnW.Name = "btnW"
         Me.btnW.Size = New System.Drawing.Size(65, 65)
         Me.btnW.TabIndex = 5
+        Me.btnW.TabStop = False
         Me.btnW.Text = "w"
         Me.btnW.UseVisualStyleBackColor = False
         '
@@ -680,6 +714,7 @@ Partial Class LoginSplash
         Me.btnS.Name = "btnS"
         Me.btnS.Size = New System.Drawing.Size(65, 65)
         Me.btnS.TabIndex = 4
+        Me.btnS.TabStop = False
         Me.btnS.Text = "s"
         Me.btnS.UseVisualStyleBackColor = False
         '
@@ -696,6 +731,7 @@ Partial Class LoginSplash
         Me.btnX.Name = "btnX"
         Me.btnX.Size = New System.Drawing.Size(65, 65)
         Me.btnX.TabIndex = 3
+        Me.btnX.TabStop = False
         Me.btnX.Text = "x"
         Me.btnX.UseVisualStyleBackColor = False
         '
@@ -712,6 +748,7 @@ Partial Class LoginSplash
         Me.btnZ.Name = "btnZ"
         Me.btnZ.Size = New System.Drawing.Size(65, 65)
         Me.btnZ.TabIndex = 2
+        Me.btnZ.TabStop = False
         Me.btnZ.Text = "z"
         Me.btnZ.UseVisualStyleBackColor = False
         '
@@ -728,6 +765,7 @@ Partial Class LoginSplash
         Me.btnA.Name = "btnA"
         Me.btnA.Size = New System.Drawing.Size(65, 65)
         Me.btnA.TabIndex = 1
+        Me.btnA.TabStop = False
         Me.btnA.Text = "a"
         Me.btnA.UseVisualStyleBackColor = False
         '
@@ -744,6 +782,7 @@ Partial Class LoginSplash
         Me.btnQ.Name = "btnQ"
         Me.btnQ.Size = New System.Drawing.Size(65, 65)
         Me.btnQ.TabIndex = 0
+        Me.btnQ.TabStop = False
         Me.btnQ.Text = "q"
         Me.btnQ.UseVisualStyleBackColor = False
         '
@@ -788,7 +827,6 @@ Partial Class LoginSplash
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 23
-        Me.lblForgotPassword.TabStop = True
         Me.lblForgotPassword.Text = "Forgot Password?"
         '
         'txtUser
@@ -801,8 +839,7 @@ Partial Class LoginSplash
         Me.txtUser.MaxLength = 20
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(202, 31)
-        Me.txtUser.TabIndex = 18
-        Me.txtUser.TabStop = False
+        Me.txtUser.TabIndex = 0
         '
         'txtPass
         '
@@ -815,8 +852,7 @@ Partial Class LoginSplash
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(202, 31)
-        Me.txtPass.TabIndex = 19
-        Me.txtPass.TabStop = False
+        Me.txtPass.TabIndex = 1
         Me.txtPass.UseSystemPasswordChar = True
         '
         'Label2
@@ -854,7 +890,7 @@ Partial Class LoginSplash
         Me.btnLogin.Location = New System.Drawing.Point(469, 126)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(340, 50)
-        Me.btnLogin.TabIndex = 22
+        Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
@@ -874,14 +910,18 @@ Partial Class LoginSplash
         Me.Panel2.Size = New System.Drawing.Size(1280, 200)
         Me.Panel2.TabIndex = 28
         '
-        'Button1
+        'DataGridView1
         '
-        Me.Button1.Location = New System.Drawing.Point(603, 54)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeColumns = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(975, 156)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 26
+        Me.DataGridView1.Visible = False
         '
         'LoginSplash
         '
@@ -890,9 +930,9 @@ Partial Class LoginSplash
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1280, 720)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.pnlSlider)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.pnlSlider)
+        Me.Controls.Add(Me.DataGridView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "LoginSplash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -901,6 +941,7 @@ Partial Class LoginSplash
         CType(Me.picLogOut, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -955,5 +996,5 @@ Partial Class LoginSplash
     Friend WithEvents picShift As PictureBox
     Friend WithEvents btnShift As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

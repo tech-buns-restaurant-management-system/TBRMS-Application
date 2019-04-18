@@ -1,13 +1,19 @@
 ﻿Public Class TableTagEntry
     Public strTableTag As String = ""
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
-        If CInt(txtTableTag.Text) > 0 Then
+        If txtTableTag.Text = "" Then
+            TableTagErrorDialog.lblMessage.Text = "Error: Invalid Table Tag."
+            TableTagErrorDialog.Show()
+            TableTagErrorDialog.Grow()
+        ElseIf CInt(txtTableTag.Text) > 0 Then
             strTableTag = txtTableTag.Text
             txtTableTag.Clear()
             PaymentSelection.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Error: Invalid Order Tag")
+            TableTagErrorDialog.lblMessage.Text = "Error: Invalid Table Tag."
+            TableTagErrorDialog.Show()
+            TableTagErrorDialog.Grow()
         End If
     End Sub
 

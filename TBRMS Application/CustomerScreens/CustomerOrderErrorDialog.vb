@@ -1,14 +1,7 @@
-﻿Public Class CustomerModeConfirmation
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
-        Shrink()
-        Me.Hide()
-    End Sub
-
-    Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
-        Shrink()
-        CusSplashScreen.Show()
-        Me.Hide()
-        WelcomeScreen.Hide()
+﻿Public Class CustomerOrderErrorDialog
+    Private Sub ErrorDialog_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Height = 0
+        Me.Width = 0
     End Sub
 
     Function Grow()
@@ -17,6 +10,7 @@
         CustomerOrderDashboard.picOrderSummary.Enabled = False
         CustomerOrderDashboard.dgvCategories.Enabled = False
         CustomerOrderDashboard.dgvMenuItems.Enabled = False
+        CustomerOrderDashboard.txtSearch.Enabled = False
         CustomerOrderDashboard.btnEdit.Enabled = False
         CustomerOrderDashboard.btnDelete.Enabled = False
         CustomerOrderDashboard.btnCheckout.Enabled = False
@@ -36,7 +30,6 @@
 
         lblMessage.Visible = True
         btnContinue.Visible = True
-        btnCancel.Visible = True
         lblMessage.Focus()
     End Function
 
@@ -44,7 +37,6 @@
 
         lblMessage.Visible = False
         btnContinue.Visible = False
-        btnCancel.Visible = False
 
         For i As Integer = 20 To 1 Step -1
             Me.Height = i * 8
@@ -59,10 +51,15 @@
         CustomerOrderDashboard.picOrderSummary.Enabled = True
         CustomerOrderDashboard.dgvCategories.Enabled = True
         CustomerOrderDashboard.dgvMenuItems.Enabled = True
+        CustomerOrderDashboard.txtSearch.Enabled = True
         CustomerOrderDashboard.btnEdit.Enabled = True
         CustomerOrderDashboard.btnDelete.Enabled = True
         CustomerOrderDashboard.btnCheckout.Enabled = True
 
         Me.Hide()
     End Function
+
+    Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
+        Shrink()
+    End Sub
 End Class

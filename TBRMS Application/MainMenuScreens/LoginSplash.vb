@@ -5,6 +5,8 @@
     Dim blnLoggedIn As Boolean = False
     Dim blnShift As Boolean = False
     Dim strTextInUse As String = ""
+    Public blnManagement As Boolean = False
+
     Private Sub LoginSplash_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         pnlSlider.Location = New Point(-2, intYCoor)
     End Sub
@@ -20,12 +22,55 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If (txtUser.Text = "ADMIN" And txtPass.Text = "PASSWORD") Then
-            blnLoggedIn = True
-            tmrSlider.Start()
-        Else
-            MessageBox.Show("That username and password combination does not exist. Please try again.", "Login Error")
+        If txtUser.Text = "" Or txtPass.Text = "" Then
+            MessageBox.Show("Error: The User ID or Password textbox was left empty.", "Login Error")
+            Exit Sub
         End If
+
+        tmrSlider.Enabled = True
+        tmrSlider.Start()
+
+        Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+        Dim dtbLogin As New DataTable
+
+        dtbLogin.Columns.Add("colID")
+        dtbLogin.Columns.Add("colPass")
+
+        connection.Open()
+
+        Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
+        selectQuery.CommandText = "SELECT Emp.Emp_ID, Emp.EmpPassword, EmpManagement FROM Employee as Emp WHERE Emp.Emp_ID = '" + txtUser.Text + "';"
+
+        Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+
+        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
+
+        DataGridView1.Columns.Add("colID", "ID")
+        DataGridView1.Columns.Add("colPass", "Pass")
+        DataGridView1.Columns.Add("colMan", "Man")
+
+        While SQLReader.Read()
+            DataGridView1.Rows.Add({SQLReader.Item("Emp_ID"), SQLReader.Item("EmpPassword"), SQLReader.Item("EmpManagement")})
+        End While
+
+        connection.Close()
+
+        If DataGridView1.Rows.Count = 0 Then
+            MessageBox.Show("That username and password combination does not exist. Please try again.", "Login Error")
+        ElseIf txtPass.Text <> DataGridView1.Rows(0).Cells(1).Value.ToString Then
+            MessageBox.Show("That username and password combination does not exist. Please try again.", "Login Error")
+        Else
+            WelcomeScreen.Show()
+            Me.Hide()
+        End If
+
+        If DataGridView1.Rows(0).Cells(2).Value.ToString = "True" Then
+            blnManagement = True
+        End If
+
+        txtUser.Clear()
+        txtPass.Clear()
     End Sub
 
     Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
@@ -38,6 +83,8 @@
             blnLoggedIn = True
             tmrSlider.Start()
         End If
+
+        blnManagement = True
     End Sub
 
     Private Sub btnLogOut_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogOut.MouseDown
@@ -348,10 +395,5 @@
 
     Private Sub txtPass_MouseUp(sender As Object, e As MouseEventArgs) Handles txtPass.MouseUp
         txtPass.BackColor = Color.FromArgb(227, 227, 227)
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Form1.Show()
-        Me.Hide()
     End Sub
 End Class

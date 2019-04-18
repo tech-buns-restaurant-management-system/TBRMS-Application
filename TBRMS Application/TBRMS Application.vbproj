@@ -144,10 +144,22 @@
     <Compile Include="CustomerScreens\DeleteItemConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerScreens\CustomerOrderErrorDialog.Designer.vb">
+      <DependentUpon>CustomerOrderErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerScreens\CustomerOrderErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomerScreens\PaymentSelection.Designer.vb">
       <DependentUpon>PaymentSelection.vb</DependentUpon>
     </Compile>
     <Compile Include="CustomerScreens\PaymentSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerScreens\TableTagErrorDialog.Designer.vb">
+      <DependentUpon>TableTagErrorDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerScreens\TableTagErrorDialog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerScreens\ThankYouScreen.Designer.vb">
@@ -156,22 +168,16 @@
     <Compile Include="CustomerScreens\ThankYouScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MainMenuScreens\CustomerModeConfirmation.Designer.vb">
       <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
     </Compile>
     <Compile Include="MainMenuScreens\CustomerModeConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerScreens\NewCustomerOrderDashboard.Designer.vb">
-      <DependentUpon>NewCustomerOrderDashboard.vb</DependentUpon>
+    <Compile Include="CustomerScreens\CustomerOrderDashboard.Designer.vb">
+      <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="CustomerScreens\NewCustomerOrderDashboard.vb">
+    <Compile Include="CustomerScreens\CustomerOrderDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FoHScreens\FoHCashPaymentScreen.Designer.vb">
@@ -186,10 +192,10 @@
     <Compile Include="FoHScreens\FoHExitConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FoHScreens\FoHSDashboard.Designer.vb">
-      <DependentUpon>FoHSDashboard.vb</DependentUpon>
+    <Compile Include="FoHScreens\FoHDashboard.Designer.vb">
+      <DependentUpon>FoHDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="FoHScreens\FoHSDashboard.vb">
+    <Compile Include="FoHScreens\FoHDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenuScreens\LoginSplash.Designer.vb">
@@ -204,10 +210,16 @@
     <Compile Include="MainMenuScreens\LogOutConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\AddForm.Designer.vb">
-      <DependentUpon>AddForm.vb</DependentUpon>
+    <Compile Include="ManagementScreens\OrderListCriteria.Designer.vb">
+      <DependentUpon>OrderListCriteria.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\AddForm.vb">
+    <Compile Include="ManagementScreens\OrderListCriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\InventoryItem.Designer.vb">
+      <DependentUpon>InventoryItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\InventoryItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagementScreens\ExitManagementConfirmation.Designer.vb">
@@ -216,16 +228,28 @@
     <Compile Include="ManagementScreens\ExitManagementConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\ManagemantDashboard.Designer.vb">
-      <DependentUpon>ManagemantDashboard.vb</DependentUpon>
+    <Compile Include="ManagementScreens\ManagementDashboard.Designer.vb">
+      <DependentUpon>ManagementDashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\ManagemantDashboard.vb">
+    <Compile Include="ManagementScreens\ManagementDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\OrderDetails.Designer.vb">
+      <DependentUpon>OrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\OrderDetails.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagementScreens\PlaceOrderConfirmation.Designer.vb">
       <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
     </Compile>
     <Compile Include="ManagementScreens\PlaceOrderConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\SupplierInfo.Designer.vb">
+      <DependentUpon>SupplierInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\SupplierInfo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -281,20 +305,23 @@
     <EmbeddedResource Include="CustomerScreens\DeleteItemConfirmation.resx">
       <DependentUpon>DeleteItemConfirmation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\CustomerOrderErrorDialog.resx">
+      <DependentUpon>CustomerOrderErrorDialog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\PaymentSelection.resx">
       <DependentUpon>PaymentSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerScreens\TableTagErrorDialog.resx">
+      <DependentUpon>TableTagErrorDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerScreens\ThankYouScreen.resx">
       <DependentUpon>ThankYouScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainMenuScreens\CustomerModeConfirmation.resx">
       <DependentUpon>CustomerModeConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerScreens\NewCustomerOrderDashboard.resx">
-      <DependentUpon>NewCustomerOrderDashboard.vb</DependentUpon>
+    <EmbeddedResource Include="CustomerScreens\CustomerOrderDashboard.resx">
+      <DependentUpon>CustomerOrderDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoHScreens\FoHCashPaymentScreen.resx">
       <DependentUpon>FoHCashPaymentScreen.vb</DependentUpon>
@@ -302,8 +329,8 @@
     <EmbeddedResource Include="FoHScreens\FoHExitConfirmation.resx">
       <DependentUpon>FoHExitConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoHScreens\FoHSDashboard.resx">
-      <DependentUpon>FoHSDashboard.vb</DependentUpon>
+    <EmbeddedResource Include="FoHScreens\FoHDashboard.resx">
+      <DependentUpon>FoHDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuScreens\LoginSplash.resx">
       <DependentUpon>LoginSplash.vb</DependentUpon>
@@ -311,17 +338,26 @@
     <EmbeddedResource Include="MainMenuScreens\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\AddForm.resx">
-      <DependentUpon>AddForm.vb</DependentUpon>
+    <EmbeddedResource Include="ManagementScreens\OrderListCriteria.resx">
+      <DependentUpon>OrderListCriteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\InventoryItem.resx">
+      <DependentUpon>InventoryItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\ExitManagementConfirmation.resx">
       <DependentUpon>ExitManagementConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\ManagemantDashboard.resx">
-      <DependentUpon>ManagemantDashboard.vb</DependentUpon>
+    <EmbeddedResource Include="ManagementScreens\ManagementDashboard.resx">
+      <DependentUpon>ManagementDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\OrderDetails.resx">
+      <DependentUpon>OrderDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\PlaceOrderConfirmation.resx">
       <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\SupplierInfo.resx">
+      <DependentUpon>SupplierInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

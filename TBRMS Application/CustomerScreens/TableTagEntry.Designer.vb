@@ -269,6 +269,7 @@ Partial Class TableTagEntry
         Me.txtTableTag.ReadOnly = True
         Me.txtTableTag.Size = New System.Drawing.Size(144, 73)
         Me.txtTableTag.TabIndex = 86
+        Me.txtTableTag.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'PictureBox2
         '
