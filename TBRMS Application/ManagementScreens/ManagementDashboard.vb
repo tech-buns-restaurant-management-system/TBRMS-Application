@@ -193,10 +193,7 @@
                 End If
 
             Case "Order Inventory"
-                OrderDetails.Width = 0
-                OrderDetails.Height = 0
-                OrderDetails.Show()
-                OrderDetails.Grow()
+
         End Select
     End Sub
 
