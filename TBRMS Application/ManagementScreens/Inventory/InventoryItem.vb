@@ -20,11 +20,15 @@
 
             ExecuteQuery(insertQuery)
 
-            MessageBox.Show("Item inserted successfully")
         Else
-            Dim updateQuery As String = "UPDATE Inventory SET InvName = '" & txtItemName.Text + "'AND InvSS = CONVERT(DECIMAL(6,2), " & txtSS.Text &
-                                        ") AND InvDefaultOrder = CONVERT(DECIMAL(6,2), " & txtOrderQty.Text & ") AND InvModCode = '" & txtModCode.Text & "' WHERE Inv_ID = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "';"
+            Dim updateQuery As String = "UPDATE Inventory SET InvName = '" & txtItemName.Text + "', InvSS = CONVERT(DECIMAL(6,2), " & txtSS.Text &
+                                        "), InvDefaultOrder = CONVERT(DECIMAL(6,2), " & txtOrderQty.Text & "), InvModCode = '" & txtModCode.Text &
+                                        "' WHERE Inv_ID = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "';"
+            ExecuteQuery(updateQuery)
+
         End If
+
+        ManagementDashboard.FetchInventoryList()
         Shrink()
     End Sub
 

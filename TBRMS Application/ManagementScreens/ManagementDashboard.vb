@@ -157,6 +157,10 @@
                 InventoryItem.txtOrderQty.Clear()
                 InventoryItem.txtSS.Clear()
 
+                InventoryItem.txtItemName.ReadOnly = False
+                InventoryItem.lblMessage.Text = "Add a New Inventory Item"
+                InventoryItem.btnAddItem.Text = "Add Item"
+
                 InventoryItem.Height = 0
                 InventoryItem.Width = 0
                 InventoryItem.Show()
@@ -171,10 +175,24 @@
                 SupplierInfo.txtZip.Clear()
                 SupplierInfo.txtPhone.Clear()
 
+                SupplierInfo.txtName.ReadOnly = False
+                SupplierInfo.lblMessage.Text = "Add a New Supplier"
+                SupplierInfo.btnAddItem.Text = "Add Supplier"
+
                 SupplierInfo.Height = 0
                 SupplierInfo.Width = 0
                 SupplierInfo.Show()
                 SupplierInfo.Grow()
+
+            Case "Create Order"
+                CreateInventoryOrder.Height = 0
+                CreateInventoryOrder.Width = 0
+
+                CreateInventoryOrder.NewOrder()
+
+                CreateInventoryOrder.Show()
+                CreateInventoryOrder.Grow()
+
         End Select
     End Sub
 
@@ -192,25 +210,34 @@
                     OrderDetails.Grow()
                 End If
 
-            Case "Order Inventory"
-
-        End Select
-    End Sub
-
-    Private Sub btnOpt3_Click(sender As Object, e As EventArgs) Handles btnOpt3.Click
-        Select Case btnOpt3.Text
             Case "Edit Item"
                 If index = -1 Then
                     MessageBox.Show("Error: No order selected.")
                 Else
                     FetchInventoryDetails()
 
+                    InventoryItem.txtItemName.ReadOnly = True
+                    InventoryItem.lblMessage.Text = "Edit an Existing Inventory Item"
                     InventoryItem.btnAddItem.Text = "Save Changes"
                     InventoryItem.Height = 0
                     InventoryItem.Width = 0
                     InventoryItem.Show()
                     InventoryItem.Grow()
                 End If
+        End Select
+    End Sub
+
+    Private Sub btnOpt3_Click(sender As Object, e As EventArgs) Handles btnOpt3.Click
+        Select Case btnOpt3.Text
+            Case "Order Inventory"
+                FetchInventoryOrderList()
+
+            Case "View Details"
+                InventoryOrderDetails.Height = 0
+                InventoryOrderDetails.Width = 0
+                InventoryOrderDetails.FetchOrderDetails(selectedRow.Cells(0).Value.ToString)
+                InventoryOrderDetails.Show()
+                InventoryOrderDetails.Grow()
 
             Case "Edit Supplier"
                 If index = -1 Then
@@ -218,6 +245,8 @@
                 Else
                     EditSupplier()
 
+                    SupplierInfo.txtName.ReadOnly = True
+                    SupplierInfo.lblMessage.Text = "Edit an Existing Supplier"
                     SupplierInfo.btnAddItem.Text = "Save Changes"
                     SupplierInfo.Height = 0
                     SupplierInfo.Width = 0
@@ -267,8 +296,6 @@
     End Sub
 
     Private Sub btnInventoryView_Click(sender As Object, e As EventArgs) Handles btnInventoryView.Click
-        FetchInventoryList()
-
         tmrViews.Enabled = True
         tmrViews.Start()
 
@@ -276,13 +303,14 @@
 
         btnOpt1.Text = "Add Item"
         btnOpt1.Visible = True
-        btnOpt2.Text = "Order Inventory"
+        btnOpt2.Text = "Edit Item"
         btnOpt2.Visible = True
-        btnOpt3.Text = "Edit Item"
+        btnOpt3.Text = "Order Inventory"
         btnOpt3.Visible = True
 
         tmrOptions.Enabled = True
         tmrOptions.Start()
+        FetchInventoryList()
     End Sub
 
     Function FetchInventoryList()
@@ -393,5 +421,110 @@
         SupplierInfo.txtState.Text = selectedRow.Cells(3).Value.ToString
         SupplierInfo.txtZip.Text = selectedRow.Cells(4).Value.ToString
         SupplierInfo.txtPhone.Text = selectedRow.Cells(5).Value.ToString
+    End Function
+
+    Function FetchInventoryOrderList()
+        Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+
+        connection.Open()
+
+        Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
+        selectQuery.CommandText = "SELECT IO.InvOrder_ID, CONVERT(varchar(10), IO.InvOrderDate, 101) as Date, IO.InvOrderTime, Sup.SupName, IO.InvOrderIngested
+                                   FROM InventoryOrder as IO, Supplier as Sup
+                                   WHERE IO.Sup_ID = Sup.Sup_ID
+                                   AND IO.InvOrderIngested = 'False';"
+
+        Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+
+        DataGridView1.Columns.Clear()
+        DataGridView1.Rows.Clear()
+
+        DataGridView1.Columns.Add("colOrderID", "Order ID")
+        DataGridView1.Columns.Add("colDate", "Order Date")
+        DataGridView1.Columns.Add("colTime", "Order Time")
+        DataGridView1.Columns.Add("colSup", "Supplier")
+
+        While SQLReader.Read()
+            DataGridView1.Rows.Add({SQLReader.Item("InvOrder_ID"), SQLReader.Item("Date"), SQLReader.Item("InvOrderTime"), SQLReader.Item("SupName")})
+        End While
+
+        connection.Close()
+
+        btnOpt1.Visible = True
+        btnOpt1.Text = "Create Order"
+        btnOpt2.Visible = True
+        btnOpt2.Text = "Ingest Order"
+        btnOpt3.Visible = True
+        btnOpt3.Text = "View Details"
+
+        'connection.Open()
+
+        'Dim selectQueryV2 As SqlClient.SqlCommand = connection.CreateCommand()
+
+        'selectQueryV2.CommandText = "SELECT Inv.InvName, Inv.InvQty, Inv.InvSS
+        '                           FROM Inventory as Inv
+        '                           WHERE Inv.InvQty < Inv.InvSS;"
+
+        'Dim SQLReaderV2 As SqlClient.SqlDataReader = selectQueryV2.ExecuteReader()
+
+        'Dim strItemsToOrder As String = ""
+
+        'While SQLReaderV2.Read()
+        '    Dim strTemp() As String = {SQLReaderV2.Item("InvName").ToString}
+        '    strItemsToOrder += strTemp(0) + vbCrLf
+        'End While
+
+        'If (Not IsNothing(strItemsToOrder)) Then
+        '    MessageBox.Show("Items That Need To Be Reordered:" + vbCrLf + vbCrLf + strItemsToOrder)
+        'Else
+        '    MessageBox.Show("Shit's good yo")
+        'End If
+
+        'connection.Close()
+
+        DataGridView1.ClearSelection()
+    End Function
+
+    Function IngestOrder()
+        Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+
+        connection.Open()
+
+        Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
+        selectQuery.CommandText = "SELECT IOL.Inv_ID, IOL.InvOrderQty
+                                   FROM InventoryOrderLine as IOL
+                                   WHERE IOL.InvOrder_ID = '" & selectedRow.Cells(0).Value.ToString & "';"
+
+        Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+
+        Dim strItemID(), strQuantity(), strItems(), strQuantities() As String
+        Dim counter As Integer = 0
+
+        While SQLReader.Read()
+            strItemID = {SQLReader.Item("Inv_ID")}
+            strQuantity = {SQLReader.Item("InvOrderQty")}
+
+            strItems(counter) = strItemID(0)
+            strQuantities(counter) = strQuantity(0)
+
+            counter += 1
+        End While
+
+        For i As Integer = 0 To strItems.Length - 1
+            Dim updateQuery As String = "UPDATE Inventory SET InvQty = '" & strQuantities(i) & "' WHERE Inv_ID = '" & strItems(i) & "';"
+
+            ExecuteQuery(updateQuery)
+        Next
+
+        connection.Close()
+    End Function
+
+    Function ExecuteQuery(query As String)
+        Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
+
+        Dim command As New SqlClient.SqlCommand(query, connection)
+        connection.Open()
+        command.ExecuteNonQuery()
+        connection.Close()
     End Function
 End Class

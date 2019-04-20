@@ -167,6 +167,7 @@ Partial Class ThankYouScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
         Me.Controls.Add(Me.DataGridView4)

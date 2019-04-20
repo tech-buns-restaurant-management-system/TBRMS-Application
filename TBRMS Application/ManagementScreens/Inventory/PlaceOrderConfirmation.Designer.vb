@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ExitManagementConfirmation
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class PlaceOrderConfirmation
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ExitManagementConfirmation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblMessage = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
@@ -32,11 +32,11 @@ Partial Class ExitManagementConfirmation
         Me.lblMessage.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.lblMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMessage.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblMessage.Location = New System.Drawing.Point(-1, 10)
+        Me.lblMessage.Location = New System.Drawing.Point(-1, 11)
         Me.lblMessage.Name = "lblMessage"
         Me.lblMessage.Size = New System.Drawing.Size(340, 70)
-        Me.lblMessage.TabIndex = 38
-        Me.lblMessage.Text = "Are you sure that you'd like to exit Management Mode?"
+        Me.lblMessage.TabIndex = 41
+        Me.lblMessage.Text = "Are you sure that you'd like to place this order?"
         Me.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblMessage.Visible = False
         '
@@ -48,10 +48,10 @@ Partial Class ExitManagementConfirmation
         Me.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(180, 97)
+        Me.btnCancel.Location = New System.Drawing.Point(180, 98)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(140, 50)
-        Me.btnCancel.TabIndex = 37
+        Me.btnCancel.TabIndex = 40
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
         Me.btnCancel.Visible = False
@@ -64,26 +64,25 @@ Partial Class ExitManagementConfirmation
         Me.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight
         Me.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnContinue.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnContinue.Location = New System.Drawing.Point(20, 97)
+        Me.btnContinue.Location = New System.Drawing.Point(20, 98)
         Me.btnContinue.Name = "btnContinue"
         Me.btnContinue.Size = New System.Drawing.Size(140, 50)
-        Me.btnContinue.TabIndex = 36
+        Me.btnContinue.TabIndex = 39
         Me.btnContinue.Text = "Continue"
         Me.btnContinue.UseVisualStyleBackColor = False
         Me.btnContinue.Visible = False
         '
-        'ExitManagementConfirmation
+        'PlaceOrderConfirmation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(338, 158)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnContinue)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Name = "ExitManagementConfirmation"
+        Me.Name = "PlaceOrderConfirmation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
 

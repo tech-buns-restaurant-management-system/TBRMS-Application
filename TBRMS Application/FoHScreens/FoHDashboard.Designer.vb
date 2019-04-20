@@ -82,6 +82,7 @@ Partial Class FoHDashboard
         Me.dgvOrderList.AllowUserToDeleteRows = False
         Me.dgvOrderList.AllowUserToResizeColumns = False
         Me.dgvOrderList.AllowUserToResizeRows = False
+        Me.dgvOrderList.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -115,6 +116,7 @@ Partial Class FoHDashboard
         Me.dgvOrderDetails.AllowUserToDeleteRows = False
         Me.dgvOrderDetails.AllowUserToResizeColumns = False
         Me.dgvOrderDetails.AllowUserToResizeRows = False
+        Me.dgvOrderDetails.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -205,6 +207,7 @@ Partial Class FoHDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label2)

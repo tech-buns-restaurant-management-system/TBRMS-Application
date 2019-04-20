@@ -25,8 +25,8 @@ Partial Class CusSplashScreen
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CusSplashScreen))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnStartOrder = New System.Windows.Forms.Button()
         Me.picBack = New System.Windows.Forms.PictureBox()
+        Me.btnStartOrder = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.picBack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +51,18 @@ Partial Class CusSplashScreen
         Me.Panel2.Size = New System.Drawing.Size(1280, 100)
         Me.Panel2.TabIndex = 27
         '
+        'picBack
+        '
+        Me.picBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picBack.Image = CType(resources.GetObject("picBack.Image"), System.Drawing.Image)
+        Me.picBack.Location = New System.Drawing.Point(30, 0)
+        Me.picBack.Name = "picBack"
+        Me.picBack.Size = New System.Drawing.Size(100, 100)
+        Me.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picBack.TabIndex = 24
+        Me.picBack.TabStop = False
+        '
         'btnStartOrder
         '
         Me.btnStartOrder.BackColor = System.Drawing.SystemColors.ControlLight
@@ -68,22 +80,11 @@ Partial Class CusSplashScreen
         Me.btnStartOrder.Text = "Begin Crafting Your Order"
         Me.btnStartOrder.UseVisualStyleBackColor = False
         '
-        'picBack
-        '
-        Me.picBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.picBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.picBack.Image = CType(resources.GetObject("picBack.Image"), System.Drawing.Image)
-        Me.picBack.Location = New System.Drawing.Point(30, 0)
-        Me.picBack.Name = "picBack"
-        Me.picBack.Size = New System.Drawing.Size(100, 100)
-        Me.picBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picBack.TabIndex = 24
-        Me.picBack.TabStop = False
-        '
         'CusSplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1278, 718)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnStartOrder)

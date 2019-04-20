@@ -21,17 +21,21 @@
         End If
 
         If btnAddItem.Text = "Add Supplier" Then
-            Dim insertQuery As String = "INSERT INTO Inventory VALUES ('" & txtName.Text + "', '" & txtAddress.Text &
+            Dim insertQuery As String = "INSERT INTO Supplier VALUES ('" & txtName.Text + "', '" & txtAddress.Text &
                                         "', '" & txtCity.Text & "', '" & txtState.Text & "', '" & txtZip.Text & "', '" & txtPhone.Text & "');"
 
             ExecuteQuery(insertQuery)
 
-            MessageBox.Show("Item inserted successfully")
+
         Else
-            Dim updateQuery As String = "UPDATE Inventory SET InvName = '" & txtName.Text + "'AND SupAddress = '" & txtAddress.Text & "' AND SupCity = '" & txtCity.Text &
-                                        "' AND SupState = '" & txtState.Text & "' AND SupZip = '" & txtZip.Text & "' AND SupPhone = '" & txtPhone.Text & "';"
+            Dim updateQuery As String = "UPDATE Supplier SET SupName = '" & txtName.Text + "', SupAddress = '" & txtAddress.Text & "', SupCity = '" & txtCity.Text &
+                                        "', SupState = '" & txtState.Text & "', SupZip = '" & txtZip.Text & "', SupPhoneNumber = '" & txtPhone.Text & "'
+                                        WHERE Sup_ID = (SELECT Sup_ID FROM Supplier WHERE SupName = '" & txtName.Text & "');"
+
+            ExecuteQuery(updateQuery)
         End If
 
+        ManagementDashboard.FetchSuppliers()
         Shrink()
     End Sub
 

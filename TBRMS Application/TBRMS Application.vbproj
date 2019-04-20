@@ -210,16 +210,28 @@
     <Compile Include="MainMenuScreens\LogOutConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\OrderListCriteria.Designer.vb">
-      <DependentUpon>OrderListCriteria.vb</DependentUpon>
+    <Compile Include="ManagementScreens\Inventory\AddOrderItem.Designer.vb">
+      <DependentUpon>AddOrderItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\OrderListCriteria.vb">
+    <Compile Include="ManagementScreens\Inventory\AddOrderItem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\InventoryItem.Designer.vb">
+    <Compile Include="ManagementScreens\Inventory\CreateInventoryOrder.Designer.vb">
+      <DependentUpon>CreateInventoryOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\Inventory\CreateInventoryOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\CustomerOrders\OrderListCriteria.Designer.vb">
+      <DependentUpon>OrderListCriteria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\CustomerOrders\OrderListCriteria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\Inventory\InventoryItem.Designer.vb">
       <DependentUpon>InventoryItem.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\InventoryItem.vb">
+    <Compile Include="ManagementScreens\Inventory\InventoryItem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagementScreens\ExitManagementConfirmation.Designer.vb">
@@ -228,28 +240,40 @@
     <Compile Include="ManagementScreens\ExitManagementConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ManagementScreens\Inventory\InventoryOrderDetails.Designer.vb">
+      <DependentUpon>InventoryOrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\Inventory\InventoryOrderDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagementScreens\Inventory\SelectSupplier.Designer.vb">
+      <DependentUpon>SelectSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementScreens\Inventory\SelectSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManagementScreens\ManagementDashboard.Designer.vb">
       <DependentUpon>ManagementDashboard.vb</DependentUpon>
     </Compile>
     <Compile Include="ManagementScreens\ManagementDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\OrderDetails.Designer.vb">
+    <Compile Include="ManagementScreens\CustomerOrders\OrderDetails.Designer.vb">
       <DependentUpon>OrderDetails.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\OrderDetails.vb">
+    <Compile Include="ManagementScreens\CustomerOrders\OrderDetails.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\PlaceOrderConfirmation.Designer.vb">
+    <Compile Include="ManagementScreens\Inventory\PlaceOrderConfirmation.Designer.vb">
       <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\PlaceOrderConfirmation.vb">
+    <Compile Include="ManagementScreens\Inventory\PlaceOrderConfirmation.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagementScreens\SupplierInfo.Designer.vb">
+    <Compile Include="ManagementScreens\Suppliers\SupplierInfo.Designer.vb">
       <DependentUpon>SupplierInfo.vb</DependentUpon>
     </Compile>
-    <Compile Include="ManagementScreens\SupplierInfo.vb">
+    <Compile Include="ManagementScreens\Suppliers\SupplierInfo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -338,25 +362,37 @@
     <EmbeddedResource Include="MainMenuScreens\LogOutConfirmation.resx">
       <DependentUpon>LogOutConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\OrderListCriteria.resx">
+    <EmbeddedResource Include="ManagementScreens\Inventory\AddOrderItem.resx">
+      <DependentUpon>AddOrderItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\Inventory\CreateInventoryOrder.resx">
+      <DependentUpon>CreateInventoryOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\CustomerOrders\OrderListCriteria.resx">
       <DependentUpon>OrderListCriteria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\InventoryItem.resx">
+    <EmbeddedResource Include="ManagementScreens\Inventory\InventoryItem.resx">
       <DependentUpon>InventoryItem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\ExitManagementConfirmation.resx">
       <DependentUpon>ExitManagementConfirmation.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\Inventory\InventoryOrderDetails.resx">
+      <DependentUpon>InventoryOrderDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagementScreens\Inventory\SelectSupplier.resx">
+      <DependentUpon>SelectSupplier.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagementScreens\ManagementDashboard.resx">
       <DependentUpon>ManagementDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\OrderDetails.resx">
+    <EmbeddedResource Include="ManagementScreens\CustomerOrders\OrderDetails.resx">
       <DependentUpon>OrderDetails.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\PlaceOrderConfirmation.resx">
+    <EmbeddedResource Include="ManagementScreens\Inventory\PlaceOrderConfirmation.resx">
       <DependentUpon>PlaceOrderConfirmation.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagementScreens\SupplierInfo.resx">
+    <EmbeddedResource Include="ManagementScreens\Suppliers\SupplierInfo.resx">
       <DependentUpon>SupplierInfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
