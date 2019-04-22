@@ -1,23 +1,22 @@
 ﻿Public Class InventoryItem
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         If txtItemName.Text = "" Or IsNumeric(txtModCode.Text) Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtOrderQty.Text = "" Or Not IsNumeric(txtOrderQty.Text) Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtSS.Text = "" Or Not IsNumeric(txtSS.Text) Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtModCode.Text = "" Or IsNumeric(txtModCode.Text) Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         End If
 
         If btnAddItem.Text = "Add Item" Then
             Dim insertQuery As String = "INSERT INTO Inventory VALUES ('" & txtItemName.Text + "', NULL, CONVERT(DECIMAL(6,2), " & txtSS.Text & "), CONVERT(DECIMAL(6,2), " &
                                     txtOrderQty.Text & "), '" & txtModCode.Text & "');"
-
             ExecuteQuery(insertQuery)
 
         Else

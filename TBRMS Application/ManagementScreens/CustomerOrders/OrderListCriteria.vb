@@ -17,9 +17,6 @@
         ManagementDashboard.btnOpt3.Visible = False
         Shrink()
 
-        MessageBox.Show("Start Date: " + StartDate)
-        MessageBox.Show("End Date: " + EndDate)
-
         ManagementDashboard.FetchOrders(StartDate, EndDate)
 
         ManagementDashboard.tmrViews.Start()

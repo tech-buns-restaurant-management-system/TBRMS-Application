@@ -1,37 +1,35 @@
 ﻿Public Class SupplierInfo
     Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
         If txtName.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtAddress.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtCity.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtState.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtZip.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         ElseIf txtPhone.Text = "" Then
-            MessageBox.Show("Stop")
+            MessageBox.Show("Error: All fields must have a value.")
             Exit Sub
         End If
 
         If btnAddItem.Text = "Add Supplier" Then
             Dim insertQuery As String = "INSERT INTO Supplier VALUES ('" & txtName.Text + "', '" & txtAddress.Text &
                                         "', '" & txtCity.Text & "', '" & txtState.Text & "', '" & txtZip.Text & "', '" & txtPhone.Text & "');"
-
             ExecuteQuery(insertQuery)
 
 
         Else
             Dim updateQuery As String = "UPDATE Supplier SET SupName = '" & txtName.Text + "', SupAddress = '" & txtAddress.Text & "', SupCity = '" & txtCity.Text &
                                         "', SupState = '" & txtState.Text & "', SupZip = '" & txtZip.Text & "', SupPhoneNumber = '" & txtPhone.Text & "'
-                                        WHERE Sup_ID = (SELECT Sup_ID FROM Supplier WHERE SupName = '" & txtName.Text & "');"
-
+                                        WHERE Sup_ID = (SELECT Sup_ID FROM Supplier WHERE SupName = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "');"
             ExecuteQuery(updateQuery)
         End If
 
