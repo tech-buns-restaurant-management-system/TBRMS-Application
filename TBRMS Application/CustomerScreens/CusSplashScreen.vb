@@ -3,6 +3,7 @@
     Private Sub btnStartOrder_Click(sender As Object, e As EventArgs) Handles btnStartOrder.Click
         CustomerOrderDashboard.FetchCategories()
 
+        'Initializes the necessary columns in the dgvOrderSummary DataGridView
         CustomerOrderDashboard.dgvOrderSummary.Columns.Add("colItem", "Item Name")
         CustomerOrderDashboard.dgvOrderSummary.Columns.Add("colMods", "Mods")
 
@@ -11,6 +12,7 @@
         CustomerOrderDashboard.dgvOrderSummary.Columns("colMods").Width = 150
         CustomerOrderDashboard.dgvOrderSummary.Columns("colMods").SortMode = DataGridViewColumnSortMode.NotSortable
 
+        'Initializes the necessary columns in the dtbOrderMods datatable
         dtbOrderMods.Rows.Clear()
         dtbOrderMods.Columns.Clear()
 

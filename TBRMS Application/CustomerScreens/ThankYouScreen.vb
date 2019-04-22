@@ -19,16 +19,19 @@
         Dim strDate As String = DateString
         Dim strTime As String = TimeString
 
+        'Inserts record for the order into CustomerOrder table
         Dim insertOrderQuery As String = "INSERT INTO CustomerOrder VALUES ('" + DateString + "', '" + TimeString + "', '" + TableTagEntry.strTableTag + "', '" +
                                          CStr(PaymentSelection.blnPaid) + "', 'False', " + CStr(CustomerOrderDashboard.dblOrderTotal) + ");"
 
         ExecuteQuery(insertOrderQuery)
 
+        'Inserts each Order Line Item into CustomerOrderLine table
         For i As Integer = 0 To CustomerOrderDashboard.strItems.Length - 1
             Dim OrderLineQuery As String = "INSERT INTO CustomerOrderLine VALUES ((SELECT CusOrder_ID FROM CustomerOrder WHERE OrderDate = '" &
                                             strDate & "' AND OrderTime = '" & strTime & "' AND OrderTableNum = '" & TableTagEntry.strTableTag & "'), (SELECT MenuItem_ID FROM MenuItem WHERE MenuItemName = '" +
                                             CustomerOrderDashboard.strItems(i) + "'), '" & (i + 1) & "', ' "
 
+            'If there are no mods for the current item, NULL is inserted
             If (CustomerOrderDashboard.strMods(i) = "") Then
                 OrderLineQuery += "NULL');"
             Else
@@ -42,6 +45,9 @@
     End Function
 
     Function DeductInventory()
+        'Hidden DataGridViews were used because the programming was a lot easier to do versus using Datatables at the time. 
+        'If it's stupid but it works, it ain't supid, right?
+
         DataGridView1.Columns.Clear()
         DataGridView1.Rows.Clear()
 
@@ -51,6 +57,7 @@
         DataGridView3.Columns.Add("colIng3", "Ing3")
         DataGridView3.Columns.Add("colIng4", "Ing4")
 
+        'Add each mod for each item to DataGridView3
         For Each Row In CusSplashScreen.dtbOrderMods.Rows
             DataGridView3.Rows.Add(Row("colIng1"), Row("colIng2"), Row("colIng3"), Row("colIng4"))
         Next
@@ -60,6 +67,7 @@
 
         DataGridView4.Columns.Add("colItem", "Item")
 
+        'Add each item to DataGridView4
         For i As Integer = 0 To CustomerOrderDashboard.strItems.Length - 1
             DataGridView4.Rows.Add(CustomerOrderDashboard.strItems(i))
         Next
@@ -67,6 +75,7 @@
         DataGridView1.Columns.Add("colMenuItem", "MenuItem_ID")
         DataGridView1.Columns.Add("colIng", "Inv_ID")
 
+        'Fetch the MenuItem_ID and the Inv_ID for each Ingredient for each item
         For i As Integer = 0 To CustomerOrderDashboard.strItems.Length - 1
             Dim Connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
@@ -99,7 +108,7 @@
 
             Dim Connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
-            'Gets Inv_IDs of the ingredients used in the Item selected
+            'Gets the ModCode for each ingredient and inserts into DataGridView2
 
             Connection.Open()
 
@@ -118,10 +127,10 @@
 
             Connection.Close()
 
+            'If item does not have a mod code, the regular amount is deducted from the quantity
             If DataGridView2.Rows(counter).Cells(1).Value.ToString = "--" And DataGridView2.Rows(counter).Cells(0).Value.ToString <> "28" Then
                 Dim updateString As String = "UPDATE Inventory SET InvQty = InvQty - 1 WHERE Inv_ID = '" + DataGridView2.Rows(counter).Cells(0).Value.ToString + "';"
                 ExecuteQuery(updateString)
-                'MessageBox.Show(updateString)
 
                 DataGridView2.Rows.RemoveAt(counter)
             Else
@@ -132,6 +141,7 @@
         Dim dgvCounter As Integer = DataGridView2.Rows.Count
         counter = 0
 
+        'Each ingredient for each item is updated based on the amount selected by the customer
         For Each row As DataRow In CusSplashScreen.dtbOrderMods.Rows
 
             Dim updateString As String
@@ -150,8 +160,7 @@
                         col = "colIng4"
                 End Select
 
-                'MessageBox.Show(row(col))
-
+                'If the item is not Ice or Spring Water, the quantity is updated based on what has been chosen
                 If dgvCounter > 0 Then
                     If (DataGridView2.Rows(counter).Cells(0).Value.ToString <> "27" And DataGridView2.Rows(counter).Cells(0).Value.ToString <> "28") Then
                         Select Case row(col)
@@ -161,15 +170,12 @@
                                 updateString = ""
                             Case "Light"
                                 updateString = "UPDATE Inventory SET InvQty = InvQty - .5 WHERE Inv_ID = '" + DataGridView2.Rows(counter).Cells(0).Value.ToString + "';"
-                                'MessageBox.Show(updateString)
                                 ExecuteQuery(updateString)
                             Case "Regular"
                                 updateString = "UPDATE Inventory SET InvQty = InvQty - 1 WHERE Inv_ID = '" + DataGridView2.Rows(counter).Cells(0).Value.ToString + "';"
-                                'MessageBox.Show(updateString)
                                 ExecuteQuery(updateString)
                             Case "Extra"
                                 updateString = "UPDATE Inventory SET InvQty = InvQty - 1.5 WHERE Inv_ID = '" + DataGridView2.Rows(counter).Cells(0).Value.ToString + "';"
-                                'MessageBox.Show(updateString)
                                 ExecuteQuery(updateString)
                         End Select
                         counter += 1

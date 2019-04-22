@@ -17,6 +17,13 @@
         End If
     End Sub
 
+    Function AddNumber(Num As String)
+        If txtTableTag.Text.Length < 2 Then
+            txtTableTag.Text += Num
+        End If
+    End Function
+
+    'Keypad Button Function
     Private Sub btn1_Click(sender As Object, e As EventArgs) Handles btn1.Click
         AddNumber("1")
     End Sub
@@ -60,10 +67,4 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         txtTableTag.Clear()
     End Sub
-
-    Function AddNumber(Num As String)
-        If txtTableTag.Text.Length < 2 Then
-            txtTableTag.Text += Num
-        End If
-    End Function
 End Class

@@ -5,7 +5,6 @@
     Dim intYCoor As Integer = 720
     Dim blnSliderOpen As Boolean = False
     Dim blnOrderSummarySlider As Boolean = False
-    Dim strMeme As String = ""
     Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
     Public intItemNum As Integer
@@ -15,6 +14,7 @@
 
     'Form Load Function
     Private Sub DBTestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Set sliders to be closed
         pnlOrderSummary.Location = New Point(intXCoor, -1)
         pnlKeyboard.Location = New Point(-2, intYCoor)
 
@@ -23,6 +23,7 @@
 
     'MainOrderForm Functions
     Private Sub picBack_Click(sender As Object, e As EventArgs) Handles picBack.Click
+        'If Order Summary slider is open, the Order Summary slider is closed
         If (blnOrderSummarySlider = True) Then
             tmrOrderSummarySlider.Start()
         End If
@@ -34,35 +35,43 @@
     End Sub
 
     Private Sub picOrderSummary_Click(sender As Object, e As EventArgs) Handles picOrderSummary.Click
+        'If Keyboard slider is open, the Keyboard slider is closed
         If (blnSliderOpen = True) Then
             tmrKeyboard.Start()
         End If
 
+        'OrderSummary Slider's timer is started
         tmrOrderSummarySlider.Enabled = True
         tmrOrderSummarySlider.Start()
     End Sub
 
     Function ResetPrices()
         dblSubtotal = 0
-        lblSubtotal.Text = FormatCurrency(dblSubtotal)
         dblOrderTax = 0
-        lblTax.Text = FormatCurrency(dblOrderTax)
         intItemNum = 0
-        lblNumItems.Text = intItemNum
+
+        lblNumItems.Text = CStr(intItemNum)
+        lblSubtotal.Text = FormatCurrency(dblSubtotal)
+        lblTax.Text = FormatCurrency(dblOrderTax)
+
         ReDim dblOrderPrice(0)
     End Function
+
     'Category & Menu Item DataGridView Functions
     Private Sub dgvCategories_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCategories.CellClick
+        'Set selectedRow to the row that is selected in dgvCategories
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow = dgvCategories.Rows(index)
         Dim strCategory As String = selectedRow.Cells(0).Value
 
+        'Queries the MenuItem table, resets intSelectedIndex, and clears the selection in dgvORderSummary
         FetchItemList(strCategory)
         intSelectedIndex = -1
         dgvOrderSummary.ClearSelection()
     End Sub
 
     Private Sub dgvMenuItems_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvMenuItems.CellClick
+        'Sets the selectedRow variable equal to the row that has been selected in dgvMenuItems
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow = dgvMenuItems.Rows(index)
         CustomizeItem.lblItemName.Text = selectedRow.Cells(0).Value
@@ -70,6 +79,7 @@
         dgvOrderSummary.ClearSelection()
         intSelectedIndex = -1
 
+        'Pulls the Inv_ID and ModCode of each ingredient and puts them into the dtbInvIDs DataTable
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
         'Gets Inv_IDs of the ignredients used in the Item selected
@@ -86,6 +96,7 @@
             connection.Close()
         End Using
 
+        'Get the items of each 
         CustomizeItem.GetItemNames(dtbInvIDs, CustomizeItem.strItemNames)
 
         CustomizeItem.pnlIng1.Visible = False
@@ -93,6 +104,7 @@
         CustomizeItem.pnlIng3.Visible = False
         CustomizeItem.pnlIng4.Visible = False
 
+        'Initializes and displays the correct amount of Ingredient panels for the Menu Item
         Select Case CustomizeItem.intIngCount
             Case 1
                 CustomizeItem.intIngAmount(0) = 2
@@ -146,6 +158,7 @@
     End Sub
 
     Function AddItem()
+
         Dim strItem As String = CustomizeItem.lblItemName.Text
 
         intItemNum += 1
@@ -153,6 +166,7 @@
 
         connection.Open()
 
+        'Queries the MenuItem table to get the price of the selected item
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
         selectQuery.CommandText = "SELECT MI.MenuItemPrice
                                    FROM MenuItem as MI
@@ -168,6 +182,7 @@
 
         connection.Close()
 
+        'Makes a new slot in the dblOrderPrice array for the item's price
         If (dblOrderPrice.Length > 0) And (dblOrderPrice(0) <> Nothing) Then
             ReDim Preserve dblOrderPrice(dblOrderPrice.Length)
         End If
@@ -175,6 +190,7 @@
         dblOrderPrice(dblOrderPrice.Length - 1) = dblItemPrice(0)
         dblSubtotal = 0
 
+        'Set the Subtotal, Tax, and Item Num variables and labels
         For i As Integer = 0 To dblOrderPrice.Length - 1
             dblSubtotal += dblOrderPrice(i)
         Next
@@ -220,7 +236,7 @@
     End Function
 
     Function FetchItemList(Category As String)
-        'Queries CustomerOrder table and refreshes dgvOrderList with updated list of open orders
+        'Queries MenuItem table and populates dgvMenuItems with list of items that are a part of the selected category
         connection.Open()
 
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
@@ -252,6 +268,7 @@
     End Sub
 
     Function DeleteItem()
+        'Display error dialog if no item is selected
         If (intSelectedIndex < 0) Then
             CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
             CustomerOrderErrorDialog.Show()
@@ -261,8 +278,10 @@
             dgvOrderSummary.Rows.RemoveAt(intSelectedIndex)
             CusSplashScreen.dtbOrderMods.Rows.RemoveAt(intSelectedIndex)
 
+            'Re-populate dblOrderPrice array to account for the deletion of the item
             ReDim dblOrderPrice(0)
 
+            'Retrieve the price for each ordered Item
             For i As Integer = 0 To dgvOrderSummary.Rows.Count - 1
                 connection.Open()
 
@@ -291,6 +310,7 @@
 
             dblSubtotal = 0
 
+            'Set the Subtotal, Tax, and Item Num vairables and labels
             For i As Integer = 0 To dblOrderPrice.Length - 1
                 dblSubtotal += dblOrderPrice(i)
             Next
@@ -312,6 +332,7 @@
     End Function
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        'Display error dialog if no item is selected
         If (intSelectedIndex = -1) Then
             CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
             CustomerOrderErrorDialog.Show()
@@ -325,6 +346,7 @@
     End Sub
 
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        'Display error dialog if no item is selected
         If (intSelectedIndex = -1) Then
             CustomerOrderErrorDialog.lblMessage.Text = "Error: No item is selected."
             CustomerOrderErrorDialog.Show()
@@ -337,12 +359,13 @@
 
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
-        'Gets Inv_IDs of the ignredients used in the Item selected
+        'Gets Inv_IDs and ModCodes of the ingredients used in the item selected
         Dim strSelect As String = "SELECT Ing.Inv_ID, Inv.InvModCode FROM Ingredient as Ing, Inventory as Inv, MenuItem as MI " +
                                "WHERE MI.MenuItem_ID = Ing.MenuItem_ID And Ing.Inv_ID = Inv.Inv_ID And MI.MenuItemName = '" + selectedRow.Cells(0).Value + "';"
 
         Dim dtbInvIDs As New DataTable
 
+        'Fill dtbInvIDs datatable with Inv_IDs and ModCodes
         Using connection
             connection.Open()
             Using dad As New SqlClient.SqlDataAdapter(strSelect, connection)
@@ -351,8 +374,10 @@
             connection.Close()
         End Using
 
+
         CustomizeItem.GetItemNames(dtbInvIDs, CustomizeItem.strItemNames)
 
+        'Reset Ingredient amount array and labels on CustomizeItem form
         For i As Integer = 0 To 3
             CustomizeItem.intIngAmount(i) = 2
             CustomizeItem.lblIng1Amount.Text = "Regular"
@@ -369,6 +394,7 @@
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+        'Display error dialog if no items are selected
         If (dgvOrderSummary.Rows.Count = 0) Then
             CustomerOrderErrorDialog.lblMessage.Text = "Error: No items are on the order."
             CustomerOrderErrorDialog.Show()
@@ -376,6 +402,7 @@
             Exit Sub
         End If
 
+        'Populate strItems and strMods arrays that will be used to add items to CustomerOrderLine table
         For i As Integer = 0 To dgvOrderSummary.Rows.Count - 1
             ReDim Preserve strItems(i)
             ReDim Preserve strMods(i)
@@ -390,8 +417,10 @@
 
         dblOrderTotal = dblSubtotal + dblOrderTax
 
+        'Reset dblOrderPrice array
         ReDim dblOrderPrice(0)
 
+        'Reset Subtotal, Tax, and Item Num labels and variables
         dblSubtotal = 0
         dblOrderTax = 0
         intItemNum = 0
@@ -400,6 +429,7 @@
         lblSubtotal.Text = FormatCurrency(dblSubtotal)
         lblTax.Text = FormatCurrency(dblOrderTax)
 
+        'Close the Order Summary slider
         tmrOrderSummarySlider.Enabled = True
         tmrOrderSummarySlider.Start()
 
@@ -408,6 +438,7 @@
     End Sub
 
     Private Sub picCloseArrow_Click(sender As Object, e As EventArgs) Handles picCloseArrow.Click
+        'Starts timer to clost the Order Summary slider
         tmrOrderSummarySlider.Enabled = True
         tmrOrderSummarySlider.Start()
     End Sub
@@ -417,11 +448,13 @@
     End Sub
 
     Function OrderSummarySlider()
+        'If Order Summary Slider is not open, the slider gets moved left 30px each time the timer ticks
         If blnOrderSummarySlider = False Then
             If (intTicks < 10) Then
                 intTicks += 1
                 intXCoor -= 30
                 pnlOrderSummary.Location = New Point(intXCoor, -1)
+                'When timer hits 10 ticks, the Order Summary Slider is in its final position, and timer stops and intTicks is reset
             ElseIf (intTicks = 10) Then
                 tmrOrderSummarySlider.Stop()
                 intTicks = 0
@@ -429,11 +462,13 @@
                 blnOrderSummarySlider = True
                 intXCoor = 859
             End If
+            'If Order Summary Slider is not open, the slider gets moved right 30px each time the timer ticks
         ElseIf blnOrderSummarySlider = True Then
             If (intTicks < 10) Then
                 intTicks += 1
                 intXCoor += 30
                 pnlOrderSummary.Location = New Point(intXCoor, -1)
+                'When timer hits 10 ticks, the Order Summary Slider is in its final position, and timer stops and intTicks is reset
             ElseIf (intTicks = 10) Then
                 tmrOrderSummarySlider.Stop()
                 intTicks = 0
@@ -446,7 +481,7 @@
         End If
     End Function
 
-    'Keyboard Functionality
+    'Keyboard Functionality. Each Letter Button function adds the button's letter to the Search textbox when pressed
     Private Sub btnA_Click(sender As Object, e As EventArgs) Handles btnA.Click
         txtSearch.Text += "A"
     End Sub
@@ -576,52 +611,37 @@
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        'When Search button is pressed, it searches for it's contents in the MenuItem table and returns the results in dgvMenuItems
         tmrKeyboard.Enabled = True
         tmrKeyboard.Start()
 
-        If strMeme = "Mascot" Then
-            Meme()
-        ElseIf strMeme = "Shrek" Then
-            Meme()
-        Else
-            connection.Open()
+        connection.Open()
 
-            Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
-            selectQuery.CommandText = "SELECT MI.MenuItemName
+        Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
+        selectQuery.CommandText = "SELECT MI.MenuItemName
                                    FROM MenuItem as MI
                                    WHERE MI.MenuItemName LIKE '%" + txtSearch.Text + "%';"
 
-            Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+        Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
 
-            dgvMenuItems.Columns.Clear()
-            dgvMenuItems.Rows.Clear()
+        dgvMenuItems.Columns.Clear()
+        dgvMenuItems.Rows.Clear()
 
-            dgvMenuItems.Columns.Add("colItem", "Menu Item")
+        dgvMenuItems.Columns.Add("colItem", "Menu Item")
 
-            dgvMenuItems.Columns("colItem").Width = 396
+        dgvMenuItems.Columns("colItem").Width = 396
 
-            While SQLReader.Read()
-                dgvMenuItems.Rows.Add({SQLReader.Item("MenuItemName")})
-            End While
+        While SQLReader.Read()
+            dgvMenuItems.Rows.Add({SQLReader.Item("MenuItemName")})
+        End While
 
-            connection.Close()
-        End If
+        connection.Close()
 
         txtSearch.Text = "Search..."
 
         dgvCategories.ClearSelection()
         dgvMenuItems.ClearSelection()
         dgvOrderSummary.ClearSelection()
-    End Sub
-
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        If txtSearch.Text = "HAPPY BUNS" Then
-            picMeme.ImageLocation = "Mascot1.png"
-            strMeme = "Mascot"
-        ElseIf txtSearch.Text = "MAX OGRE DRIVE" Then
-            picMeme.ImageLocation = "shrek.png"
-            strMeme = "Shrek"
-        End If
     End Sub
 
     Private Sub txtSearch_MouseDown(sender As Object, e As MouseEventArgs) Handles txtSearch.MouseDown
@@ -650,22 +670,26 @@
     End Sub
 
     Function KeyboardSlider()
+        'If Keyboard Slider is not open, the slider gets moved up 20px each time the timer ticks
         If blnSliderOpen = False Then
             If (intTicks < 15) Then
                 intTicks += 1
                 intYCoor -= 20
                 pnlKeyboard.Location = New Point(-2, intYCoor)
+                'Once the timer hits 15 ticks, the Keyboard Slider is in its final position, and the timer stops.
             ElseIf (intTicks = 15) Then
                 tmrKeyboard.Stop()
                 intTicks = 0
                 pnlKeyboard.Location = New Point(-2, 420)
                 blnSliderOpen = True
             End If
+            'If Keyboard Slider is open, the slider moves down 20px each time the timer ticks
         ElseIf blnSliderOpen = True Then
             If (intTicks < 15) Then
                 intTicks += 1
                 intYCoor += 20
                 pnlKeyboard.Location = New Point(-2, intYCoor)
+                'Once the timer hits 15 ticks, the Keyboard Slider is in its final position, and the timer stops.
             ElseIf (intTicks = 15) Then
                 tmrKeyboard.Stop()
                 intTicks = 0
@@ -673,34 +697,6 @@
                 blnSliderOpen = False
                 txtSearch.Text = "Search..."
             End If
-        End If
-    End Function
-
-    'These functions are essential. DO NOT REMOVE
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Meme()
-    End Sub
-
-    Function Meme()
-        picMeme.Location = New Point(415, 169)
-        Timer1.Enabled = True
-        Timer1.Start()
-        picMeme.Visible = True
-
-        If (intTicks = 1) Then
-            If strMeme = "Mascot" Then
-                My.Computer.Audio.Play("wow.wav", AudioPlayMode.WaitToComplete)
-            ElseIf strMeme = "Shrek" Then
-                My.Computer.Audio.Play("allstar.wav", AudioPlayMode.WaitToComplete)
-            End If
-
-            intTicks += 1
-        ElseIf (intTicks < 3) Then
-            intTicks += 1
-        ElseIf (intTicks = 3) Then
-            Timer1.Stop()
-            picMeme.Visible = False
-            intTicks = 0
         End If
     End Function
 End Class

@@ -14,12 +14,14 @@
             Exit Sub
         End If
 
+        'If item is being added, insert the item into the Inventory table
         If btnAddItem.Text = "Add Item" Then
             Dim insertQuery As String = "INSERT INTO Inventory VALUES ('" & txtItemName.Text + "', NULL, CONVERT(DECIMAL(6,2), " & txtSS.Text & "), CONVERT(DECIMAL(6,2), " &
                                     txtOrderQty.Text & "), '" & txtModCode.Text & "');"
             ExecuteQuery(insertQuery)
 
         Else
+            'If item is being edited, update the selected item in the Inventory table
             Dim updateQuery As String = "UPDATE Inventory SET InvName = '" & txtItemName.Text + "', InvSS = CONVERT(DECIMAL(6,2), " & txtSS.Text &
                                         "), InvDefaultOrder = CONVERT(DECIMAL(6,2), " & txtOrderQty.Text & "), InvModCode = '" & txtModCode.Text &
                                         "' WHERE Inv_ID = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "';"

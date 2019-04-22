@@ -14,6 +14,7 @@
     End Sub
 
     Function FetchSuppliers()
+        'Queries the Supplier table for SupName and populates cboSupplier with each name
         cboSupplier.Items.Clear()
 
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")

@@ -26,8 +26,7 @@
     End Sub
 
     Private Sub btnRunOrder_Click(sender As Object, e As EventArgs) Handles btnRunOrder.Click
-        MessageBox.Show("Confirm That All Items Are Ready To Be Run")
-
+        'Updates CustomerOrder table to show that order has been completed
         Dim updateQuery As String = "UPDATE CustomerOrder SET OrderComplete = 'TRUE' WHERE CusOrder_ID = '" + strSelectedOrder + "';"
 
         ExecuteQuery(updateQuery)
@@ -45,6 +44,7 @@
     End Sub
 
     Private Sub dgvOrderList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvOrderList.CellClick
+        'Sets the selectedRow and Fetches the details for that order
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
 
@@ -113,7 +113,7 @@
     End Function
 
     Function FetchOrderDetails()
-        'Queries CustomerOrder table and refreshes dgvOrderList with updated list of open orders
+        'Queries CustomerOrderLine table and populates dgvOrderDetails with the MenuItems and their Modifications
         connection.Open()
 
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()

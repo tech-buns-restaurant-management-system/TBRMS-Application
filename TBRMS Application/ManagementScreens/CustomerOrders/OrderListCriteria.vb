@@ -46,25 +46,17 @@
             End If
         Next
 
-        lblMessage.Visible = True
-        lblStart.Visible = True
-        lblEnd.Visible = True
-        dtpStart.Visible = True
-        dtpEnd.Visible = True
-        btnContinue.Visible = True
-        btnCancel.Visible = True
+        For Each ctrl In Me.Controls
+            ctrl.visible = True
+        Next
 
         lblMessage.Focus()
     End Function
 
     Function Shrink()
-        lblMessage.Visible = False
-        lblStart.Visible = False
-        lblEnd.Visible = False
-        dtpStart.Visible = False
-        dtpEnd.Visible = False
-        btnContinue.Visible = False
-        btnCancel.Visible = False
+        For Each ctrl In Me.Controls
+            ctrl.visible = False
+        Next
 
         For i As Integer = 20 To 1 Step -1
 

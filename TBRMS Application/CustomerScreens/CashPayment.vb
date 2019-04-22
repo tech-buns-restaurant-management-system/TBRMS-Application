@@ -7,6 +7,8 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         intSecond += 1
+
+        'When timer hits 5 seconds, it is stopped, the ThankYouScreen is shown, and its timer is started
         If intSecond >= 5 Then
             Timer1.Stop()
             ThankYouScreen.Timer1.Enabled = True

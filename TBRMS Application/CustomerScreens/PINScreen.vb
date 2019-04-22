@@ -2,6 +2,25 @@
 
     Dim strPIN As String = ""
 
+    Function AddNumber(Num As String)
+        If (strPIN.Length < 4) Then
+            strPIN += Num
+        End If
+
+        'Allows user to exit Customer Order Mode if the passcode is correct
+        If (strPIN.Length = 4 And strPIN = "1234") Then
+            Me.Hide()
+            WelcomeScreen.Show()
+            CusSplashScreen.Hide()
+            strPIN = ""
+        ElseIf (strPIN.Length = 4 And strPIN <> "1234") Then
+            Me.Hide()
+            strPIN = ""
+        End If
+
+    End Function
+
+    'Keypad Button Functions
     Private Sub btnCancel_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
@@ -45,23 +64,6 @@
     Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
         AddNumber("0")
     End Sub
-
-    Function AddNumber(Num As String)
-        If (strPIN.Length < 4) Then
-            strPIN += Num
-        End If
-
-        If (strPIN.Length = 4 And strPIN = "1234") Then
-            Me.Hide()
-            WelcomeScreen.Show()
-            CusSplashScreen.Hide()
-            strPIN = ""
-        ElseIf (strPIN.Length = 4 And strPIN <> "1234") Then
-            Me.Hide()
-            strPIN = ""
-        End If
-
-    End Function
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         strPIN = ""

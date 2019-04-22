@@ -10,6 +10,7 @@
     End Sub
 
     Private Sub cboItems_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboItems.SelectedIndexChanged
+        'Queries the default order quantity for the Inventory table
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
         connection.Open()
@@ -30,6 +31,7 @@
     End Sub
 
     Function PopulateControls()
+        'Queries InvName and InvQty from Inventory table and populates controls
         cboItems.Items.Clear()
 
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")

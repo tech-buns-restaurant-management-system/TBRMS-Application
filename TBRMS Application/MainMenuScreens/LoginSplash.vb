@@ -38,10 +38,14 @@
 
         connection.Open()
 
+        'Query Employee table for Emp_ID, Password, and blnManagement
+
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
         selectQuery.CommandText = "SELECT Emp.Emp_ID, Emp.EmpPassword, EmpManagement FROM Employee as Emp WHERE Emp.Emp_ID = '" + txtUser.Text + "';"
 
         Dim SQLReader As SqlClient.SqlDataReader = selectQuery.ExecuteReader()
+
+        'The infamous hidden DataGridView strikes back...
 
         DataGridView1.Columns.Clear()
         DataGridView1.Rows.Clear()
@@ -65,6 +69,7 @@
             Me.Hide()
         End If
 
+        'Allows system to tell if the user is a manager or not
         If DataGridView1.Rows(0).Cells(2).Value.ToString = "True" Then
             blnManagement = True
         End If

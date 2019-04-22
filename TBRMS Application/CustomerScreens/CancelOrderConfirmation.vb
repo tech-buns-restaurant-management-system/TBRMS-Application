@@ -14,6 +14,7 @@
         Shrink()
     End Sub
 
+    'Handles the Grow animation of the screen
     Function Grow()
 
         CustomerOrderDashboard.picBack.Enabled = False
@@ -34,17 +35,20 @@
             End If
         Next
 
-        lblMessage.Visible = True
-        btnContinue.Visible = True
-        btnCancel.Visible = True
+        For Each ctrl In Me.Controls
+            ctrl.visible = True
+        Next
 
         lblMessage.Focus()
     End Function
 
+    'Handles the Shrink animation of the screen
     Function Shrink()
-        lblMessage.Visible = False
-        btnContinue.Visible = False
-        btnCancel.Visible = False
+
+        For Each ctrl In Me.Controls
+            ctrl.visible = False
+        Next
+
         For i As Integer = 20 To 1 Step -1
 
             Me.Height = i * 8
@@ -54,10 +58,6 @@
             Threading.Thread.Sleep(5)
 
         Next
-
-        lblMessage.Visible = False
-        btnContinue.Visible = False
-        btnCancel.Visible = False
 
         CustomerOrderDashboard.picBack.Enabled = True
         CustomerOrderDashboard.picOrderSummary.Enabled = True

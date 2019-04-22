@@ -13,18 +13,18 @@
             End If
         Next
 
-        pnlHeader.Visible = True
-        btnContinue.Visible = True
-        dgvOrderDetails.Visible = True
+        For Each ctrl In Me.Controls
+            ctrl.visible = True
+        Next
 
         lblHeading.Focus()
     End Function
 
     Function Shrink()
 
-        pnlHeader.Visible = False
-        btnContinue.Visible = False
-        dgvOrderDetails.Visible = False
+        For Each ctrl In Me.Controls
+            ctrl.visible = False
+        Next
 
         For i As Integer = 20 To 1 Step -1
 
@@ -43,7 +43,7 @@
     End Sub
 
     Function FetchOrderDetails(strSelectedOrder As String)
-        'Queries CustomerOrder table and refreshes dgvOrderList with updated list of open orders
+        'Fetches the MenuItems and Customizations for the selected order and populates dgvOrderDetails
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
 

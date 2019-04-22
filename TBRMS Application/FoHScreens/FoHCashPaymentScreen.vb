@@ -6,7 +6,6 @@
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         txtPaid.ReadOnly = True
-        txtPaid.BackColor = Color.White
         dblPaid = CDbl(txtPaid.Text)
 
         If dblPaid - dblDue < 0 Then
@@ -18,7 +17,6 @@
 
             txtChange.Text = String.Format("{0:C}", dblChange)
 
-            MessageBox.Show("Confirm That Change Has Been Given to Customer.")
             picSave.Enabled = True
         End If
     End Sub
@@ -74,6 +72,7 @@
     End Function
 
     Private Sub picSave_Click(sender As Object, e As EventArgs) Handles picSave.Click
+        'Updates the CustomerOrder table to show that the order has been paid for
         Dim updateQuery As String = "UPDATE CustomerOrder SET OrderPaid = 'TRUE' WHERE CusOrder_ID = '" + FoHDashboard.strSelectedOrder + "';"
 
         ExecuteQuery(updateQuery)

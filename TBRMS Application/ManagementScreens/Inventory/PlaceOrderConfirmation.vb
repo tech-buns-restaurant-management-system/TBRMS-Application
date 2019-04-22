@@ -14,12 +14,14 @@
         Dim strDate As String = DateString
         Dim strTime As String = TimeString
 
+        'Inserts the Inventory Order information into the InventoryOrder table
         Dim insertQuery As String = "INSERT INTO InventoryOrder VALUES ('" & DateString & "', '" & TimeString &
                                     "', (SELECT Sup.Sup_ID FROM Supplier as Sup WHERE Sup.SupName = '" & SelectSupplier.strSupplier & "'), 'False');"
 
         ExecuteQuery(insertQuery)
 
         For i As Integer = 0 To CreateInventoryOrder.dgvOrderDetails.Rows.Count - 1
+            'Insert each Item and its Qunatity Ordered into the InventoryOrderLine table
             Dim strItem, strQuantity As String
 
             strItem = CreateInventoryOrder.dgvOrderDetails.Rows(i).Cells(0).Value.ToString

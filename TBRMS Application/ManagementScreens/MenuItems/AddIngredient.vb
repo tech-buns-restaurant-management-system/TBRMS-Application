@@ -12,6 +12,7 @@
     Function AddIng()
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
 
+        'Query Inventory table for InvName and ModCode for the selected item
         connection.Open()
 
         Dim selectQuery As SqlClient.SqlCommand = connection.CreateCommand()
@@ -33,6 +34,7 @@
 
         connection.Close()
 
+        'Counts the number of customizable ingredients
         Dim CustomIngNum As Integer
 
         For i As Integer = 0 To MenuItemDetails.dgvIngs.Rows.Count - 1
@@ -49,6 +51,7 @@
     End Function
 
     Function PopulateControls()
+        'Pulls the name of each Ingredient and adds it to cboItems
         cboItems.Items.Clear()
 
         Dim connection As New SqlClient.SqlConnection("Server=tcp:techbuns.database.windows.net,1433;Initial Catalog=TechBunsTestDB1;Persist Security Info=False;User ID=TopBuns;Password=TechBuns123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")
