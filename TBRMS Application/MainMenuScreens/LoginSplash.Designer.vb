@@ -827,6 +827,7 @@ Partial Class LoginSplash
         Me.lblForgotPassword.Name = "lblForgotPassword"
         Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
         Me.lblForgotPassword.TabIndex = 23
+        Me.lblForgotPassword.TabStop = True
         Me.lblForgotPassword.Text = "Forgot Password?"
         '
         'txtUser

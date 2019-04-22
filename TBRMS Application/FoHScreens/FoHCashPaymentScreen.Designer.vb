@@ -43,12 +43,12 @@ Partial Class FoHCashPaymentScreen
         Me.btn2 = New System.Windows.Forms.Button()
         Me.btn1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.picBack = New System.Windows.Forms.PictureBox()
         Me.picSave = New System.Windows.Forms.PictureBox()
+        Me.picBack = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
-        CType(Me.picBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSave, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnDecimal
@@ -335,18 +335,17 @@ Partial Class FoHCashPaymentScreen
         Me.Panel2.Size = New System.Drawing.Size(1280, 100)
         Me.Panel2.TabIndex = 56
         '
-        'Label8
+        'picSave
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Label8.Location = New System.Drawing.Point(319, 23)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(643, 55)
-        Me.Label8.TabIndex = 9
-        Me.Label8.Text = "Please Enter Your Table Tag"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.picSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.picSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picSave.Image = CType(resources.GetObject("picSave.Image"), System.Drawing.Image)
+        Me.picSave.Location = New System.Drawing.Point(1150, 0)
+        Me.picSave.Name = "picSave"
+        Me.picSave.Size = New System.Drawing.Size(100, 100)
+        Me.picSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picSave.TabIndex = 25
+        Me.picSave.TabStop = False
         '
         'picBack
         '
@@ -360,17 +359,18 @@ Partial Class FoHCashPaymentScreen
         Me.picBack.TabIndex = 24
         Me.picBack.TabStop = False
         '
-        'picSave
+        'Label8
         '
-        Me.picSave.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.picSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.picSave.Image = CType(resources.GetObject("picSave.Image"), System.Drawing.Image)
-        Me.picSave.Location = New System.Drawing.Point(1150, 0)
-        Me.picSave.Name = "picSave"
-        Me.picSave.Size = New System.Drawing.Size(100, 100)
-        Me.picSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picSave.TabIndex = 25
-        Me.picSave.TabStop = False
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label8.Location = New System.Drawing.Point(470, 23)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(340, 55)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "Cash Payment"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FoHCashPaymentScreen
         '
@@ -404,8 +404,8 @@ Partial Class FoHCashPaymentScreen
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.picBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSave, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

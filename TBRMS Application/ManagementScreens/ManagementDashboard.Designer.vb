@@ -45,6 +45,7 @@ Partial Class ManagementDashboard
         Me.tmrViews = New System.Windows.Forms.Timer(Me.components)
         Me.tmrOptions = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.AzureTBDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AzureTBDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -54,6 +55,7 @@ Partial Class ManagementDashboard
         CType(Me.picCloseArrow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlOptions.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AzureTBDB
@@ -305,6 +307,16 @@ Partial Class ManagementDashboard
         Me.DataGridView1.Size = New System.Drawing.Size(640, 480)
         Me.DataGridView1.TabIndex = 35
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(605, 53)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(713, 722)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 36
+        Me.PictureBox2.TabStop = False
+        '
         'ManagementDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -316,6 +328,7 @@ Partial Class ManagementDashboard
         Me.Controls.Add(Me.pnlOptions)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.PictureBox2)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
@@ -332,6 +345,7 @@ Partial Class ManagementDashboard
         CType(Me.picCloseArrow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlOptions.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -354,4 +368,5 @@ Partial Class ManagementDashboard
     Friend WithEvents tmrViews As Timer
     Friend WithEvents tmrOptions As Timer
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

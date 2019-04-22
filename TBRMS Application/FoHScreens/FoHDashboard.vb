@@ -21,7 +21,7 @@
         connection.Close()
 
         FoHCashPaymentScreen.dblDue = strPrice(0)
-        FoHCashPaymentScreen.txtDue.Text = "$" + CStr(FoHCashPaymentScreen.dblDue)
+        FoHCashPaymentScreen.txtDue.Text = FormatCurrency(FoHCashPaymentScreen.dblDue)
         FoHCashPaymentScreen.Show()
     End Sub
 

@@ -1,10 +1,7 @@
 ﻿Public Class CreateInventoryOrder
-    Private Sub btnAddItem_Click(sender As Object, e As EventArgs) Handles btnAddItem.Click
-        AddOrderItem.Height = 0
-        AddOrderItem.Width = 0
-        AddOrderItem.Show()
-        AddOrderItem.PopulateControls()
-        AddOrderItem.Grow()
+    Dim index As Integer = -1
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Shrink()
     End Sub
 
     Function NewOrder()
@@ -60,5 +57,27 @@
         SelectSupplier.FetchSuppliers()
         SelectSupplier.Show()
         SelectSupplier.Grow()
+    End Sub
+
+    Private Sub lnkAdd_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkAdd.LinkClicked
+        AddOrderItem.Height = 0
+        AddOrderItem.Width = 0
+        AddOrderItem.Show()
+        AddOrderItem.PopulateControls()
+        AddOrderItem.Grow()
+    End Sub
+
+    Private Sub lnkDelete_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkDelete.LinkClicked
+        If index = -1 Then
+            MessageBox.Show("Error: No item selected.")
+        Else
+            dgvOrderDetails.Rows.RemoveAt(index)
+            dgvOrderDetails.ClearSelection()
+            index = -1
+        End If
+    End Sub
+
+    Private Sub dgvOrderDetails_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvOrderDetails.CellClick
+        index = e.RowIndex
     End Sub
 End Class

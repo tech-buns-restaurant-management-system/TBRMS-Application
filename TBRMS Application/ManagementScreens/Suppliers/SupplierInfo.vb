@@ -20,6 +20,7 @@
             Exit Sub
         End If
 
+        'Inserts the Supplier into the Supplier table
         If btnAddItem.Text = "Add Supplier" Then
             Dim insertQuery As String = "INSERT INTO Supplier VALUES ('" & txtName.Text + "', '" & txtAddress.Text &
                                         "', '" & txtCity.Text & "', '" & txtState.Text & "', '" & txtZip.Text & "', '" & txtPhone.Text & "');"
@@ -27,6 +28,7 @@
 
 
         Else
+            'Updates the existing Supplier wit the new information in the Supplier table
             Dim updateQuery As String = "UPDATE Supplier SET SupName = '" & txtName.Text + "', SupAddress = '" & txtAddress.Text & "', SupCity = '" & txtCity.Text &
                                         "', SupState = '" & txtState.Text & "', SupZip = '" & txtZip.Text & "', SupPhoneNumber = '" & txtPhone.Text & "'
                                         WHERE Sup_ID = (SELECT Sup_ID FROM Supplier WHERE SupName = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "');"

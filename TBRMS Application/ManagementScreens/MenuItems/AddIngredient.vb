@@ -3,10 +3,17 @@
     Private Sub btnContinue_Click(sender As Object, e As EventArgs) Handles btnContinue.Click
         If AddIng() = False Then
             MessageBox.Show("Maximum number of customizable ingredients selected.")
+        ElseIf cboItems.SelectedItem = "" Then
+            MessageBox.Show("Error: No item selected.")
         Else
             MenuItemDetails.dgvIngs.Rows.Add(cboItems.SelectedItem, strCustom)
             Shrink()
         End If
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        cboItems.SelectedItem = ""
+        Shrink()
     End Sub
 
     Function AddIng()

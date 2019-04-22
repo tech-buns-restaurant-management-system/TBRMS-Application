@@ -6,16 +6,16 @@
 
     Private Sub btnEnter_Click(sender As Object, e As EventArgs) Handles btnEnter.Click
         txtPaid.ReadOnly = True
-        dblPaid = CDbl(txtPaid.Text)
+        dblPaid = FormatCurrency(CDbl(txtPaid.Text))
 
         If dblPaid - dblDue < 0 Then
             MessageBox.Show("Error: Too low of payment")
             txtPaid.Clear()
         Else
             dblChange = dblPaid - dblDue
-            txtPaid.Text = String.Format("{0:C}", dblPaid)
 
-            txtChange.Text = String.Format("{0:C}", dblChange)
+            txtPaid.Text = FormatCurrency(dblPaid)
+            txtChange.Text = FormatCurrency(dblChange)
 
             picSave.Enabled = True
         End If

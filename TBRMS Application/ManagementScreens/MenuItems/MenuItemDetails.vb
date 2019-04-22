@@ -2,8 +2,8 @@
     Dim index As Integer
     Private Sub lnkAddIng_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkAddIng.LinkClicked
         Dim IngNum As Integer = 0
-        Dim CustomIngNum As Integer = 0
 
+        'If there are 6 ingredients on the Menu Item, the user cannot add any more
         For i As Integer = 0 To dgvIngs.Rows.Count - 1
             IngNum += 1
         Next
@@ -52,6 +52,7 @@
     End Function
 
     Function AddMenuItem()
+        'Inserts Menu Item info into MenuItem table
         Dim insertMenuItemQuery As String = "INSERT INTO MenuItem VALUES ('" & txtPrice.Text & "', '" & txtName.Text & "', '" & cboCategory.SelectedItem & "'"
 
         If CheckBox1.Checked = True Then
@@ -60,16 +61,13 @@
             insertMenuItemQuery += ", 'False');"
         End If
 
-        'MessageBox.Show(insertMenuItemQuery)
-
         ExecuteQuery(insertMenuItemQuery)
 
+        'Inserts each ingredient for the Menu Item into the Ingredients table
         For i As Integer = 0 To dgvIngs.Rows.Count - 1
 
             Dim insertIngredientQuery As String = "INSERT INTO Ingredient VALUES ((SELECT MI.MenuItem_ID FROM MenuItem as MI WHERE MI.MenuItemName = '" & txtName.Text &
                                                  "'), (SELECT Inv.Inv_ID FROM Inventory as Inv WHERE Inv.InvName = '" & dgvIngs.Rows(i).Cells(0).Value.ToString & "'));"
-
-            'MessageBox.Show(insertIngredientQuery)
 
             ExecuteQuery(insertIngredientQuery)
         Next
@@ -81,6 +79,7 @@
     End Function
 
     Function EditMenuItem()
+        'Updates the Menu Item info in the MenuItem table
         Dim updateMenuItemQuery As String = "UPDATE MenuItem SET MenuItemPrice = '" & txtPrice.Text & "', MenuItemName = '" & txtName.Text & "', MenuItemCategory = '" & cboCategory.SelectedItem & "'"
 
         If CheckBox1.Checked = True Then
@@ -91,20 +90,18 @@
 
         updateMenuItemQuery += "WHERE MenuItem_ID = (SELECT MenuItem_ID FROM MenuItem WHERE MenuItemName = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "');"
 
-        'MessageBox.Show(insertMenuItemQuery)
-
         ExecuteQuery(updateMenuItemQuery)
 
+        'Deletes old Ingredients for the MenuItem in the Ingredients table
         Dim deleteIngredientQuery As String = "DELETE FROM Ingredient WHERE MenuItem_ID = (SELECT MenuItem_ID FROM MenuItem WHERE MenuItemName = '" & ManagementDashboard.selectedRow.Cells(0).Value.ToString & "');"
 
         ExecuteQuery(deleteIngredientQuery)
 
+        'Adds new Ingredients for the Menu Item in the Ingredients table
         For i As Integer = 0 To dgvIngs.Rows.Count - 1
 
             Dim insertIngredientQuery As String = "INSERT INTO Ingredient VALUES ((SELECT MI.MenuItem_ID FROM MenuItem as MI WHERE MI.MenuItemName = '" & txtName.Text &
                                                  "'), (SELECT Inv.Inv_ID FROM Inventory as Inv WHERE Inv.InvName = '" & dgvIngs.Rows(i).Cells(0).Value.ToString & "'));"
-
-            'MessageBox.Show(insertIngredientQuery)
 
             ExecuteQuery(insertIngredientQuery)
         Next
@@ -113,6 +110,7 @@
         txtPrice.Clear()
         CheckBox1.Checked = False
         cboCategory.SelectedIndex = -1
+        dgvIngs.ClearSelection()
     End Function
 
     Function ExecuteQuery(query As String)
@@ -174,6 +172,12 @@
     End Sub
 
     Private Sub lnkDeleteIngredient_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkDeleteIngredient.LinkClicked
-        dgvIngs.Rows.RemoveAt(index)
+        If index = -1 Then
+            MessageBox.Show("Error: No item selected.")
+        Else
+            dgvIngs.Rows.RemoveAt(index)
+            dgvIngs.ClearSelection()
+            index = -1
+        End If
     End Sub
 End Class
