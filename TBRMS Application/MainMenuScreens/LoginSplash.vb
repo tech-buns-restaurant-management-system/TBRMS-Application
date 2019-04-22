@@ -78,20 +78,6 @@
         txtPass.Clear()
     End Sub
 
-    Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
-        If blnSliderOpen = False Then
-            WelcomeScreen.Show()
-            txtUser.Clear()
-            txtPass.Clear()
-            Me.Hide()
-        Else
-            blnLoggedIn = True
-            tmrSlider.Start()
-        End If
-
-        blnManagement = True
-    End Sub
-
     Private Sub btnLogOut_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogOut.MouseDown
         picLogOut.BackColor = Color.FromArgb(207, 211, 216)
     End Sub

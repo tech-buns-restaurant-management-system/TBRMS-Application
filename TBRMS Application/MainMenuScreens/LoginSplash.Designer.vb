@@ -67,7 +67,6 @@ Partial Class LoginSplash
         Me.tmrSlider = New System.Windows.Forms.Timer(Me.components)
         Me.picLogOut = New System.Windows.Forms.PictureBox()
         Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.lblForgotPassword = New System.Windows.Forms.LinkLabel()
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -817,19 +816,6 @@ Partial Class LoginSplash
         Me.btnLogOut.TabStop = False
         Me.btnLogOut.UseVisualStyleBackColor = False
         '
-        'lblForgotPassword
-        '
-        Me.lblForgotPassword.AutoSize = True
-        Me.lblForgotPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.lblForgotPassword.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.lblForgotPassword.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.lblForgotPassword.Location = New System.Drawing.Point(720, 96)
-        Me.lblForgotPassword.Name = "lblForgotPassword"
-        Me.lblForgotPassword.Size = New System.Drawing.Size(92, 13)
-        Me.lblForgotPassword.TabIndex = 23
-        Me.lblForgotPassword.TabStop = True
-        Me.lblForgotPassword.Text = "Forgot Password?"
-        '
         'txtUser
         '
         Me.txtUser.BackColor = System.Drawing.SystemColors.ControlLight
@@ -904,7 +890,6 @@ Partial Class LoginSplash
         Me.Panel2.Controls.Add(Me.btnLogOut)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.txtPass)
-        Me.Panel2.Controls.Add(Me.lblForgotPassword)
         Me.Panel2.Controls.Add(Me.txtUser)
         Me.Panel2.Location = New System.Drawing.Point(0, 130)
         Me.Panel2.Name = "Panel2"
@@ -978,7 +963,6 @@ Partial Class LoginSplash
     Friend WithEvents tmrSlider As Timer
     Friend WithEvents picLogOut As PictureBox
     Friend WithEvents btnLogOut As Button
-    Friend WithEvents lblForgotPassword As LinkLabel
     Friend WithEvents txtUser As TextBox
     Friend WithEvents txtPass As TextBox
     Friend WithEvents Label2 As Label
